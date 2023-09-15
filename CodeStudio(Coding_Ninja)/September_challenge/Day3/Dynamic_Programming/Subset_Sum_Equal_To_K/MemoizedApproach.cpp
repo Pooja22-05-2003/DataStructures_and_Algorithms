@@ -1,3 +1,4 @@
+//  Problem Link :https://www.codingninjas.com/studio/problems/subset-sum-equal-to-k_1550954?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
 // Memoization- O(n*k)
 // Space Complexity = O(n*k)+O(n)
 #include <bits/stdc++.h> 
