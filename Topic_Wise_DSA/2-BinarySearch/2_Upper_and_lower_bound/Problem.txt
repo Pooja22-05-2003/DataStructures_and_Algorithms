@@ -1,0 +1,10 @@
+Given an array of size n  and an element x
+Find  the upper bound of x
+Find the lower bound of x
+
+Upper bound - [
+Given a sorted array of size “N”; find the index of the number in the array which is just greater than x and as close as possible to x.
+
+-> Upper Bound (x) = Returns index of the number which is just greater than x and as close as possible to x.
+-> Lower Bound (x)= Returns index of the number which is just smaller than x and as close as possible to x.
+]

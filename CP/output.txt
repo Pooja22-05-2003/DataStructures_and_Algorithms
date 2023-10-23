@@ -1,3 +1,1 @@
-4
-5
-6
+Upper Bound (x) : 3 Lower Bound of x : 2
