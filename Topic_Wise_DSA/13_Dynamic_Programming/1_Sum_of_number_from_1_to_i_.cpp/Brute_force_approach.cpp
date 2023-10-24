@@ -1,3 +1,5 @@
+// TC=O(n*q)
+// SC=O(1)
 #include <bits/stdc++.h>
 using namespace std;
 

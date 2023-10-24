@@ -1,13 +1,10 @@
+//  TC=O(N+q)
+//  SC=O(N)
+
 #include <bits/stdc++.h>
 using namespace std;
 
-int solve(vector<int> arr , int q ){
-    int sum=0;
-    for(int i=1;i<=q;i++){
-        sum+=arr[i];
-    }
-    return sum;
-}
+
 int main()
 {
 
@@ -29,12 +26,24 @@ int main()
         cin>>arr[i];
     }
 
+
+    // dp array 
+    vector<int> dp(n+1,0);
+    dp[1]=arr[1];
+
+
+    for(int i=2;i<=n;i++){
+        dp[i]=dp[i-1]+arr[i];
+    }
+
+
+
     int Q;
     cin>>Q;
     while(Q>0){
         int q;
         cin>>q;
-        cout<<solve(arr,q)<<endl;
+        cout<<dp[q]<<endl;
         Q--;
     }
 }
