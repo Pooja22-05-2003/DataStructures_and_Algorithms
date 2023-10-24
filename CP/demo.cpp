@@ -6,7 +6,7 @@ int upperBound(vector<int> arr , int x){
     int st=0;
     int end=arr.size()-1;
 
-    while(st<=end){
+    while(st<=end ){
         int mid=(st+end)/2;
         if(arr[mid]>x){
             index=mid;
