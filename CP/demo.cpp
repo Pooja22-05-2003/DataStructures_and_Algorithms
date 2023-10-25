@@ -1,12 +1,29 @@
+// TC=O(N)
+// SC=O(N)
 #include <bits/stdc++.h>
 using namespace std;
 
-int solve(vector<int> arr , int q ){
-    int sum=0;
-    for(int i=1;i<=q;i++){
-        sum+=arr[i];
+int solve(vector<int> arr  ){
+    int n=arr.size();
+    int dp[n+1];
+    memset(dp,0,n+1);
+    int ans=0;
+    //  here dp[1]!=arr[1] beacuse negative value are also allowed
+    // So taking 0 is better then taking negative value.
+    dp[1]=max(arr[1],ans);
+    dp[2]=max(arr[2],dp[1]);
+    // dp[3]=max(arr[3]+dp[1],dp[2]);
+
+    //  general formula 
+    // dp[i]=max(arr[i]+dp[i-2],dp[i-1]);
+
+    for(int i=3;i<=n;i++){
+        dp[i]=max((arr[i]+dp[i-2]),dp[i-1]);
     }
-    return sum;
+
+    return dp[n];
+
+
 }
 int main()
 {
@@ -23,35 +40,21 @@ int main()
 
     int n;
     cin >> n ;
-    // cout<<"Enter elements in sorted fashion"<<endl;
+    
     vector<int> arr(n+1,0);
     for(int i=1;i<=n;i++){
         cin>>arr[i];
     }
 
-    int Q;
-    cin>>Q;
-    while(Q>0){
-        int q;
-        cin>>q;
-        cout<<solve(arr,q)<<endl;
-        Q--;
-    }
+    cout<<solve(arr)<<endl;
 }
 
 /*
 
-input :
 6
-1 2 1 1 3 5
-3
-2
-6
-5
+1 2 -1 -2 3 
 
 
 output :
-3
-13
-8
+
 */
