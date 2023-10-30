@@ -1,0 +1,43 @@
+Problem Link :
+https://leetcode.com/discuss/interview-question/3114099/AMAZON-OA-(INTERN-2024)
+
+Given a string s and target word t, the target word can be obtained
+by selecting some subset of character from s that can be rearranged to form 
+string t and removing them from s.
+
+Determine the maximum number of times the target word can be removed
+from the given log entry.
+
+Note : Both strings s and t consist only of lowercase english letters.
+
+
+
+Example:
+s="mononom"
+t="mon"
+
+output : 2
+
+example 2:
+s="abacbc"
+t="bca"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+w

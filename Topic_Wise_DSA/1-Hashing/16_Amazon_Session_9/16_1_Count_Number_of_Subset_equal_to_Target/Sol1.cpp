@@ -79,11 +79,11 @@ output :
 
 
 input 3:
-3
-51 32 43
+abdadccacd
+edac
 
 output :
--1
+0
 
 */
 
