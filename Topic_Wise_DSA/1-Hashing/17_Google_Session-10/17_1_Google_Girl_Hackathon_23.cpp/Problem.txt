@@ -1,0 +1,16 @@
+Q-16.1  Problem Link :
+https://www.desiqna.in/13650/google-girl-hackathon-coding-questions-solutions-2023-kumar
+
+
+Q-17 We are given one array index ranging from 1 to n and integer k.
+At one time we can choose indexes and value of k (k can range from -k to +k).
+So Determine the maximum length of the subsequence of array a , such that all the numbers in 
+That subsequence are equal after applying the given operation.
+
+
+Constraints:
+1<=N<=100000
+1<=k<=100000
+100000>=A[i] >=K+1
+
+
