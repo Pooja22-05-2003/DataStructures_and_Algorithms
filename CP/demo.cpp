@@ -20,7 +20,7 @@ string  solve(string s1,string s2){
    unordered_map<char,int> Map3;
    unordered_map<char,int> Map4;
 
-   // here we can create 2 hash array or maps
+   // here we can create 4 hash array or maps
    //  Map1 contain frequency of char of odd index in string s1.
    //  Map2 contain frequency of char of even index in string s2.
    //  Map3 contain frequency of char of odd index in string s3.
