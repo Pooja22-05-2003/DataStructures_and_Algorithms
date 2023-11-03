@@ -1,45 +1,39 @@
-// TC=O(N)
+// TC=O(2N)==O(N)
 // SC= O(N)
 
 #include <bits/stdc++.h>
 using namespace std;
 
-int solve(string &s , string &t){
-    unordered_map<char,int> map;
-    for(int i=0;i<s.size();i++){
-        map[s[i]]++;
+int solve(vector<int>&arr , int n , int k){
+    int b[200009]={0};
+
+    int i=1;
+    while(i<=n){
+        int lower_range=arr[i]-k;
+        int upper_range=arr[i]+k;
+
+        //  range updation technique applied here , it will be done in O(1) 
+        // for each element range updation
+        b[lower_range]=b[lower_range]+1;
+        b[upper_range+1]=b[upper_range+1]-1;
+
+        i++;
     }
 
-    int ans=0;
-    int TargetSize=t.size();
-    bool flag=true;
-    while(flag){
-         int count=0;
-        for(int i=0;i<t.size();i++){
-           
-            if(map[t[i]]>0 ){
-                count++;
-                map[t[i]]--;
-                // cout<<"count:"<<count<<" Target Size " <<TargetSize<<endl;
-                if(count==TargetSize) 
-                {
-                    // cout<<"hi"<<endl;
-                    ans++;
-                    break;
-                }
-            }
-            else 
-            {
-                flag=false;
-                break;
-            }
-        }
-       
+    //  minimum 1 length of the subsequence can be the legnth of the (subsequence having same element)
+    int ans=1;
+    int j=1;
+    while(j<=200002){
+        b[j]=b[j-1]+b[j];
+        ans=max(ans,b[j]);
+        j++;
     }
 
- 
     return ans;
+
 }
+
+
 int main()
 {
     #ifndef ONLINE_JUDGE
@@ -49,12 +43,14 @@ int main()
     //**********
 
     //*********
-   string s;
-   cin>>s;
-   string t;
-   cin>>t;
-   cout<<solve(s,t)<<endl;
+   int n,k;
+   cin>>n>>k;
+   vector<int>arr(n+1);
+   for(int i=1;i<=n;i++){
+    cin>>arr[i];
+   }
 
+    cout<<solve(arr,n,k);
 }
 
 
@@ -64,26 +60,12 @@ int main()
 
 /*
 input :
-mononom
-mon
+5 
+3 
+4 5 8 10 15 
 
 output :
-2
-
-input2 :
-abacbc
-bca
-
-output :
-2
-
-
-input 3:
-3
-51 32 43
-
-output :
--1
+4
 
 */
 
