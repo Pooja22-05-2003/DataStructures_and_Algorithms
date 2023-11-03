@@ -1,0 +1,22 @@
+Problem Link :
+https://desiqna.in/13820/google-oa-sde2-jan-2023
+
+You are given an array A of N integers. You have to find the number
+of special Pairs in array A. A pair of two indexes i and j are called special
+if the following 2 condition are  satisified.
+
+1. i<j 
+2. A[A[A[i]]]=A[A[A[j]]]
+
+Find out the number of special pairs present in the array A.
+
+Note - 1 based indexing is used.
+
+constraints:
+
+1<=T<=10
+1<=N<=10^5
+1<=Ai<=N
+
+
+

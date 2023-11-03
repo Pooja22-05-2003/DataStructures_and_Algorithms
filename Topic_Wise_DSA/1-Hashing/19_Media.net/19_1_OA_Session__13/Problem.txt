@@ -1,0 +1,19 @@
+You are given an integer array A of size N. Your task is to select exactly B elements from either the left end or the right end of the array A in order to maximize the sum of the selected elements.
+
+Here are the details of the problem:
+
+You are given an integer array A of size N where 1 <= N <= 10^5.
+You need to select exactly B elements from either the left end or the right end of the array A.
+The goal is to find and return the maximum possible sum of elements you can pick.
+
+Input:
+
+An integer array A of size N where each element A[i] satisfies -103 <= A[i] <= 103.
+An integer B where 1 <= B <= N.
+Output:
+
+An integer representing the maximum possible sum of selected elements.
+
+[5, -2, 3, 1, 2], 
+k=3 
+output = 8
