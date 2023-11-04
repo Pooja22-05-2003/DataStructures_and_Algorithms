@@ -1,61 +1,22 @@
-// TC=O(N+M)
-// SC= O(26)=O(1)
+// TC=O(N)
+// SC=O(N)
 
 #include <bits/stdc++.h>
 using namespace std;
 
-
-bool checkEquality( unordered_map<char,int> &Map1, unordered_map<char,int> &Map3)
-{
-   for(char temp='a';temp<='z';temp++){
-      if(Map1[temp]!=Map3[temp]){
-         return false;
-      }
-   }
-   return true;
-}
-string  solve(string s1,string s2){
-   unordered_map<char,int> Map1;
-   unordered_map<char,int> Map2;
-   unordered_map<char,int> Map3;
-   unordered_map<char,int> Map4;
-
-   // here we can create 4 hash array or maps
-   //  Map1 contain frequency of char of odd index in string s1.
-   //  Map2 contain frequency of char of even index in string s2.
-   //  Map3 contain frequency of char of odd index in string s3.
-   //  Map4 contain frequency of char of even index in string s4.
-
-   for(int i=0;i<s1.size();i++){
-      if(i%2==0){
-         Map2[s1[i]]++;
-      }
-      else {
-         Map1[s1[i]]++;
+int solve(vector<int> &A ,vector<int> &B,int n , int target){
+   //  Brute force 
+   int ans=INT_MIN;
+   for(int i=1;i<=n;i++){
+      for(int j=1;j<=n;j++){
+         int sum=A[i]+B[j];
+         if(sum<=target){
+            ans=max(ans,sum);
+         }
       }
    }
 
-   for(int i=0;i<s2.size();i++){
-      if(i%2==0){
-         Map4[s2[i]]++;
-      }
-      else {
-         Map3[s2[i]]++;
-      }
-   }
-
-
-   //  chech if map1 all characters count are equal to map3
-   //  all character count  
-   // && 
-   //  chech if map2 all characters count are equal to map4
-   //  all character count  
-
-   //  If both condition are satisftying than we can make twins by performing operations
-   //  else not.
-
-   if(checkEquality(Map1,Map3) && checkEquality(Map2,Map4) ) return "YES";
-   else return "NO";
+   return ans;
 
 }
 int main()
@@ -67,14 +28,29 @@ int main()
     //**********
 
     //*********
+    // 1-- based indexing are used here
 
-    string s1,s2;
-    cin>>s1;
-    cin>>s2;
-    cout<<solve(s1,s2)<<endl;
+    int n;
+    cin >> n ;
+    
+    vector<int> arr1(n+1);
+    vector<int> arr2(n+1);
+
+    for(int i=1;i<=n;i++){
    
+        cin>>arr1[i];
 
+    }
 
+    
+    for(int i=1;i<=n;i++){
+        cin>>arr2[i];
+
+    }
+    int target;
+    cin>>target;
+  
+    cout<<solve(arr1,arr2,n,target)<<endl;
 }
 
 
@@ -84,33 +60,15 @@ int main()
 
 /*
 input :
-cdab
-abcd
-
- 
-
-output :
-YES
-
-
-input :
-dcba
-abcd
-
- 
+4
+1 4 5 7 
+10 20 30 40 
+36
 
 output :
-NO
-
-input 3:
-dcba
-bcda
-
-output3:
-YES
+35
 
 */
-
 
 
 

@@ -6,14 +6,16 @@ using namespace std;
 
 int solve(vector<int> &A ,vector<int> &B,int n , int target){
     int i=1;
+
+    //  We are  putting j pointer at n and not at 1 ( so that we have only 1 option then only we can apply two pointer / greedy approach)
     int j=n;
-    int PrevSum=0;
+   
     int ans=INT_MIN;
     while(i<=n && j>=1){
         int sum=A[i]+B[j];
-        PrevSum=sum;
+        
 
-        if(PrevSum<=target){
+        if(sum<=target){
             
             ans=max(ans,sum);
             i++;
