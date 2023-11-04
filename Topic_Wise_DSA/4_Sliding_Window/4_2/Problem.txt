@@ -1,0 +1,9 @@
+Understanding -> You are given two sorted arrays ; both arrays were of size N ;  you have to find a pair of numbers such that sum of those numbers <=x and as close as possible to x 
+
+N = 4
+A = 1 4 5 7 
+B = 10 20 30 40 
+X = 32
+
+Output : -31 (1+30)
+
