@@ -23,7 +23,7 @@ int solve(vector<int> &A , int n){
    }
 
 
-   //Main condition: A[i] > A[j] < A[k] >A[l]   i<j<k<l 
+   // main condition:A[i] >A[j]< A[k] such that i < j < k ; 
    vector<int> suffix(n+1,0);
 
    for(int j=n;j>=1;j--){
@@ -37,14 +37,9 @@ int solve(vector<int> &A , int n){
       suffix[j]=cnt;
    }
 
-   //Main condition: A[i] > A[j] < A[k] >A[l]   i<j<k<l 
    int ans=0;
    for(int j=1;j<=n;j++){
-      int k=j+1;
-      while(k<=n){
-         if(A[j] < A[k] ) ans+=prefix[j]*suffix[k];
-         k++;
-      }
+      ans+=prefix[j]*suffix[j];
    }
 
    return ans;
@@ -86,7 +81,7 @@ input :
 
 
 output :
-5
+10
 
 */
 

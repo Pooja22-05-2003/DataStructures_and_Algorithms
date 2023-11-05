@@ -1,0 +1,4 @@
+Follow up :-> Given an array of size “N”; find the number of quadruplets; such that A[i] > A[j] < A[k] >A[l] such that i < j < k < l ; 
+
+1<=N<=1000
+
