@@ -1,0 +1,11 @@
+Problem Link :
+https://www.desiqna.in/15920/microsoft-oa-september-2023-freshers-hiring-sde1-set-115
+
+
+docs link :
+https://docs.google.com/document/d/143re9hqaxWxVkGTFKZJ24RhR_6bxs64su0Dmb8Kjdw4/edit
+
+Understanding :-> We are given an array  of size “N”. We have to pick “x” elements at exactly “y” distance; sum of all them should be minimum. 
+
+-> [1 5 8 1 4 5 8] X = 2; Y =2;
+(5+1=6.)
