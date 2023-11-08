@@ -1,0 +1,9 @@
+Prerequistite leetcode Problem :
+https://leetcode.com/problems/max-number-of-k-sum-pairs/
+
+Understanding :-> You are given an integer array of size N; find out the maximum number of pairs whose sum is K; once you select (x,y) ; you can never use “x” or “y” in any other pair 
+
+
+Google OA :
+
+Understanding :-> You are given an array of size “N”; try to find the maximum number of pairs whose sum is “K”; but “K” is unknown. Fix such a K ; that the number of pairs comes as maximum! 

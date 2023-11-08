@@ -1,3 +1,29 @@
+/*
+Observation:-> If you want to know the number of pairs (x,y) such that x + y = k ; answer is minimum(frequency(x);frequency(y)) -> this formula is only correct if x!=y 
+
+According to Akash’s Law:-> if x==y then ans+=freq(x)/2 
+Algorithm:-> We can easily convert our array into hashmap <number,frequency> 
+
+You can run the algorithm for K = 1 ; 
+You can run the algorithm for K = 2 ;
+.
+.
+.
+.
+.
+.
+.
+..
+You can run the algorithm for K = sum of two largest numbers(maximum pair sum.)
+Out of all these choices pix the maximum answer and your job is done. 
+
+-> https://ideone.com/L9Q3Rd 
+
+-> One smart solution also :-> What can be the values of K -> it can only be the sum of different pairs in the array
+
+-> Harsh Patel’s Law :-> the possible values of k are only the sums of pairs in array 
+
+*/
 // TC=O(2N)==O(N)
 // SC=O(N)
 
