@@ -1,4 +1,8 @@
 /*
+
+### This code not giving correct anser.
+
+
 Observation:-> If you want to know the number of pairs (x,y) such that x + y = k ; answer is minimum(frequency(x);frequency(y)) -> this formula is only correct if x!=y 
 
 According to Akash’s Law:-> if x==y then ans+=freq(x)/2 
