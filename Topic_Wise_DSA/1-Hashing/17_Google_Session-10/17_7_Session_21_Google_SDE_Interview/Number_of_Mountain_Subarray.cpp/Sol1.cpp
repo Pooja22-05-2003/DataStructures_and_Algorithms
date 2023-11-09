@@ -30,10 +30,10 @@ int solve(vector<int>& nums,int n) {
     // for(auto it : suffix) cout<< it<<",";
 
     //  At any index i, if we want to calculate number of mountain subarrays. it's formula will be 
-    // ans+=prefix[i]-1*suffix[i]-1;
+    // ans+=prefix[i-1]*suffix[i+1];
     int ans=0;
     for(int k=1;k<=n-2;k++){
-        ans+=(prefix[k]-1)*(suffix[k]-1);
+        ans+=(prefix[k-1])*(suffix[k+1]);
     }
 
     return ans;
@@ -71,11 +71,11 @@ int main()
 
 input :
 5
-1 2 4 2 1
+1 2 3 1 1
 
 
 output :
-4
+8
 
 input 2:
 
