@@ -15,7 +15,7 @@ using namespace std;
 
 int solve(vector<int>& nums,int n) {
        
-    //     create prefix array . prefix[i]-it will tell the number of striclty incerasing subarray till index i
+
     int count=0;
     for(int i=1;i<=n;i++){
         int sum=0;
