@@ -1,0 +1,29 @@
+Problem Link :
+https://www.desiqna.in/15926/atlassian-oa-sde-1-freshers-hiring-ctc-75-lac
+
+Docs : link : 
+https://docs.google.com/document/d/1f2VzhDu7z0fxBgn5TcpW0xf0wVyPFePNW_Iezlvk_oI/edit
+
+
+Given an array of size “N”; find a subset from an array with a particular property and the sum of that subset should be maximum possible. 
+
+-> all adjacent elements should follow this.-> 
+
+(s[1],s[2],...........s[m]) -> s[2] - s[1] = position[2] - position[1] 
+S[3]-s[2] = position[3] - position[2].
+.
+.
+.
+.
+.
+.
+
+
+-> Try to analyze the equation! 
+s[i] - s[j] = i - j 
+
+
+constraints :
+
+1<=n<=10^5
+1<=stockPrics[i]<=10^9

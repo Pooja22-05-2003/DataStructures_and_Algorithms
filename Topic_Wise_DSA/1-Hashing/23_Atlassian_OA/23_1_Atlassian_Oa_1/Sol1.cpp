@@ -1,3 +1,18 @@
+// Approach :
+
+
+// 1.Analyze the equation. (arr[j]-arr[i]== j-i) so it is a valid (or we can say that we add this in our subset).
+// 2. arr[i]-i==arr[j]-j   ( We can precompute this using hashing or prefix sum array .
+// 3. Now maintain one unordered map, and to each same element in the prefix array, maintain the sum, and also the maximum, as final ans return your maximum sum.
+
+
+
+
+// Approach :
+// TC=O(n)
+// Sc=O(n)
+
+
 // TC=O(N)
 // SC=O(N)
 
