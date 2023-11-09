@@ -1,0 +1,18 @@
+Problem Link :
+https://www.desiqna.in/15334/amazon-sde-intern-ireland-australia-india-august-2023-coding
+
+Docs Link :
+https://docs.google.com/document/d/1ndmwNjcfyY3kTTou4-olNLki34aBg6xpgBXgxkz_PWk/edit
+
+Given an array, count the number of pairs (nums[i],nums[j]) such that i<j and (nums[i]+nums[j])%x==0 
+(means that sum of both the number must be divisble by 0)
+
+example:
+n=5
+x=60
+price= [31 , 25 , 85 , 29 , 35]
+
+
+output :
+3
+pairs = (31,29) , (25,35) , (85,35)
