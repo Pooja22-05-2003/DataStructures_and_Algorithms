@@ -1,1 +1,5 @@
-4
+i:1 j:5
+sum:27focus_sum:9
+i:2 j:4
+sum:9focus_sum:3
+2

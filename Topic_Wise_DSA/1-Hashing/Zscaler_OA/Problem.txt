@@ -1,0 +1,12 @@
+Problem Link : https://www.desiqna.in/15839/zscaler-oa-2023-sep-set-10
+
+We are given an array of size "N"; Find the number of subarrays
+which are -> have the same element at start as well as end; and 
+the sum of that subarray(excluding the first and last number)=first number = last number
+
+constraints:
+
+1<=N<=300000 = 3*10^5
+1<=c[i]<=1000000000 = 10^9
+
+

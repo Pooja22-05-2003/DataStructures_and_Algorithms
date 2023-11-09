@@ -1,3 +1,11 @@
+/*
+Approach:
+1. Check all the subarrays pair using i and j pointer and the subarray which satisfy this condition
+the sum of that subarray(excluding the first and last number)=first number = last number [ do count++]
+
+2. Return count as our final ans.
+*/
+
 // TC=O(3*N)==O(N)
 // SC=O(2*N)==O(N)
 
