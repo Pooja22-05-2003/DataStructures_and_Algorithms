@@ -7,25 +7,34 @@ using namespace std;
 
 int solve(vector<int>& nums,int n) {
        
-    //     create prefix array . prefix[i]-it will tell the number of striclty incerasing subarray till index i
-    int count=0;
-    for(int i=1;i<=n;i++){
-        int sum=0;
-        for(int j=i;j<=n;j++){
-            sum+=nums[j];
-            //  foucs sum = sum-(nums[i]+nums[j]) , as in the condition it was given that subbarray of range 
-            // [l to r] sum must be from [l+1 to r-1]
+     //  prefix array will contain the sum from index 1 to n
+     int sum=0;
+     unordered_map<int,int> map;
+     vector<int> prefix(n+1);
+     for(int i=1;i<=n;i++){
+        sum+=nums[i];
+        prefix[i]=sum;
+        map[sum]=i;
+     }
 
-            int focus_sum=sum-(nums[i]+nums[j]);
-            if(nums[i]==nums[j]  && focus_sum==nums[i]){
-                // cout<<"i:"<<i<<" j:"<<j<<endl;
-                // cout<<"sum:"<<sum<<"focus_sum:"<<focus_sum<<endl;
-                count++;
-            }
-        }
-    }
-    return count;
+    /*
+    nums[i]=nums[j]=prefix[j]-prefix[i]  
+    -- here u know 3 values, nums[j]✅ , nums[i]✅, prefix[j]✅,find prefix[i](and your jon will done)
+    -- prefix[i]=prefix[j]-nums[j]
+    -- if u will find prefix[i] in map then check one condition also that (nums[i]==nums[j])? if yes then count increment in the answer.
 
+    g = pj - pi - cj  ( g is the focus_sum)
+    pi=pj-g-cj
+    pi=pj-cj-cj
+    pi=pj-2*cj
+    */
+   int ans=0;
+   for(int j=3;j<=n;j++){
+    int findEl=prefix[j]-(2*nums[j]);
+    if(map.find(findEl)!=map.end() && nums[j]==nums[map[findEl]])  ans++;
+   }
+
+   return ans;
 }
 
 int main()
@@ -35,6 +44,7 @@ int main()
     freopen("output.txt", "w", stdout);
     #endif
     //**********
+
 
     //*********
     // 1-- based indexing are used here
@@ -61,17 +71,14 @@ input :
 9 3 3 3 9
 
 output :
-i:1 j:5
-sum:27focus_sum:9
-i:2 j:4
-sum:9focus_sum:3
 2
 
 input 2:
-
+7
+27 9 3 3 3 9 27
 
 output :
-
+3
 
 */
 
