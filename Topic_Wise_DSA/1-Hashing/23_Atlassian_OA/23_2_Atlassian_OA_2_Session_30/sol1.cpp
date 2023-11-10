@@ -13,6 +13,9 @@ is yes then find the subarraysum from that element index and the current index.
 // TC=O(2*N)==O(N)
 // SC=O(2*N)==O(N)
 
+// TC=O(N)
+// SC=O(N)
+
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -26,6 +29,12 @@ int solve(vector<int>& nums,int n , int k) {
     prefix[1]=nums[1];
     map[nums[1]]=1;
     for(int i=2;i<=n;i++){
+        //  here chech one condition , if there are more than one same el, then maintain the smallest index
+        // ......corresponding to that el.
+
+        if(map.find(nums[i])!=map.end()){
+            map[nums[i]]=min(i,map[nums[i]]);
+        }
         map[nums[i]]=i;
         prefix[i]=prefix[i-1]+nums[i];
     }
