@@ -5,33 +5,44 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int solve(vector<int>& nums,int n , int x) {
-    int maxSum=0;
-    //  unordered_map will store the count correspsding to nums[i]%k
+int solve(vector<int>& nums,int n , int k) {
 
-    // (nums[i]%k) + (nums[j]%k)=divisible by k
-
-    // (nums[i]% x(known))+(nums[j](known)%x(known))=divisible by k
-    //  so for the sum to be divisible by k , we need (k-(nums[i]%x)) to be divisible by k
-
-    //  so both lhs and rhs will be equal means both are divisble by k
-
-
-
-
-    unordered_map<int,int>map;
+    unordered_map<int,int>mp;
+    unordered_map<int,int>vis;
+    // for(auto it :nums){
+    //     vis[it]=0;
+    // }
     int ans=0;
-   for(int j=1;j<=n;j++){
-    int findEl=x-(nums[j]%x);
+    for(int i=1;i<=n;i++){
+        // a+k=b
+        // b is the current el
+        // so u need to find (b-k) in the map, and make the pair(if one of them or both of them are not visited)
+        int findEl=nums[i]-k;
+        if(mp.find(findEl)!=mp.end()){
+            //  check the visited condition
+            int firstEl=nums[i];
+            int secondEl=findEl;
 
-    // x-0=0 , so for safety do mod one more time
-    findEl=findEl%x;
-    ans=ans+map[findEl];
-    map[nums[j]%x]++;
+            if(vis[firstEl]==0 || vis[secondEl]==0){
+ 
+               
+                ans++;
+                vis[firstEl]=1;
+                vis[secondEl]=1;
 
-   }
+            }
 
-   return ans;
+            //  here also u need to mark the el in the map
+             mp[nums[i]]++;
+        }
+
+        else {
+            mp[nums[i]]++;
+        }
+
+    }
+
+    return ans;
 }
 
 int main()
@@ -50,7 +61,7 @@ int main()
     cin>>n;
     int x;
     cin>>x;
-        vector<int> arr(n);
+        vector<int> arr(n+1);
         for(int i=1;i<=n;i++){
             cin>>arr[i];
         }
@@ -66,16 +77,22 @@ int main()
 /*
 
 input :
-5
-60
-31 25 85 29 35
+4
+1
+1 1 1 2
+
+
 output :
-3
+1 ({2,1})
 
 input 2:
+6
+1
+1 1 1 2 2 3
 
 output :
-
+2
+pairs {(1,2), (2,3)}
 
 */
 

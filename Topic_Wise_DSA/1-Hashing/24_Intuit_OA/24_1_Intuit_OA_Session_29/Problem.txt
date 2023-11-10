@@ -1,0 +1,25 @@
+Problem Link :
+https://www.desiqna.in/15111/intuit-oa-sde1-2023-may
+
+Given an integer k and array, count the number of distinct 
+valid pairs of integers (a,b) in the list for which a+k=b. Two 
+Pairs of integer (a,b) and (c,d) are connected distinct if at least 
+one element of (a,b) does not also belong to (c,d). Note that the elements
+in a pair might be the same element in the array. 
+
+
+An instance of this is below where k=0.
+
+
+Example 
+n=4
+numbers=[1,1,1,2]
+k=1
+
+output :
+1
+
+This array has three different valid pairs:(1,1) and (1,2)
+for k=1, there is only 1 valid pair which satisifies a+k=b: the pair(a,b)=(1,2)
+
+
