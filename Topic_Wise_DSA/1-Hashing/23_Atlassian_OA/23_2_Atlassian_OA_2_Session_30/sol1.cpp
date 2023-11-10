@@ -1,5 +1,17 @@
-// TC=O(N)
-// SC=O(N)
+/*
+Approach :
+1. Take two array, one is the map array that will store the el and its index 
+el->index
+....
+2. Make one prefix array of the sum.
+3. now do one iteration, in that check whether nums[i]-k or nums[i]+k is present in the map . or not....
+is yes then find the subarraysum from that element index and the current index.
+4. Updated the maxAns variable with the ans=max(ans,subarraySum)
+4. Return ans as your final ans in the function.
+*/
+
+// TC=O(2*N)==O(N)
+// SC=O(2*N)==O(N)
 
 
 #include <bits/stdc++.h>

@@ -1,0 +1,19 @@
+Problem Link :
+https://www.desiqna.in/15241/atlassian-sde-interview-coding-problem-2023
+
+
+-> Given an array of size N ;  find the maximum sum subarray which has a difference of "k" between the start and end elements of the array
+
+N = 8
+
+K = 5
+
+1 5 -5 8 8 8 10 15
+
+Output - [5 -5 8 8 8 10] = 34. (also difference b/w start and end element is abs(5-10)) = 5
+
+1 <= K <= 100000
+
+1 <= N <= 100000
+
+If there is no subarray with positive then print 0
