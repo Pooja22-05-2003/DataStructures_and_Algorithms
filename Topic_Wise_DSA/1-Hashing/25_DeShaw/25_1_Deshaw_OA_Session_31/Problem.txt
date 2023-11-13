@@ -7,3 +7,19 @@ https://docs.google.com/document/d/1ddCV9pTFFkvJRascZEU_Nckh3-nzLDet0Hj77KR6s4o/
 Understanding : We are given an array B of size “N”; Divide the array into 4 continuous parts such that g = part1+part3-(part2+part4) is maximized. 
 
 Any part is allowed to be empty as well ; but collectively they should cover the whole array .
+
+example:
+input :
+6
+-3 4 -5 2 6 -5
+
+
+output :
+19
+
+input 2:
+3
+-4 1 -1
+
+output :
+6
