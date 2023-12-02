@@ -7,6 +7,7 @@ Approach:
 
 -> For first using prefix sum , find out the ans(k)
 -> Now using i and j pointer sliding window, find the count of subarray having that length and sum is equal to k
+-> Using 1 based indexing , so keep in mind that(small error u did while coding)
 
 
 */
