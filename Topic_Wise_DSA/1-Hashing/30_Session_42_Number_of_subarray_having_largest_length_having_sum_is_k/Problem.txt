@@ -1,0 +1,10 @@
+Q. Find the count of subarray of longest length whose sum==k
+A = {10,5,2,7,1,9,8,7}   k = 15
+
+O/p: 1
+
+Eg. subarrays having sum =15 , {10,5} , {5,2,7,1} , {8,7}
+Longest length is 4 
+
+
+And there is only 1 such subarray present in the array A. {5,2,7,1}

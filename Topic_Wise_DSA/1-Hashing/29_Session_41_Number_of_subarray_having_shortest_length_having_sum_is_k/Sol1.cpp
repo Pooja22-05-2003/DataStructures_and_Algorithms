@@ -23,7 +23,7 @@ using namespace std;
 int solve(vector<int>& nums,int n,int k) {
     unordered_map<int,int> prefix;
     int sum=0;
-    prefix[0]=1;
+    prefix[0]=0;
 
     int m=1;
     int miniLen=INT_MAX;
@@ -31,7 +31,7 @@ int solve(vector<int>& nums,int n,int k) {
         sum+=nums[m];
         
         if(prefix.find(sum-k)!=prefix.end()){
-            miniLen=min(miniLen,(m-prefix[sum-k]+1));
+            miniLen=min(miniLen,(m-prefix[sum-k]));
         }
     prefix[sum]=m;
     m++;

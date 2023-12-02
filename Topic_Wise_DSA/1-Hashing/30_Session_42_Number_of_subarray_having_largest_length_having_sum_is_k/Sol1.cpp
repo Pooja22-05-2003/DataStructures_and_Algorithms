@@ -1,18 +1,3 @@
-/*
-Approach:
-
--> Here we need to find 2 things.
--> 1=First is find the shortest length having sum is equal to k
--> 2=Second using (fixed size sliding window) find the number of subbaray having sum k with that shortest legth (k size)
-
--> For first using prefix sum , find out the ans(k)
--> Now using i and j pointer sliding window, find the count of subarray having that length and sum is equal to k
--> Using 1 based indexing , so keep in mind that(small error u did while coding)
-
-
-*/
-
-
 // TC=O(N)
 // SC=O(N)
 
@@ -23,15 +8,16 @@ using namespace std;
 int solve(vector<int>& nums,int n,int k) {
     unordered_map<int,int> prefix;
     int sum=0;
-    prefix[0]=0;
+    prefix[0]=1;
 
     int m=1;
-    int miniLen=INT_MAX;
+    int maxLen=INT_MIN;
     while(m<=n){
         sum+=nums[m];
         
         if(prefix.find(sum-k)!=prefix.end()){
-            miniLen=min(miniLen,(m-prefix[sum-k]));
+            maxLen=max(maxLen,(m-prefix[sum-k]));
+            // cout<<"m:"<<m<<" prefix[sum-k]"<<prefix[sum-k]<<endl;
         }
     prefix[sum]=m;
     m++;
@@ -40,12 +26,12 @@ int solve(vector<int>& nums,int n,int k) {
     // fixed size sliding window
       int cnt=0;
 
-    //   cout<<"miniLen:"<<miniLen<<endl;
-    if(miniLen!=INT_MAX){
+      cout<<"maxLen:"<<maxLen<<endl;
+    if(maxLen!=INT_MIN){
   
     int i=1;
     int j=1;
-    int k1=miniLen;
+    int k1=maxLen;
     int summ=0;
     while(j<=n){
         summ+=nums[j];
@@ -104,7 +90,7 @@ input :
 
 
 output:
-2
+1
 
 
 */
