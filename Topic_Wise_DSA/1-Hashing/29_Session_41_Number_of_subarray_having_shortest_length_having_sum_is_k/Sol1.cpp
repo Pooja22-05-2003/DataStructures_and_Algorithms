@@ -1,3 +1,17 @@
+/*
+Approach:
+
+-> Here we need to find 2 things.
+-> 1=First is find the shortest length having sum is equal to k
+-> 2=Second using (fixed size sliding window) find the number of subbaray having sum k with that shortest legth (k size)
+
+-> For first using prefix sum , find out the ans(k)
+-> Now using i and j pointer sliding window, find the count of subarray having that length and sum is equal to k
+
+
+*/
+
+
 // TC=O(N)
 // SC=O(N)
 
