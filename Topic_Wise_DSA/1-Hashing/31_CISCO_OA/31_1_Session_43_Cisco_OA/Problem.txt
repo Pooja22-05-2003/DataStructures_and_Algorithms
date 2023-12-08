@@ -1,0 +1,20 @@
+Problem Link : https://www.desiqna.in/14058/cisco-ideathon-oa-july-2023-sde-1
+
+Understanding -> Particular timestamps are given in which some packets are sent in the system.
+ Also at each second, y packets will be removed from the system. Also ; at any second if the 
+ total number of packets > max_capacity ; then you are supposed to remove all the extra packets.
+The question is asking total how many packets you will have to remove in this process. 
+
+
+Constraints :
+1<=time(request[i][0])<=1000000000
+1<=n<=100000
+1<=packet(request[i][1])<=100000000
+
+1<=rate<=100000000
+
+1<=max_packets<=1000000000
+(->Each particular time(request[i][0]) comes only for maximum 1 time in the input) 
+(-> all request[i][0] are in ascending order) 
+
+
