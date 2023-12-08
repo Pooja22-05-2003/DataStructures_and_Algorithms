@@ -5,8 +5,8 @@ whatever question is telling u to do
 */
 
 
-// TC=
-// SC=
+// TC=O(n)=10^5
+// SC=O(1)
 
 
 #include <bits/stdc++.h>
