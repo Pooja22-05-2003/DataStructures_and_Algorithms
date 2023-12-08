@@ -1,0 +1,10 @@
+Problem Link : https://www.desiqna.in/13212/axis-bank-coding-oa-sde-april-2023
+
+Given vector of strings, find the string that occur more than once.
+return the answer vector in sorted manner.
+
+Input :
+cat batman latt matter cat matter cat
+
+Output :
+cat matter
