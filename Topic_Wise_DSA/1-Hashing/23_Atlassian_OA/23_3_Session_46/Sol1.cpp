@@ -17,7 +17,7 @@ Approach:
 */
 
 
-// TC=O(n2)
+// TC=O(n)
 // SC=O(n)
 
 
