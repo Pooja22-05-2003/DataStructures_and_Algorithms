@@ -1,8 +1,18 @@
 /*
 Approach:
+--> n , k and array is given .
+--> find the minimum effort , by choosing any element x from the array. effort= For all i=1 to k sum[(arr[i]-x)]
+
+-> ✨ Now , if we want to find the minimum sum , we need to choose the correct x value.
+-> ✨ Best x value , is the median value after sorting the array.
+-> ✨ If the array is of even length , then find the effort from both the median value.
+-> ✨ If the array is of odd length , then find the effort from the meadian value of the array.
 
 
+-> ⁉️🤔 Which k number u should select--> Select the k number in sorted order, as they will give the min effort value .
+-> Using 1 for loop ...use sliding window of k size and calculate effort and store the minimum effort in min valriable.
 
+-> U can also calculate effort for 1 pair in O(1) operation.
 
 */
 
@@ -15,36 +25,7 @@ Approach:
 using namespace std;
 
 int solve(vector<vector<int>> arr,int n,int max_packet,int rate , int maxtime) {
-   int drop_packet=0;
-   int totalpacket=0;
 
-   int t=arr[0][0];
-   int i=0;
-   while(t<=maxtime && i<n){
-    int curTime=arr[i][0];
-    int curPacket=arr[i][1];
-   
-   totalpacket+=curPacket;
-    if(i!=0){
-        int prevTime=arr[i-1][0];
-        int diff=curTime-prevTime;
-        int packetremove=diff*rate;
-        totalpacket=totalpacket-packetremove;
-      
-    }
-    
-
-    if(totalpacket>max_packet){
-        drop_packet+=totalpacket-max_packet;
-        totalpacket=totalpacket-drop_packet;
-          
-    }
-
-    i++;
-    t=curTime;
-   }
-
-     return drop_packet;
 }
 
 int main()
@@ -59,30 +40,8 @@ int main()
     //*********
     // 1-- based indexing are used here
 
-    int n;
-    cin>>n;
-
-    int max_packet;
-    cin>>max_packet;
-
-    int rate;
-    cin>>rate;
    
-    vector<vector<int>> arr(n,vector<int>(2,0));
-    int max_time=-1;
-
-   for (int i = 0; i < n; i++) {
-    int time;
-    int packet;
-    cin >> time;
-    cin >> packet;
-    arr[i][0] = time;
-    arr[i][1] = packet;
-    max_time = max(max_time, time);  // Update max_time correctly after reading time
-}
-
-
-    cout<<solve(arr,n,max_packet,rate,max_time);
+   
 }
 
 
@@ -93,17 +52,12 @@ int main()
 /*
 
 input :
-3
-10
-2
-1 8
-4 9
-6 7
+
 
 
 
 output:
-4
+
 
 
 */
