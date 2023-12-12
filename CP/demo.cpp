@@ -2,12 +2,21 @@
 Approach:
 ✨ Optimal approach
 
+1. Calculate the ratio of 0 and 1(not an correct way) , using prex array
+2. No of 0 / No of 1 = x/y [Rewrite : (No of 0)*y==x*(No of 1) then do cnt++]
+3. Maintain one unordered map , which will maintain the count LHS which is same as RHS
 
-    valid sequence only have 4 patterns
-    1. aaaaaabbbbbbbb
-    2. bbbbbbbbbbbbb
-    3. bbbbbbaaaaaaa
-    4. aaaaaaaaaaaaa
+1,2,3...i......n
+for any index i, we calaculate RHS and in unordered , we try to know for i=j-1 to 1 ...(which we can easiyly get thorugh hashed array)the count of LHS which is equal to RHS, and we will add that in our answer
+(pref0[j]-pref0[i-1])*y=(pref1[j]-pref1[i-1])*x
+
+((pref0[j]*y)-(pref0[i-1]*y))=((pref1[j]*x)-(pref1[i-1]*x))
+
+make i variable one side and j another side
+(pref0[i-1]*y)-(pref1[i-1]*x)(LHS)=(pref0[j]*y)-(pref1[j]*x)(RHS)
+
+Means we are directly calculating the number of good subarray from index 1 to j
+
 
 
 */
@@ -20,98 +29,35 @@ Approach:
 #include <bits/stdc++.h>
 using namespace std;
 
-int solve(string s) {
+int solve(vector<int> arr , int n , int x , int y) {
+    int ans=0;
+    vector<int> pref0(n+1,0);
+    vector<int> pref1(n+1,0);
 
-    int ans=INT_MAX;
-    int n=s.size();
-    int i=0;
-
-    vector<int> prefix_a(n+3,0);
-    vector<int> suffix_b(n+3,0);
-    vector<int> prefix_b(n+3,0);
-    vector<int> suffix_a(n+3,0);
- 
-    if(s[0]=='a'){
-     
-        prefix_b[0]=1;
-
-    }
-    else {
-       
-        prefix_a[0]=1;
-       
-    }
-
-    // if(s[n-1]=='b'){
+    unordered_map<int,int> mp;
+    for(int i=1;i<=n;i++){
+        if(arr[i]==0){
+            pref0[i]=pref0[i-1]+1;
+            pref1[i]=pref1[i-1];
+        }
         
-    //     suffix_a[n-1]=1;
-
-    // }
-    // else {
-    //     suffix_b[n-1]=1;
-       
-    // }
-   
-    for(int i=1;i<n;i++){
-        if(s[i]=='a'){ {
-            prefix_a[i]=prefix_a[i-1];
-            }
-        }
-        else{
-            prefix_a[i]=prefix_a[i-1]+1;
+        else if (arr[i]==1){
+            pref1[i]=pref1[i-1]+1;
+            pref0[i]=pref0[i-1];
         }
     }
 
-     for(int i=n-1;i>=0;i--){
-        if(s[i]=='b'){
-            suffix_b[i]=suffix_b[i+1];
-        }
-        else{
-            suffix_b[i]=suffix_b[i+1]+1;
-        }
+    int j=1;
+    while(j<=n){
+        int LHS=(pref0[j-1]*y)-(pref1[j-1]*x);
+        mp[LHS]++;
+
+        int RHS=(pref0[j]*y)-(pref1[j]*x);
+        ans+=mp[RHS];
+        j++;
     }
-
-
-    for(int i=1;i<n;i++){
-        if(s[i]=='b'){
-            prefix_b[i]=prefix_b[i-1];
-        }
-        else{
-            prefix_b[i]=prefix_b[i-1]+1;
-        }
-    }
-
-     for(int i=n-1;i>=0;i--){
-        if(s[i]=='a'){
-            suffix_a[i]=suffix_a[i+1];
-        }
-        else{
-            suffix_a[i]=suffix_a[i+1]+1;
-        }
-    }
-
     
-
-    for(int i=0;i<n;i++){
-        // for pattern of type1
-        // 1. aaaabbbbb
-        // 2. bbbbbbbb
-        int cost1=prefix_a[i]+suffix_b[i+1];
-
-        // for pattern of type2
-        // 1. aaaabbbbb
-        // 2. bbbbbbbb
-        int cost2=prefix_b[i]+suffix_a[i+1];
-
-        ans=min(ans,min(cost1,cost2));
-
-
-    }
-
     return ans;
-
-    
-
 }
 
 int main()
@@ -126,10 +72,19 @@ int main()
     //*********
     // 1-- based indexing are used here
 
-    string s;
-    cin>>s;
+    int n ;
+    cin>>n;
+    int x;
+    cin>>x;
+    int y;
+    cin>>y;
 
-    cout<<solve(s);;
+    vector<int> arr(n+1);
+    for(int i=1;i<=n;i++){
+        cin>>arr[i];
+    }
+
+    cout<<solve(arr,n,x,y);
    
 }
 
@@ -141,17 +96,30 @@ int main()
 /*
 
 input1 :
-bbaaabbbbb
+7
+1
+2
+1 0 1 1 1 1 1
 
 
 output1:
 2
 
-input 2 :
-bbababaaaabbbbbbbb
 
-output 2:
+input2:
 4
+1
+1
+0 1 0 1
+
+output2:
+4
+
+
+
+
+
+
 
 */
 
