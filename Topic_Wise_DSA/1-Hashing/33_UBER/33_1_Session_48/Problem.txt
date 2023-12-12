@@ -1,0 +1,5 @@
+Problem Link : https://www.desiqna.in/15263/uber-oa-sde-1-fresher-july-2023
+
+Understanding :-> We will give you a string only consisting of “a” and “b” ; now convert it to a string such that there is no subset like “bab” or “aba” ; do this in minimum cost ; 
+
+Cost : 1 for flipping a into b or b into a. 
