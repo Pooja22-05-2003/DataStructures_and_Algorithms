@@ -1,0 +1,28 @@
+Problem Link :https://docs.google.com/document/d/1j_GcVecF7BEkGjmzYouWorFWGQ1vRmOoIe5UEowh0CI/edit
+
+Explanation:-> Given an array of zeros and ones ; find the number of subarrays which have this property :->
+
+
+(number of zeroes)
+—---------------------    =    x / y 
+(number of ones)
+
+N = 7 
+A ->[1 0 1 1 1 1 1]
+X/Y = ½ 
+Output -> [1 0 1] ;  X = 1 ; Y = 2 
+[0 1 1] ; X = 1 ; Y = 2 
+Ans is 2 . 
+
+
+
+
+
+N = 7 
+A-> [1 0 0 1 1 1 1]
+X/Y = ½
+Output = 3  
+→ [3..5] is a valid subarray
+—> [1..6] and [2…7] are also valid. 
+
+Hence total 3 valid subarrays. 

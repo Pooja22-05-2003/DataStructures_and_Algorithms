@@ -9,8 +9,8 @@ Approach:
 */
 
 
-// TC=
-// SC=
+// TC=O(n2)
+// SC=O(n)
 
 
 #include <bits/stdc++.h>

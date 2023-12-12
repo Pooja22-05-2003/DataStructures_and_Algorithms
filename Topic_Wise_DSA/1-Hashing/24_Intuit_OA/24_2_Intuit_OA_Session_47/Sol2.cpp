@@ -22,8 +22,8 @@ Means we are directly calculating the number of good subarray from index 1 to j
 */
 
 
-// TC=
-// SC=
+// TC=O(n)
+// SC=O(n)
 
 
 #include <bits/stdc++.h>
