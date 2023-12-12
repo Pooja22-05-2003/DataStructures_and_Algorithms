@@ -1,23 +1,10 @@
 /*
 Approach:
-✨ Optimal approach
+✨ Brute Force approach
 
 1. Calculate the ratio of 0 and 1(not an correct way) , using prex array
 2. No of 0 / No of 1 = x/y [Rewrite : (No of 0)*y==x*(No of 1) then do cnt++]
-3. Maintain one unordered map , which will maintain the count LHS which is same as RHS
-
-1,2,3...i......n
-for any index i, we calaculate RHS and in unordered , we try to know for i=j-1 to 1 ...(which we can easiyly get thorugh hashed array)the count of LHS which is equal to RHS, and we will add that in our answer
-(pref0[j]-pref0[i-1])*y=(pref1[j]-pref1[i-1])*x
-
-((pref0[j]*y)-(pref0[i-1]*y))=((pref1[j]*x)-(pref1[i-1]*x))
-
-make i variable one side and j another side
-(pref0[i-1]*y)-(pref1[i-1]*x)(LHS)=(pref0[j]*y)-(pref1[j]*x)(RHS)
-
-Means we are directly calculating the number of good subarray from index 1 to j
-
-
+3. Repeat this for all the possbile subarray and is that subarray is satisifying the given condition , u can increment the count.
 
 */
 
@@ -34,7 +21,6 @@ int solve(vector<int> arr , int n , int x , int y) {
     vector<int> pref0(n+1,0);
     vector<int> pref1(n+1,0);
 
-    unordered_map<int,int> mp;
     for(int i=1;i<=n;i++){
         if(arr[i]==0){
             pref0[i]=pref0[i-1]+1;
@@ -47,16 +33,17 @@ int solve(vector<int> arr , int n , int x , int y) {
         }
     }
 
-    int j=1;
-    while(j<=n){
-        int LHS=(pref0[j-1]*y)-(pref1[j-1]*x);
-        mp[LHS]++;
-
-        int RHS=(pref0[j]*y)-(pref1[j]*x);
-        ans+=mp[RHS];
-        j++;
+    // for(int i=1;i<=n;i++){
+    //     cout<<"Pref0 - i=>"<<i<<":"<<pref0[i]<<"Pref1"<<pref1[i]<<endl;
+    // }
+    //  iterate on all the subarray
+    for(int i=1;i<=n;i++){
+        for(int j=i;j<=n;j++){
+            int cnt0=pref0[j]-pref0[i-1];
+            int cnt1=pref1[j]-pref1[i-1];
+            if((cnt0*y)==(cnt1*x)) ans++;
+        }
     }
-    
     return ans;
 }
 
