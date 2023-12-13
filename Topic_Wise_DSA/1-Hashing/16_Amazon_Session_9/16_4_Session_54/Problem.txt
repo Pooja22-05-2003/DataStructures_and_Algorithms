@@ -1,0 +1,40 @@
+Problem Link : https://www.hackerrank.com/contests/desiqna-oa-practice-contest-00/challenges/a-356
+
+
+You have given 2 Arrays X and Y each of the length N. you need to select two integers i & j such that 1 <=i<=j<= N and they meet the following condition:
+
+X[i] ⊕ X[i+1]...⊕X[j-1] ⊕ X[j] = Y[i] ⊕ Y[i+1]...⊕Y[j-1] ⊕ Y[j].
+
+-->let G = j-i+1
+
+Task:
+
+Output the max value of G if there exist 2 integers i & j satisfying all the conditions, else print 0 on a new line
+
+Note: ⊕ : indicates bitwise XOR of 2 elements
+
+1-based indexing is followed
+Example:
+
+Input: 
+
+    N = 5
+
+    X = [10, 4, 10, 10, 8]
+
+    Y = [2, 2, 1, 9, 6]
+
+Approach:
+
+    If you choose i = 2 and j = 5
+
+    X2 ⊕ X3 ⊕ X4 ⊕ X5 = 4 ⊕ 10 ⊕ 10 ⊕ 8 = 12
+
+    Y2 ⊕ Y3 ⊕ Y4 ⊕ Y5 = 2 ⊕ 1 ⊕ 8 ⊕ 6 = 12
+
+    G = j-i+1 = 5-2+1 = 4
+
+ It can be shown that 4 is the max value possible value of G
+
+ Thus, the answer is 4.
+

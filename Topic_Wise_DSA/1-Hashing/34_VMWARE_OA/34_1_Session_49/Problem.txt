@@ -1,0 +1,4 @@
+Problem Link : https://www.desiqna.in/12820/vmware-sde1-coding-questions-and-solutions-india-april-2023
+
+Give a binary string containing only 0 and 1. Count the number subarray having continuous and countinuos 1 , and 
+having count of 0 and count 1 equal.
