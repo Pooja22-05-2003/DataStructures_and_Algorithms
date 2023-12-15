@@ -1,13 +1,15 @@
-/*
--> Create one prefix array , which will tell that arr from 0....i is sorted or not.
--> Similarly create one suffix array which will tell that arr from (i+1......n) is sorted or not.
--> Now using 2 for loop of subarray , check the condition which is (lets say subarray is from i....j) then check
-that arr[i-1]<=arr[j+1] && prefix[i-1]==true and suffix[j+1]==true (this can be done in O(1) time ) , now u can increment the cnt.
+//  you go at each index ; you try to find the smallest subarray which is valid ending at index i 
+//  using upper bound function hence you get j ; this means u can remove stuff from [j+1 to i] carefree ;
+//   similarly u can do for [j to i] ; —> [j-1] to i] …….[2….i]....[1….i]  
 
-*/
+// TC : O(N*logN) as at index i ; you use upper bound function which takes log(N) time per index ;
+//  also storing all elements in the sets takes log(N) time per element ; so total time is
+//   NlogN + NlogN = 2Nlogn = O(NlogN) okjii 
 
-// TC=O(n2)
-// SC=O(n)
+
+// soln link : https://ideone.com/iQ6izS
+
+
 
 #include<bits/stdc++.h>
 using namespace std;

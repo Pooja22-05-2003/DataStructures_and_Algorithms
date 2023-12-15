@@ -1,0 +1,18 @@
+Problem Link : https://www.desiqna.in/5629/google-oa-coding-questions-and-solutions-set-13-2022
+
+Count Pairs 
+
+
+You are given the following :
+ 1. Integers n,c,d
+ 2. Array a as a1,a2.....an of lenght n
+ 3. Array b as b1,b2,.....bn of length n
+
+ Task : 
+Determine the number of Pairs (i,j):
+(i<=i<j<=n) satisying inequality (ai-aj+c)=(bi-bj+d)
+
+Note 
+ -> 1 based indexing is followed
+ -> 1<=N<=100000
+ -> 1<=a[i],b[i]<=1000000000

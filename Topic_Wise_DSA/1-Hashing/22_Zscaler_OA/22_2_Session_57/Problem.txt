@@ -1,0 +1,5 @@
+Problem Link : https://www.desiqna.in/13097/zscaler-oa-sde1-2023-coding-questions-and-solutions-april
+
+Given an array A of size n and a value. Array contain both positive and negative elements
+. Now u can take array of maximum size k(if k=3 then k=0,1,2,3 is possible size of the k), then do maximize the 
+subarray sum. and return that as the answer.

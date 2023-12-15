@@ -1,0 +1,6 @@
+Problem Link : https://www.desiqna.in/13234/de-shaw-sde-super-hard-oa-2023
+
+You are given one array , u can remove the subarray of the array of size 1<=subarray<=n, then the remaining array after removal, 
+if that array are soted then u can increment the count.
+
+So, Return the count.
