@@ -1,0 +1,16 @@
+
+For an array with non-negative integers(b[i]>=0) ; find the longest subarray such that its sum<=k(at most k)
+
+Link to problem :- https://www.geeksforgeeks.org/longest-subarray-sum-elements-atmost-k/ 
+
+B = [2 5 8 8 5 8] 
+K = 7 
+Answer :- [1,2] = [2+5] = 7 -> 2(length is 2)
+
+K = 4 
+B = [1 2 1 0 1 1 0] 
+Answer :- 
+One possibility :- [2 3 4 5] = [2 + 1 + 0 + 1] = 4 —> length is 4 ; is there any better length possible.
+Correct Answer : - [3 4 5 6 7] = [1 0 1 1 0] = 3 <=K —> length of subarray is 5 
+
+Hence the final answer is 5.

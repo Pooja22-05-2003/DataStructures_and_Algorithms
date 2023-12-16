@@ -17,46 +17,44 @@ int solve(vector<int> &b,int n , int k ){
     int i = 1 ;
     int j = 1 ;
     int ans=0;
-    int d=0;
+    int sum=0;
     while(i<=n && j<=n){
         if(i==j){
-             d = b[j] - b[i] ;
-            if(d>k){
+            if(b[i]>k){
                 i++;
                 j++;
-                if(j<=n)  d = b[j] - b[i] ;;
+                if(j<=n) sum+=b[j];
             }
             else{
                 int len=1;
                 ans=max(ans,len);
                 j++;
                 if(j<=n){
-                    d = b[j] - b[i] ;;
+                    sum+=b[j];
                 }
             }
         }
         else {
-             d = b[j] - b[i] ;
-            if(d>k){
+            if(sum>k){
                 // it means i to j-1 is surely valid
                 ans=max(ans,((j-1)-i+1));
 
                 //  now u have considered i to j-1
 
                 // i-1 to j-1 is surely smaller than equal to k
-                 
+                sum-=b[i];
                 i++;
                 
                 j++;
                 if(j<=n){
-                     d = b[j] - b[i] ;
+                    sum+=b[j];
                 }
 
             }
             else {
                 j++;
                 if(j<=n){
-                     d = b[j] - b[i] ;
+                    sum+=b[j];
                 }
                 
             }
@@ -95,15 +93,22 @@ int main(){
 
 /*
 // input1 :
-5
-3
-1 2 3 4 8
+6
+7
+2 5 8 8 5 8
 
 
 // output1:
-4(len from 1 to 4)
+2
 
 
+// input 2 :
+7
+4
+1 2 1 0 1 1 0
+
+// output 2:
+5
 
 
 */

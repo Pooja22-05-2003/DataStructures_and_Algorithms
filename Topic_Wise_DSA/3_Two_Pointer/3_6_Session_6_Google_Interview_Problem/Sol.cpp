@@ -1,6 +1,7 @@
 /*
 Otpmized  approach.
 
+✨✨ Similar to previous question  (just replace sum with d=b[j]-b[i])
 As we are starting from 1 to j1, then again from 2 to j1, we can use two pointer 
 and can use the previous sum in our current answer.
 
