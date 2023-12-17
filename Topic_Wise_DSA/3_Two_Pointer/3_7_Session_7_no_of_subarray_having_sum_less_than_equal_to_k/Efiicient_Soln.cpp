@@ -13,9 +13,21 @@ int solve(vector<int> &b,int n , int k ){
     int sum=b[1];
     while(i<=n && j<=n){
         if(sum<k){
+           
+            if(j>=i) cnt+=(j-i+1);
+             /*
+             input :
+             3
+             10
+             2 5 6
+             cnt:1 i:1 j:1
+             cnt:3 i:1 j:2
+             cnt:4 i:3 j:3
+             4-output
+
+             */
+            cout<<"cnt:"<<cnt<<" i:"<<i<<" j:"<<j<<endl;
             j++;
-            if(j>=i) cnt+=(j-i);
-            // cout<<"cnt:"<<cnt<<" i:"<<i<<" j:"<<j<<endl;
             if(j<=n) sum+=b[j];
         }
         else {
