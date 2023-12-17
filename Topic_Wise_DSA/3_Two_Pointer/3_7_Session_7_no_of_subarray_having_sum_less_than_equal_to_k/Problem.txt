@@ -1,0 +1,7 @@
+P3:- 
+For an array with non-negative integers ; find the number of subarrays such that its sum<=k
+
+Link to problem :- 
+
+https://www.geeksforgeeks.org/number-subarrays-sum-less-k/ 
+
