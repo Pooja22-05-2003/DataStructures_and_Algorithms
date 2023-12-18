@@ -1,0 +1,6 @@
+Google SDE Interview. :-> Given an array of numbers ; find the longest subarray which has 
+number g1 coming for <=k1 times. (-->k1 or k1-1 or k1-2 or k1-3 or….1 or 0) +
+ g2 coming for <=k2 times. + g3 coming for <=k3 times. 
+
+
+TC :-> O(N)

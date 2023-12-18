@@ -1,0 +1,9 @@
+Given an array of numbers ; find the longest subarray which has number g coming for <=k times. (-->k or k-1 or k-2 or k-3 or….1 or 0) 
+
+Ex:-> [5 5 6 7 8 8 6 5 5] g = 5 k = 2 
+
+O/P :-> 7. 
+
+Ex:-> 1 2 3 4 3 5 5 5 g = 3 k = 1 
+
+O/P-> 5 
