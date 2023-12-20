@@ -1,0 +1,37 @@
+Problem Link : https://docs.google.com/document/d/1qJm45nHXryDn2FPldVQUvFcUtP0c152ubx7CtXeYycw/edit?addon_store
+
+Given two arrays of size N each containing the elements 1 to N, find the minimum number of operations needed to transform the second array into the first.
+
+An operation is defined as:
+Taking any current value in an array and moving it to the beginning or end.
+
+Example:
+Turn Array2 into Array1
+
+Array1 = [4,2,3,1,5,6]
+Array2 = [3,1,4,6,5,2]
+
+Returns 3:
+
+Operation 1: Move 2 to beginning.
+Array2 = [2,3,1,4,6,5]
+
+Operation 2: Move 4 to beginning.
+Array2 = [4,2,3,1,6,5]
+
+Operation 3: Move 6 to end:
+Array2 = [4,2,3,1,5,6]
+
+ 
+
+1<=N<=100000
+---------
+Understanding of the problem:-> We are given two arrays A and B of size “N”; which have integers strictly from 1 to N coming single times. 
+
+Our task is to convert Array B -> Array A in minimum operations. 
+
+Operation:-> Pick a number from Array B and put it at the start of Array B 
+
+-> Pick up number from Array B and put it at the end of Array B 
+
+
