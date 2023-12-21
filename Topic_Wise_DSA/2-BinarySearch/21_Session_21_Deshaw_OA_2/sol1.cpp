@@ -29,7 +29,7 @@ int solve(vector<int> arr,int n , int move){
     //     }
     // }
    
-    int mid=(st+end)/2;
+    int mid=(st+(end-st)/2);
 
     if((check(mid,sum,move)==true)){
         if(mid==1){
@@ -40,9 +40,8 @@ int solve(vector<int> arr,int n , int move){
         if(check(mid-1,sum,move)==false){
             ans=mid;
             y=1;
-            break;
         }
-        else end=mid-1;
+        else end=mid+1;
     }
     else st=mid+1;
 

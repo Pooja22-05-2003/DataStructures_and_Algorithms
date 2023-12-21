@@ -18,39 +18,22 @@ int solve(vector<int> arr,int n , int move){
     while(st<=end && y==0){
 
 
-    // FFFFFFTTTTT(so here we need to find the first occurrence of T)..using binary search.
+        // FFFFFFTTTTT(so here we need to find the first occurrence of T)..using binary search.
 
-    //     if(check(st,sum,move)==true){
-    //         ans=st;
-    //         break;
-    //     }
-    //     else {
-    //         st++;
-    //     }
-    // }
-   
-    int mid=(st+end)/2;
-
-    if((check(mid,sum,move)==true)){
-        if(mid==1){
-            ans=1;
-            y=1;
+        if(check(st,sum,move)==true){
+            ans=st;
             break;
         }
-        if(check(mid-1,sum,move)==false){
-            ans=mid;
-            y=1;
-            break;
+        else {
+            st++;
         }
-        else end=mid-1;
     }
-    else st=mid+1;
-
+   
+   
 
     return ans;
-   }
-
 }
+
 
 int main(){
     #ifndef ONLINE_JUDGE
