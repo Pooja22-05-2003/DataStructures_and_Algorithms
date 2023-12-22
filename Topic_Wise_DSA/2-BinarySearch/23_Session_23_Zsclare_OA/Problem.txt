@@ -1,0 +1,11 @@
+Problem Link : https://www.desiqna.in/16182/zscaler-oa-sde1-nov-2023-maximize-array-value
+
+Docs Link : https://docs.google.com/document/d/1Jx6Ily5pkZrjHnpbCppZOEYxiXwmnuyB4Thv9cU5wQ4/edit
+
+Understanding :-> You are given an array you can perform this operation any number of times:- 
+
+-> Pick any index “i” ; remove some quantity from it and put inside index i - 1 
+
+-> After doing these operations let's say g is your maximum value in the array 
+
+-> Find minimum possible g 
