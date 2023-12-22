@@ -58,7 +58,7 @@ int solve(vector<int> arr,int n , int k){
     for(int i=1;i<=n;i++){
         sum+=arr[i];
     }
-    int end=sum;
+    int end=INT_MAX-1; // for safer side, initialize it with sum=sum+5 or more(maximum time initlaize it with INT_MAX)
     int ans=0;
     int y=0;
     while(st<=end && y==0){

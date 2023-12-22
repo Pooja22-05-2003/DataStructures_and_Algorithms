@@ -1,17 +1,34 @@
-// ❌❌❌ Giving incorrect answer.
+//❌❌❌❌NOT GIVING CORRECT OUTPUT - only giving 0 as answer.
 #include<bits/stdc++.h>
 using namespace std;
 
-bool check( int st,int sum,int move){
-    return (((st*move)-sum)>=0);
+bool check( vector<int> arr , int st,int sum,int move){
+    int i=1;
+    int n=arr.size();
+    int cnt=0;
+    while(i<=n){
+        if(arr[i]%st!=0){
+            cnt+=(arr[i]/st)+1;
+        }
+        else {
+            cnt+=(arr[i]/st);
+        }
+        i++;
+    }
+
+    if(cnt<=move) return true;
+    return false;
+
 }
 int solve(vector<int> arr,int n , int move){
     int st=1;
     int sum=0;
+    int max_el=-1;
     for(int i=1;i<=n;i++){
         sum+=arr[i];
+        max_el=max(max_el,arr[i]);
     }
-    int end=sum;
+    int end=max_el;
     int ans=0;
 
      int y=0;
@@ -29,19 +46,20 @@ int solve(vector<int> arr,int n , int move){
     //     }
     // }
    
-    int mid=(st+(end-st)/2);
+    int mid=(st+end)/2;
 
-    if((check(mid,sum,move)==true)){
+    if((check(arr,mid,sum,move)==true)){
         if(mid==1){
             ans=1;
             y=1;
-            break;
+          
         }
-        if(check(mid-1,sum,move)==false){
+        else 
+        if(check(arr,mid-1,sum,move)==false){
             ans=mid;
             y=1;
         }
-        else end=mid+1;
+        else end=mid-1;
     }
     else st=mid+1;
 
@@ -83,7 +101,7 @@ int main(){
 4 3 2 7
 
 // output1:
-4
+
 
 
 // input 2 :
@@ -92,6 +110,6 @@ int main(){
 1 2 3
 
 // output 2:
-2
+
 */
 
