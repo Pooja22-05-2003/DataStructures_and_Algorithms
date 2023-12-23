@@ -1,0 +1,53 @@
+Problem Link :https://www.desiqna.in/13333/de-shaw-sde-hard-oa-2023-binary-search
+Docs Link : https://docs.google.com/document/d/1A9cvoSU_iPY8-PVm8ea4zK0LDIRan6Zzip385ivnrCQ/edit
+
+Link to Problem :- https://www.desiqna.in/13333/de-shaw-sde-hard-oa-2023-binary-search 
+
+Subscribe - https://www.youtube.com/@kumark6326 
+
+-> Question is saying to us :- We are given an array and integer k ; we have to make maximum k moves on the array such that all elements of array become <=0 ; also -> in each move you can :-> 
+
+Decrease any number of the array by x . 
+
+K = 15 
+
+Task is to find the minimum possible value of x. 
+
+Example :- 
+
+Observation : - When the value of x is small ; total operations are more ; and when value of x is large ; total operations are less. 
+
+[5 8 8 5 5] is our array and max moved allowed are k = 15 ; 
+
+So if you select x = 0 ; —-> you cannot achieve the task. 
+
+If you select x = 1 ; —--> It will take you 31 steps which is > k -> cannot achieve task
+
+If you select x = 2 ; —--> will take you 17 steps which is > k -> cannot achieve the task  
+
+If you select x = 3 ; —--> will take you 12 steps which is <= k —> successfully achieve the task 
+
+If you select x = 4 ; —---> will take you 10 steps which is <=k —> successful 
+
+If you select x = 5 ; —---> successful 
+
+If you select x = 6 ; —--> same success. 
+.
+.
+.
+.
+.
+.
+.
+.
+.
+If you select x = infinity —> still successful
+
+
+Observation : -> Once you become successful for some x ; you will stay successful for all values >=x ; let's call it the starting point of success. 
+
+So —-> [5 8 8 5 5] ; k = 15 ; answer → 3 
+Once ; you become successful for some x = y ; 
+Then all x>=y will always be successful ; 
+
+Hence y is the minimum possible answer :) 

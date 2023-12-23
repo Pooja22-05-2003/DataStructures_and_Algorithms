@@ -1,0 +1,42 @@
+Docs Link : https://docs.google.com/document/d/1DDwlUHu9rzxSXA6On-dCtFMpz_2n8Z9kFM2nlcTDDZI/edit
+Link -> https://www.desiqna.in/15662/salesforce-oa-intern-sde1-fresher-2023-set-1
+
+
+Understanding :-> We are giving you an array of size “M” ; divide the array into at most “N” parts; lets say sum of each part is s1,s2,s3,s4,s5,.......sn 
+
+max(s1,s2,s3,s4…….sn)---> minimum as possible. 
+
+
+Observation:-> What can be the smallest possible capacity of a bucket 
+
+According to Sheenam’s Law:-> Minimum capacity of the. Bucket is the maximum element of array
+
+According to Karandeep’s Law :-> max capacity of a bucket is sum of array elements  
+
+
+Final answer will always be in the range [minimum_capacity(N=M),maximum_capacity(N=1)] 
+
+I = minimum_capacity 
+-> check(minimum_capacity = i)-> is it possible to divide the array into N parts such that capacity of each bucket is utmost = minimum_capacity 
+-> it comes as false; 
+
+->try for check(i+1)-> false;
+
+-> try for check(i+2)->false;
+.
+.
+.
+.
+.
+.
+.
+.
+.
+->try for check(i+g)==> true this your answer 
+
+Low = min;
+High = max;
+3 5 8 2 4 3 8 
+n=3.
+F F F    F   F  F   F  T T T T T T T T T T T T T T T T T T T
+8 9 10  11  12 13 14
