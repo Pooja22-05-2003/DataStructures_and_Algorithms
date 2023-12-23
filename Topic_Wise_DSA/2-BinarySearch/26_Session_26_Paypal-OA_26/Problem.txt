@@ -1,0 +1,16 @@
+Problem Link : https://www.desiqna.in/16118/paypal-october-2023-optimal-point-selection#google_vignette
+
+Given an array  and  a value k , u need to pick k points from the array such that , the minimum 
+difference between any two points is as maximum as possible.
+
+Ex: 
+arr=[1,4,2,9,8]
+k=3
+output :
+3
+
+-> The distance between 1 and 4 = abs(1-4)=3
+-> The distance between 1 and 8 => abs(1-8)=7
+-> The distance between 4 and 8 => abs(4-8)=>4
+
+So, the minimum among them is 3

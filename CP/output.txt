@@ -1,3 +1,1 @@
-check(mid):0
-check(mid):1
-5
+3
