@@ -1,0 +1,6 @@
+Problem Link : https://docs.google.com/document/d/1hLi_sFb70XILSs-59La1NGZJ1yv8dfJ2VV5efnW-Xk0/edit?addon_store
+
+We are given n chocolates.WE can eat atmax 1 chocolate at the 1st day ,then on the next day...I can eat
+x,x+1,x-1 chocolate. At the last day I can eat atmost 1 choclate.
+
+Return the minimum number of day's in which u can eat the whole chocolate.

@@ -1,0 +1,5 @@
+Problem Link : https://www.desiqna.in/15213/blackrock-oa-sde1-july-2023
+
+Given an array. Rearrange the array . and count the number of greatness in the array.
+No of greatness is the number of el in rearranged array[i]> arr[i].
+
