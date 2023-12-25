@@ -1,9 +1,21 @@
 /*
 Approach :
+
+-> Question is asking for maximum througput...smalles value amond all the system. (If we want the maximum throughtput , means we need to maximize the minimum possible value.)
+1. We need to minimize the minimum ele as maximum as possible in the array B.
+2. WE can start checking whether we can make all the ele>=0 (cost=0) and then all the ele>=2(cost=1)...[✨WHY TO START WITH]--start with the minimum el+1 as min ele is already our answer.
+3. pattern TTTTFFFF ( so we need to find the last T)[One limit will come where cost will exceed budget and u will not increment the minimum value. So find that value]
+4. what is the upper range of the binary function???------check till cost<=budget
+*/
+
+
+
+/*
+Approach :
 Pattern - TTTTTFFFFFFFFF
 */
 
-// TC=O(n)
+// TC=O(n*budget)
 // SC=O(1)
 
 #include<bits/stdc++.h>
@@ -38,28 +50,15 @@ int solve(vector<int>arr1, vector<int>arr2 , int n , int budget){
     }
     int maxx=INT_MIN;
  
-//    for(int i=minn+1;i<=budget;i++){
-//     // i=minn+1 means whether it is possible to make the minimum ele in the array to minn+1 whith the budget which we have.
-//     if(check(i,arr1, arr2, n , budget)==true){
+   for(int i=minn+1;i<=budget;i++){
+    // i=minn+1 means whether it is possible to make the minimum ele in the array to minn+1 whith the budget which we have.
+    if(check(i,arr1, arr2, n , budget)==true){
 
-//         maxx=max(maxx,i);
+        maxx=max(maxx,i);
 
-//     }
-//     else break;
-//    }
-int st=minn;
-int end=budget;
-while(st<=budget){
-    int mid=(st+end)/2;
-    // pattern = TTTTTFFFFFF
-    if(check(mid,arr1,arr2,n,budget)==true && check(mid+1,arr1,arr2,n,budget)==false){
-        return mid;
     }
-    else if(check(mid,arr1,arr2,n,budget)==true){
-        st=mid+1;
-    }
-    else end=mid-1;
-}
+    else break;
+   }
 
    return maxx;
 }

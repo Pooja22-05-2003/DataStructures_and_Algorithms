@@ -1,0 +1,34 @@
+Docs Link : https://docs.google.com/document/d/1aUZLNxW5Gnu0NeuBYeblxI7Vna8gXNa7J7ZS10-q538/edit
+
+1<=N<=100000
+1<=A[i],b[i],c[i],d[i]<=100000000
+Given these 4 things.
+Find the maximum number of servers u can be upgraded for the ith network
+num_server[]=Number of houses , 
+Money[]= Money you have,
+Sell[]= Cost of money u will get after selling 1 house.
+Upgrade[]= Cost of upgrading 1 house
+
+Understanding :- We are given 4 arrays of size “N”. We have to solve for each index separately and we have to output “N” integers. 
+
+Example:
+num_server=[4,3]
+money=[8,9]
+sell=[4,2]
+Upgrade=[4,5]
+
+
+
+Output :
+3
+
+
+
+now for i=1;
+Is i=1 possible? [Means can u upgrade 1 server?] ---> YES (I have money 8 and with this money i can upgrade 2 serves)
+Is i=2 possible ? ---> YES
+Is i=3 Possible?  [ Money=8 ...i need 4 more money]--> So i can sell 1 server and can get money 4 so , now i have total 8+4=12
+-> Now with money=12--> YES i can upgrade 3 servers
+Is i=4 Possible? (Money require=4*4=16 , and i have 8 If i sell even 1 server at most I can upgrade 3 servers, but 4 answer would never be possible.)
+
+[If i =4 possible then initially check for that means, if u have that much money ....then obviously u can upgrade all the servers.]

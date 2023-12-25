@@ -1,0 +1,11 @@
+Problem Link : https://docs.google.com/document/d/1Smp8Xfo5zCvvj6VHYrvP6itSzmyG6lDOxivoTimN9JM/edit
+
+
+Understanding :-> Given arrays B and C ; and budget D ; each element in the array B can 
+be multiplied and increased to a new number(any number of time ...but increment can only
+happen number equal to itself....for example 4 -> 8 -> 12) ; but there is a cost of 
+multiplying which is given by array C
+
+-> Do as many operations as you want but total cost of operations <=D; 
+
+-> Goal -> Minimum value of final array B should be as big as possible!  
