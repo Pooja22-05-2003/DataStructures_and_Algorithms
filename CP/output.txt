@@ -1,1 +1,7 @@
-10
+i:2 arr[i]:2 arr[i+1]:2 diff:1
+i:3 arr[i]:2 arr[i+1]:4 diff:0
+i:4 arr[i]:4 arr[i+1]:15505 diff:2
+maxDiff:2
+mid:1
+mid:0
+0

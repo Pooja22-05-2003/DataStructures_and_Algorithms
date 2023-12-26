@@ -24,20 +24,16 @@ bool check(int ii,int p,int n , vector<int> arr){
     // p pairs must have diff <=i;
     int i=2;
     while(i<=n){
-        // cout<<"i:"<<i<<"diff:"<<(arr[i]-arr[i-1])<<endl;
         if((arr[i]-arr[i-1])<=ii) {
             cnt++;
             i=i+2;
             if(cnt>=p) break;
-            
         }
         else {
             i=i+1;
         }
-        
     }
 
-    
     if(cnt>=p) return true;
     else return false;
  
@@ -52,18 +48,11 @@ int solve(vector<int> arr , int n , int p){
     for(int i=2;i<=n;i++){
         maxDiff=max(maxDiff,(arr[i]-arr[i-1]));
     }
-    // pattern FFFTTTT
-    int st=0;
-    int end=maxDiff;
-
-    while(st<=end){
-        int mid=(st+end)/2;
-
-        if((mid==0 &&(check(mid,p,n,arr)==true) ) || (check(mid,p,n,arr)==true) && check(mid-1,p,n,arr)==false){
-            return mid;
+    for(int i=0;i<=maxDiff;i++){
+        if(check(i,p,n,arr)==true){
+            ans=i;
+            break;
         }
-        if(check(mid,p,n,arr)==false) st=mid;
-        else end=mid;
     }
     return ans;
    
@@ -88,8 +77,7 @@ int main(){
     int p;
     cin>>p;
 
-   
-    vector<int> arr(n+1);
+    vector<int> arr(n);
     for(int i=1;i<=n;i++){
         cin>>arr[i];
     }
