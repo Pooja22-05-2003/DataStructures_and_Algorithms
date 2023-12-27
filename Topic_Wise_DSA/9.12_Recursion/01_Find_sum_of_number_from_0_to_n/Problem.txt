@@ -1,0 +1,1 @@
+Que : Find sum of all numbers from 0 to N.

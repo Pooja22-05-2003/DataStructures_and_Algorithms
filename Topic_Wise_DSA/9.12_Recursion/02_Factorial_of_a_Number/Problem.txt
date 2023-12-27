@@ -1,0 +1,9 @@
+Que : Given the value of n, calculate the factorial of n .
+
+Factorial of a Number :-  
+
+The Product of all positive integers less than or equal to n.
+
+Factorial of 5 -> 5*4*3*2*1 = 120
+
+Factorial of 7 -> 7*6*5*4*3*2*1 = 5040

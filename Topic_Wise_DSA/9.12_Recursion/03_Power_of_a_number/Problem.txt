@@ -1,0 +1,9 @@
+Given a number N and power P, our task is to Find  ‘P’th Power of a number ‘N’ ( i.e. N^P ) using Recursion.
+
+For Example :- N = 5 and p =3 
+
+5^3 = 5*5*5
+
+N = 7 and p = 4
+
+7^4 = 7 * 7 * 7 * 7
