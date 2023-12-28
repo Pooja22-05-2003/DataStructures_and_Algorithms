@@ -1,7 +1,0 @@
-Move Disc 1 from rod A to rod C
-Move Disc 2 from rod A to rod B
-Move Disc 1 from rod C to rod B
-Move Disc 3 from rod A to rod C
-Move Disc 1 from rod B to rod A
-Move Disc 2 from rod B to rod C
-Move Disc 1 from rod A to rod C

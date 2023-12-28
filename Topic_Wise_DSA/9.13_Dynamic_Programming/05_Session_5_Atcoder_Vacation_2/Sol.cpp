@@ -1,5 +1,28 @@
-// TC=O(N)
-// SC=O(N)
+/*
+Problem in 2-3 lines.
+Given 2D array , having 3 col.
+On each day u need to do work and it will give u .....x amount of happiness. But U can't do same work on 2 or more consecutive day.
+As there are only 3 columns , then u can have only 3 work.I u choose to do 1st work today ....which will give u x amount of happiness,
+u can' do that 1st work on next day. Now on next day ...u have only 2 options. whether to do the 2nd work or 3rd work.
+
+Now, U need to achieve the maximum happiness.
+
+
+
+SOLUTION:
+-> As this is not a greedy problem and it's a dp problem because , consective same work is not allowed.
+-> And on the 1st day , u don't have the knowledge of the future or the 2nd day happiness.
+-> So, u need to find all the possiblities and pic the best answer from all of them.
+-> For this u need 3 arrays.
+-> dpa[i]= It tells the maximum happiness till index i , if u decided to pic the arr1[i](1st work) on the ith day.
+-> dpb[i]= It tells the maximum happiness till index i , if u decided to pic the arr2[i](2nd work) on the ith day.
+-> dpc[i]= It tells the maximum happiness till index i , if u decided to pic the arr3[i](3rd work) on the ith day.
+
+-> Run a for loop and calculate till dp[n]
+-> Now maximum of (dpa[n],dpb[n],dpc[n]) will be your answer.
+*/
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -89,4 +112,5 @@ input3:
 output3:
 46
 */
+
 
