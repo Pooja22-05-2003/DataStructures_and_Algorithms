@@ -1,0 +1,11 @@
+Docs Link : https://docs.google.com/document/d/1OvybkF0hQ4uCWJxCMWiA01ed9-lnnCrW3OcP1_NzfDc/edit
+
+Problem Link : https://www.desiqna.in/15782/atlassian-oa-sde-1-freshers-hiring-ctc-75-lac 
+
+Understanding of the problem:-> You are given “B” queries; you have to perform some of them in order ; and make your initial integer 1 as large as possible! 
+
+-> + x 
+-> - x 
+-> * x 
+->/ x
+->N
