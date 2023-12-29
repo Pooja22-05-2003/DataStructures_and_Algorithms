@@ -1,0 +1,59 @@
+Find the number of journeys where you start from index 1 and end at index ‘n’ and the sum of every journey should be odd..
+
+-> Similarly find for even. 
+
+Allowed to make jumps of size 1 or 2 
+
+5 4 2 6 
+ 
+
+Number of odd sum journey : 
+
+-> (5,2,6)
+
+-> (5,4,2,6)
+
+-> (5,4,6)
+
+ 
+
+Number of even sum journey : 
+
+-> Nothing 
+
+
+ 
+
+2 3 5 8 10 
+
+ 
+
+Evn sum journey
+
+//evn
+
+    //2...3...5...8...10
+
+    //2...3...5.....10
+
+ 
+
+Od sum journey : 
+
+ 
+
+    
+
+    //odd
+
+    //2...5...10
+
+    //2...3...8...10
+
+    //2...5...8....10
+
+
+
+
+
+Follow up question :-> You are allowed to make jumps of size 1,2,3.
