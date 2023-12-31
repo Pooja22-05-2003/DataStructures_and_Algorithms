@@ -19,8 +19,7 @@ Sc=O(1)
 
 //Tc=O(log(sum*n))
 // sc=O(1)
-#include<bits/stdc++.h>
-using namespace std;
+
 /*
 Check function working.
 
@@ -31,6 +30,8 @@ check function is checking whther it is possible to make y groups for particular
 -> But if less element are present at index i than required, then we pick those elements and fill our reaming requirement from next index.
 -> After itearting all index, if we were able to fill the requirement which is target(we will return true) else false.
 */
+#include<bits/stdc++.h>
+using namespace std;
 bool check( int y, int k,vector<int>arr,int n){
     int target=y*k;
     int total=0;
