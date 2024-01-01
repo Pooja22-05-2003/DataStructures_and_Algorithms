@@ -1,32 +1,31 @@
 // // TC=O(N+2*E)
-// // SC= O(3N)==> O(N) [ans,queue,vis]
+// // SC= O(3N)==> O(N) [ans,recursion stack space(Max depth of the graph),vis]
 #include <bits/stdc++.h>
 using namespace std;
 
- vector<int> bfsOfGraph(int V, vector<int> adj[]) {
-    // Code here
-    vector<int> ans;
-    vector<int> vis(V,0);
-    queue<int> q;
-    q.push(0);
-    ans.push_back(0);
-    vis[0]=1;
-
-    // This will take O(N) time 
-    while(!q.empty()){
-        int curr=q.front();
-        q.pop();
-
-        // This will total run for total degree=(2*E)
-        for(auto it : adj[curr]){
+// This dfs recursion would be called maximum n times
+ void dfs(int st, vector<int> &vis , vector<int> & ans , vector<int> adj[]){
+        vis[st]=1;
+        ans.push_back(st);
+        
+        // This adjacecny will go maximum to all degree(2*E)
+        for(auto it : adj[st]){
             if(!vis[it]){
-                q.push(it);
-                ans.push_back(it);
-                vis[it]=1;
+
+                
+                dfs(it,vis,ans,adj);
             }
         }
+        
     }
-    return ans;     
+vector<int> dfsOfGraph(int V, vector<int> adj[]) {
+        // Code here
+        vector<int> ans;
+        vector<int>vis(V,0);
+    
+        
+        dfs(0,vis,ans,adj);
+        return ans;
 }
 
 
@@ -62,7 +61,7 @@ int main(){
 
     }
 
-    vector<int> ans=bfsOfGraph(n,adj);
+    vector<int> ans=dfsOfGraph(n,adj);
 
     for(auto it : ans) {
         cout<< it<<endl;
@@ -75,10 +74,22 @@ int main(){
 
 /*
 // // input1 :
+5
+4
+0 1
+0 2
+0 3
+2 4
 
 
 
 // // output1:
+
+0
+1
+2
+4
+3
 
 
 
