@@ -1,4 +1,4 @@
-// TC=O(V+2*E)
+// TC=O(n)+(V+2*E) [ n for the for loop,]
 // SC=O(n)
 class Solution {
 public:
@@ -11,6 +11,8 @@ public:
     int dfsTraversal(int V, vector<int> adj[]){
         vector<int> vis(V,0);
         int ans=0;
+
+        // this for loop , will take O(N) time complexity
         for(int i=0;i<V;i++){
             if(!vis[i]){
              ans++;
