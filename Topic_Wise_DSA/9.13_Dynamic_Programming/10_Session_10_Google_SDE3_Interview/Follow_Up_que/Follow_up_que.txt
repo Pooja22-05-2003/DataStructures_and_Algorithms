@@ -1,0 +1,3 @@
+Follow up :-> solve the problem for 3 cities A,B,C
+
+All dollars are positive!

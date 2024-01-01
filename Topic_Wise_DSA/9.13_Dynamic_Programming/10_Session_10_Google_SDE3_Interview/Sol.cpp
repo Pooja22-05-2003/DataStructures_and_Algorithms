@@ -1,3 +1,17 @@
+/*
+Problem in 1 Line :
+Given 2 arrays, 1st array us cityA and 2nd is cityB, U need to earn maximum profit. U can pick ele from A or B , from wherever u want.But If u are picking element from
+array A and now want to pick from B Then u need to move from arr A to arr B , and here no profit will be earned. So tell the path and earn the maximum profit.
+
+Approach.
+-> It,s a Dp Problem , As at the curr index our previous answer will matter.
+-> Also, If u are at i index , u need to know whether u picked the previous element from arr A or arrB, So, 1 Dp will not able to work here, 2 Dp are required,
+DPa and DPb.
+-> So , try to find DPa[1],DPb[1]...., DPa[2],DPb[2]....., Try to formulate the general formula.
+-> Then using general formula iterate it....till index n .
+-> Return the max(DPa[n],DPb[n])- maximum earning would be our answer.
+*/
+
 
 // TC=O(n) 
 // SC=O(2*n)=O(n)
@@ -60,10 +74,14 @@ int main(){
 
 /*
 // input1 :
-
+5
+25 10 15 10 70 
+5 5 50 5 30 
 
 
 // output1:
+DPa[n]:145 DPb[n]:110
+145
 
 
 
