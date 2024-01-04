@@ -1,0 +1,11 @@
+Q :- Given an array ; pick any subset of numbers(minimum size 1) ; such that their goodness is maximized. (Numbers can be positive as well as -ve;) 
+
+To go from x—>y costs :-  y - x; whole cost of journey is goodness calculated. 
+
+
+Goodness :- Sum of adjacent differences of the numbers in set 
+
+-> [5 10 1 5 100] 
+
+-> Output - 99. 
+

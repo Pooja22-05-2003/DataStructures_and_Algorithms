@@ -11,30 +11,20 @@ Observation:
 
 */
 
-// TC=O(n)-- 1 for loops
-// SC=O(2*n) Dp array
+// TC=O(n2)-- 2 for loops
+// SC=O(n) Dp array
 
 #include <bits/stdc++.h>
 using namespace std;
 
     int solve(int n , vector<int> nums){
         vector<int> dp(n+1,0);
-        // vector<int> max_arr(n+1,0);
         dp[1]=0;
-
-        // max_arr[i] represent maximum answer from i-1 to 1 of nums[i]-nums[j]+dp[j];
-        int maxx=dp[1]-nums[1];
-        
         for(int i=2;i<=n;i++){
-            // for(int j=i-1;j>=1;j--){
-            //     int temp=nums[i]-nums[j]+dp[j];
-            //     dp[i]=max(dp[i],temp);
-            // }
-       //     int temp=nums[i]-nums[j]+dp[j]; // reshuffle this temp=nums[i]+(dp[j]-nums[j]) [ so j will go from j-1 to 1 ]
-            int temp=nums[i]+maxx;
-            dp[i]=max(dp[i],temp);
-            maxx=max(maxx,dp[i]-nums[i]);
-
+            for(int j=i-1;j>=1;j--){
+                int temp=nums[i]-nums[j]+dp[j];
+                dp[i]=max(dp[i],temp);
+            }
         }
 
         return dp[n];
