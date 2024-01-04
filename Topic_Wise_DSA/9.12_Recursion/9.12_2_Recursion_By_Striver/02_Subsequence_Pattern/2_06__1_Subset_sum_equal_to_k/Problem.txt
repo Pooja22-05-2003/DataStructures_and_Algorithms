@@ -1,0 +1,1 @@
+Print all the subsequences in the array having sum equal to k.
