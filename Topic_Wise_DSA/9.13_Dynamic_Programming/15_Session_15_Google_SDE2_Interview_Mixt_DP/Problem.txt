@@ -1,0 +1,10 @@
+Que. Find the minimum cost to do this  : In one operation ; you must select two 
+adjacent numbers ; and merge them to 1 number ; the cost of doing so is the sum of
+ both numbers ; do this till the array has only 1 number left. Find the min cost to do
+  please. 
+
+[5,5,8] = [10,8] = [18] = cost = 10 + 18 
+[5,5,8] = [5,13] = [18] = cost = 13 + 18 
+
+Answer is 10 + 18 as it's the way with min cost. 
+

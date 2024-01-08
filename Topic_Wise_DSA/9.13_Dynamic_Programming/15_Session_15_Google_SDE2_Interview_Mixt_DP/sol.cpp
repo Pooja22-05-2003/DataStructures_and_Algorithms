@@ -1,4 +1,25 @@
 /*
+Q1. What is Mixt Dp=? 
+1. Dp[i]=In general Dp, it tells the best answer till index [i] from index 1
+2. But in Mixt DP, this is not the case and here dp[i][j]= It tells the best answer from index i to index j.
+
+*/
+
+/*
+Que in 1 line => We are given one array , and we need to convert that single element . 
+->We are allowed to take any 2 adjacent numbers and merge them, and its cost would be the sum of the both elements.
+-> And we can do this operation as many times as we want , from all the possible , find the way which cost minimum and return that minimum cost.
+
+*/
+
+/*
+INTUTION-> We need to find the best answer from index 1 to n.
+-> For every new index, we can't again calaculte the all values from scratch, so we can reuse the previous for the current indexes, and that is possible in the 
+case of DP.
+
+*/
+
+/*
 Approach:
 1. Compute the arr of 1 length cost , dp[1][1] , dp[2][2], dp[3][3]....till len.
 2. Compute for arr of len=2, dp[1][2] , dp[2][3] , dp[3][4] , dp[4][5] .....till last ind.,
