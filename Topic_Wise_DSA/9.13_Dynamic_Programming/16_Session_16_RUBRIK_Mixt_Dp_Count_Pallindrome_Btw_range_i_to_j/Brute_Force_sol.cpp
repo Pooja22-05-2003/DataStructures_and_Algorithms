@@ -1,14 +1,17 @@
 /*
-For Optimization , Think of is it possible to Extract the answer for each query in O(1) operation.
+Brute Force approach is , use the dp array u created in the counting of number of 
+Pallindromic substring in string , and and run one for loop for q queries and under that 
+run 2 for loop[which will go in range of l to r] ,just like you do in subarray and if (dp[i][j]==1) 
+it means that substring from index i to j is pallindrome, so increase the counter and return the count for each range.
 
 */
 
-// TC=O(N*N) => 
+// TC=O(Q*N*N) => q range is 10^6*10^5*10^5=> 10^16==> OPTIMIZE IT 
 // SC=O(N*N)
 #include<bits/stdc++.h>
 using namespace std;
    
-    void  solve(string s, vector<vector<int>> &dp1) {
+    int solve(string s,int l , int r) {
         int n=s.size();
         vector<vector<int>> dp(n,vector<int>(n,0));
 
@@ -20,7 +23,6 @@ using namespace std;
         int i=0;
         while(i<n){
             dp[i][i]=1;
-            dp1[i][i]=1;
             cnt++;
             i++;
         }
@@ -34,8 +36,6 @@ using namespace std;
                 cnt++;
                 }
             else dp[i][i+1]=0;
-
-            dp1[i][i+1]=dp1[i][i+1-1]+dp1[i+1][i+1]+dp[i][i+1];
             i++;
         }
 
@@ -52,28 +52,19 @@ using namespace std;
                 }
             else dp[i][j]=0;
 
-            // This formula is created as number of substring between i to j-1 and + i+1 to j and we counted i+1 to j-1 2 times , so we will subtract 1 time
-            //  and also at last , we will check if the dp[i][j] is a valid substring, so it contribute 1 in the main ans
-            dp1[i][j]=dp1[i][j-1]+dp1[i+1][j]-dp1[i+1][j-1]+dp[i][j];
-
             i++;
         }
         len++;
-
-
-
         }
        
-        // int cntt=0;
-        // for(int m=l;m<=r;m++){
-        //     for(int n=m;n<=r;n++){
-        //         if(dp[m][n]==1) cntt++;
-        //     }
-        // }
+        int cntt=0;
+        for(int m=l;m<=r;m++){
+            for(int n=m;n<=r;n++){
+                if(dp[m][n]==1) cntt++;
+            }
+        }
 
-        // return cntt;
-
-       
+        return cntt;
     }
 
 int main(){
@@ -92,18 +83,11 @@ int main(){
     int q;
     cin>>q;
     int i=1;
-
-
-    int n=s.size();
-    // 2D vector DP1, and in this 
-    // DP1[i][j]= It will store the number of pallindromic subtrings which are valid the the range of i to j.
-    vector<vector<int>> dp1(n+1,vector<int>(n+1,0));
-    solve(s,dp1);
     while(i<=q){
         int l,r;
         cin>>l;
         cin>>r;
-        cout<<dp1[l][r]<<endl;
+        cout<<solve(s,l,r)<<endl;
         
         i++;
     }

@@ -1,0 +1,6 @@
+Problem Link : https://www.desiqna.in/16212/rubrik-oa-sde-1-nov-dynamic-programming-solution-by-kumar-k#google_vignette
+Docs Link : https://docs.google.com/document/d/1RepfPtEjtvU2BoZzlAhRUuS0HTarp1fOlmONJKJMsDk/edit?addon_store
+
+Que : Given a string s, and q queries in the form of l,r and 1<=l<=r<=s ( s is the length of the string).
+For Each range output the number of pallindromic substring that occur between the range of l to r (Both inclusive).
+
