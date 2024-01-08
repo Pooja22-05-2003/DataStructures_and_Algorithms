@@ -1,0 +1,17 @@
+Count All Palindromic Subsequence in a given String
+Read
+Courses
+Practice
+Jobs
+Find how many palindromic subsequences (need not necessarily be distinct) can be formed in a given string. Note that the empty string is not considered a palindrome. 
+
+Examples: 
+
+Input : str = "abcd"
+Output : 4
+Explanation :- palindromic  subsequence are : "a" ,"b", "c" ,"d" 
+Input : str = "aab"
+Output : 4
+Explanation :- palindromic subsequence are :"a", "a", "b", "aa"
+Input : str = "aaaa"
+Output : 15

@@ -1,8 +1,1 @@
-dpa[i]:6 dpb[i]:7 dpc[i]:8
-dpa[i]:16 dpb[i]:16 dpc[i]:11
-dpa[i]:18 dpb[i]:21 dpc[i]:18
-dpa[i]:28 dpb[i]:29 dpc[i]:27
-dpa[i]:33 dpb[i]:34 dpc[i]:37
-dpa[i]:39 dpb[i]:40 dpc[i]:41
-dpa[i]:48 dpb[i]:46 dpc[i]:41
-48
+15

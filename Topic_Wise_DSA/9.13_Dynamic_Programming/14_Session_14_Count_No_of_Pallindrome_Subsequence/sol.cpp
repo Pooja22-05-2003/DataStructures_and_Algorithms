@@ -1,8 +1,14 @@
 /*
-Brute Force Approach.
-1.Generate all the substring using 2 for loops and check whther substring is pallindrome or not.
-2. If it is pallindrome, then calculate its len, If its len is more than maxLen, then update the maxlen and finalSt ,FinalEnd.
-3. After iterating through all the substrigs, print the maximum length substring and its len.
+Optimized Approach Uisng dp.
+1. dp[i][j]= store the maximum number of subsequence in range of i to j , and count the number of pallindroic subsequence in it.
+2. Now handle the case when string len=1 , then this subsequence will be always valid,
+3. Now hadle the case of 2, if (s[i]==s[i+1]) , it means there are 3 subsequence Ex= xx then subsequences are x,x,xx
+   else dp[i][i+1]=2 , ex= ac , then  its subsequence are a,c
+4. Now check for len=3 and more.
+5. If s[i]!=s[j] then the totoal subsequence are   dp[i][j]=dp[i][j-1]+dp[i+1][j]-dp[i+1][j-1];
+   else  dp[i][j]=dp[i][j-1]+dp[i+1][j]+1;
+6. Now after all iteration till end , dp[0][n-1] will store the final answer ,so return that.
+
 
 */
 

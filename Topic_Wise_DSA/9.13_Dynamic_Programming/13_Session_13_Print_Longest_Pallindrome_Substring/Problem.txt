@@ -1,0 +1,10 @@
+Given a string str, the task is to find the longest substring which is a palindrome.
+
+Examples:
+
+Input: str = “forgeeksskeegfor” 
+Output: “geeksskeeg”
+Explanation: There are several possible palindromic substrings like “kssk”, “ss”, “eeksskee” etc. But the substring “geeksskeeg” is the longest among all.
+
+Input: str = “Geeks” 
+Output: “ee”
