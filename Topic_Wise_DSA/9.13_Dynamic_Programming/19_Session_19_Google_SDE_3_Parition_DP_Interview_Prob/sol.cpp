@@ -1,3 +1,16 @@
+/*
+Problem in 1 line:
+1. Given an array of size 'N'.Find the number of ways to partition it, such 
+that sum of each part<=M.
+
+1. dp[i]=It will denote the best answer till index i , or maximum possible ways to partition the array till index i.
+2. For any dp[i] le'ts say i=5, you can partition from ind=4,3,2,1..but index is valid only , when sum till there is <=m
+...so lets say k is the partition index.
+3. Caculate dp[i] for all the possible indexes and do this till n.
+
+*/
+
+
 
 
 

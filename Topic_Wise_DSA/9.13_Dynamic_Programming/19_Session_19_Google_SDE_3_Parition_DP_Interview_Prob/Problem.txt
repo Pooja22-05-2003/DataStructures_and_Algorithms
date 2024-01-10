@@ -1,0 +1,15 @@
+Docs Link : https://docs.google.com/document/d/1-6Wz38cZtW5R616MT2c9qy80R7YfOaiGu3kGtBl7zYM/edit
+
+Given an array of size ‘N’; find the number of ways to partition it such that sum of each part is <=M ; 
+
+1<=N<=100
+1<=b[i]<=m;
+1<=m<=10^10;
+
+-> [1 2 3 4 4] 
+M = 5 
+
+Output :- 3
+P1-> [1] [2] [3] [4] [4] 
+P2-> [12] [3] [4] [4] 
+P3-> [1] [23] [4] [4] 
