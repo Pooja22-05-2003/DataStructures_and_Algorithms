@@ -1,0 +1,12 @@
+Given a array , You need to return the maximum number of moves.
+Move means , you have only 3 options
+1. Pick the first and second element from the array , and the result of this is the sum of the first 2 elements.
+2. Pick the last 2 elements and the result of this move is the sum of the last 2 elements.
+3. Pick the first and the last element from the array and the move of this is the sum of the first and the last elements.
+
+Note. You can perform this move only , if the array size is greater than 2.
+
+Note- In array of size n , if u can all the moves which have equal sum.
+
+Que. Return the Maximum number of moves which u can achieve.
+
