@@ -1,0 +1,4 @@
+Follow up :- 
+
+-> Given an array of size ‘N’; find the number of ways to partition it such that the 
+sum of each part is <=M ; but you should only make k partitions!
