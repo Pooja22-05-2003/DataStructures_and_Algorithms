@@ -1,0 +1,4 @@
+Problem Link : https://www.desiqna.in/15065/cisco-ideathon-coding-oa-2023-solution-kumar-monica-and-jaey
+
+Understanding :-> Given an array of Size “N”; divide it into some parts; such that each part is of size>=K
+ and the max - min of that part should be <=M .

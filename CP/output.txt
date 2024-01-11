@@ -1,9 +1,1 @@
-i:2 partition:1 dp[i][partition]:1
-i:2 partition:2 dp[i][partition]:1
-i:3 partition:2 dp[i][partition]:2
-i:3 partition:3 dp[i][partition]:1
-i:4 partition:3 dp[i][partition]:2
-i:4 partition:4 dp[i][partition]:1
-i:5 partition:4 dp[i][partition]:2
-i:5 partition:5 dp[i][partition]:1
-1
+2

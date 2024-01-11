@@ -1,0 +1,8 @@
+Google SDE1 OA 
+
+Docs Link : https://docs.google.com/document/d/1lINhL8Wi-LO1nfbWXGyXLUXycwBvIzH0dMR2R619oGc/edit
+
+Given an array of size N; find the number of tuples (i,j,k,l,m) such that b[i] < b[j] > b[k] < b[l] > b[m] 
+
+1<=N<=1000 
+
