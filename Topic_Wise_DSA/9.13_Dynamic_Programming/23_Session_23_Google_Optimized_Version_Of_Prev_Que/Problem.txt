@@ -1,0 +1,11 @@
+Docs : https://docs.google.com/document/d/1TNj-SuTxzHFV0f6rX9-AN8MD-W0MlBdYFDt8VzZd5KI/edit
+
+Problem Link : https://www.desiqna.in/15165/google-oa-software-engineering-intern-july-21-2023-kumar-k
+
+You are given an array, divide the array into subarrays , totoal cost of doing that should be minimum.
+
+Whenever the subarrays of size>=2; cost of the subarray [i...j]=b[i]+b[i+1]......b[j]
+
+Whenever the subarray of size=1; cost of the subarray is[i.i]=a[i]
+
+
