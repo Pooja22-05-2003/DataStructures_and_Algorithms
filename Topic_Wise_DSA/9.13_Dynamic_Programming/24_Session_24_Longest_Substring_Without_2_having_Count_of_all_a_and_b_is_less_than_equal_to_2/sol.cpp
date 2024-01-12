@@ -1,4 +1,48 @@
 /*
+Approach.
+1. This Problem can be solved using Dynamic Programing[ INTUTION: Here we need to divide the string into substrings and need to find the best answer. And dividing and finding the best answer is solved using DP]
+2. If u observe and try to find dp[i]=It will the best possible length of valid largest substring till index "i" , when last element is included. But 
+For ex. a a a b
+        0 1 2 3 [If we calulate dp[2]...it will not able to ]
+
+
+dp[i] = dp[i-1] + fix the last part of the string “i”
+OR
+dp[i] = dp[i-2] + fix the last part of string “i-1 i”
+OR
+dp[i] = dp[i-3] + fix the last part of the string “...........”
+
+.
+.
+.
+You pick the best choice! 
+
+
+dp[i] = longest substring which ends at index “i” = it should strictly include the ith element
+
+Final answer = max(dp[0],dp[1],dp[2],........dp[N-1])
+
+But these states are not enough. 
+
+
+So here we introduce more than 1 DP is required.
+dpa[i]= Best answer till index 'i' , if the last element is 'a'
+dpa[i]=max(dpb[i-1],dpb2[i-1])
+
+dpa2[i]=It store the best answer till index 'i' , if the last 2 elements are 'a'
+dpa2[i]=max(dpb[i-1],dpb2[i-1])
+
+dpb[i]= Best answer till index 'i' , if the last element is 'b'
+dpb[i]=max(dpa[i-1],dpa2[i-1])
+
+dpb2[i]=It store the best answer till index 'i' , if the last 2 elements are 'b'
+dpb2[i]=max(dpa[i-1],dpa2[i-1])
+
+
+*/
+
+
+/*
 dpa[i]= Best answer till index 'i' , if the last element is 'a'
 dpa[i]=1+max(dpb[i-1],dpb2[i-1])
 
@@ -13,8 +57,8 @@ dpb2[i]=2+max(dpa[i-2],dpa2[i-2])
 
 */
 
-// TC= 
-// SC= 
+// TC= O(n)
+// SC= O(n)
 #include<bits/stdc++.h>
 using namespace std;
 

@@ -1,0 +1,18 @@
+// Docs Link :https://docs.google.com/document/d/1UHcOnW8ex12OPrQ9_OpuADYNX4XPsIQwmMgOoVtJb48/edit
+
+// Problem Link : https://www.desiqna.in/15248/microsoft-oa-sde-1-freshers-hiring-2023-43-lakhs-ctc
+
+Given a string s containing only a and b , find the length of substrig s such that s does not contain 
+more than two contiguous occurrences of a and b.
+
+Example1:
+Input : aabbaaaaabb
+Output: aabbaa
+
+Example2:
+
+Input :
+aabbaabbaabbaaa
+
+Output:
+aabbaabbaabbaa
