@@ -1,1 +1,2 @@
-aabbaaaaabb
+123
+1000

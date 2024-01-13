@@ -1,0 +1,17 @@
+Docs Link:https://docs.google.com/document/d/11KUwYCB3OGXJsIX081WYkG3Vcqe0KjQ-5UruiC7cP3g/edit
+
+Problem Link : https://www.desiqna.in/13954/techgig-coding-semifinale-contest-problem-dp
+
+Given a string of integers, divide them in such a manner that all the parts of that string <=k, find the number 
+of ways to do it.
+
+Expample :
+S = “123” ; K<=1000
+
+Output : 4. 
+
+S = “125” ; K = 24 
+Output : 2. 
+
+S = “1234” ; K = 1000
+output : 4
