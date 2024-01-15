@@ -1,0 +1,14 @@
+Docs Link : https://docs.google.com/document/d/1dGuvfcFh7cT9OOtM6UPSqDjj8O2a8UfTKfWu9oev2jg/edit
+
+Problem : Given two arrays A and B , both of size "N"; find the number of
+pair of subsets {s1,s2} , such that max(s1)>=max(s2); where 
+s1= Subset from Array A
+s2= Subset from array B.
+
+
+Constraint :
+1<=N<=100000
+1<=A[i],B[i]<=100000
+
+
+As the answer is so large , so do modulo 1e9+7

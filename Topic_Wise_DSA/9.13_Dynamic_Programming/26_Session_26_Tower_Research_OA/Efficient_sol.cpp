@@ -1,3 +1,6 @@
+// TC=O(N)
+// SC=O(N)
+
 #include<bits/stdc++.h>
 using namespace std;
 int mod=1e9+7;
