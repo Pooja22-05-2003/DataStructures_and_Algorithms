@@ -11,8 +11,6 @@ so, dp[i][j]..when last el burnign is k , then dp[i][j]=dp[i-1]*dp[k]*dp[j+1] + 
 
 6. Now if the len of the array u are decided burn is 4, then k will vary from 1 to 4 , so calculate dp[i][j] from 1 to 4 and store the maximum among all of them in dp[i][j] state.
 
-
-
 */
 
 class Solution {

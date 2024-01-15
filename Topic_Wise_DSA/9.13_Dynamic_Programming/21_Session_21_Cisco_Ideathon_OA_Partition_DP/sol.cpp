@@ -24,9 +24,7 @@ OR
 
 
 // TC=O(N2)
-
 // SC=O(N)
-
 
 // 1st if the array given to u is 0 based then convert it into 1 based indexing.
 
