@@ -1,0 +1,12 @@
+Docs Link :https://docs.google.com/document/d/1l5WpLUrtyc_U_j0ubnzFH89RMkXQZ9KDx2HVDXPptZM/edit
+
+Problem Link : https://desiqna.in/16229/meesho-oa-sde-intern-ctc-25l-jan-2024
+
+ Given an array of size “N” ; you can do a particular type of operation any number of times(even 0) ; the final size of the array should be as small as possible! 
+
+In one operation ; you are allowed to pick any subarray which starts and ends at the same element and remove it from array 
+
+Find the minimum number of elements left in the array.
+
+
+Homework :-> Optimise it to O(N) time; using hashing and eliminate the inner loop 
