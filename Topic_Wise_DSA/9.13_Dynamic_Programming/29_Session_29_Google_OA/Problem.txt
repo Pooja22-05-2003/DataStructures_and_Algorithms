@@ -1,0 +1,22 @@
+Problem Link : https://www.desiqna.in/16133/google-oa-sde1-nov-2023
+
+Docs Link : https://docs.google.com/document/d/1uEr-EqrvzB14HZtUKjdKJc-3F0DP3m_etdnLdy1jJNc/edit
+
+Problem:
+Given array of positive integers of length n (n<=100000)
+
+(a[i]<=100000)
+You have to maximize the consecutive integers count in array (Order doesn't matter)
+Only operation you are allowed to do with array elements is to make
+ai=ai+1 i.e increase the element by one  OR
+ai=ai+0 i.e do nothing with element
+for all 0<=i<n
+E.g 
+Input
+n=9
+arr:1 1 3 4 6 6 6 8 10
+ans = 5
+Explanation:
+You can transform the array to
+1 1 4 5 6 7 6 8 10
+maximum consecutive length is 5 with elements 4,5,6,7,8.
