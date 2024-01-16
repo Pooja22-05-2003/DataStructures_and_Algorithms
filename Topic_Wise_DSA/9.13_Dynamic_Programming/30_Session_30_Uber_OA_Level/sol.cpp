@@ -20,8 +20,8 @@ At last after n iteration return the best answer for index n by calculating the 
 
 */
 
-// TC=
-// SC=
+// TC=O(N)
+// SC=O(N)
 
 #include<bits/stdc++.h>
 using namespace std;
