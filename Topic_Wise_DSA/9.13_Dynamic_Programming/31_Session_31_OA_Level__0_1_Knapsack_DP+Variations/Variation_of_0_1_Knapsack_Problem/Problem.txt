@@ -1,0 +1,3 @@
+Now , u have 2 bags ,one of capacity c1 and other of capacity c2 and u need to return the maximum profit.
+
+Follow Up: If bags will increase , dp state will also increase.
