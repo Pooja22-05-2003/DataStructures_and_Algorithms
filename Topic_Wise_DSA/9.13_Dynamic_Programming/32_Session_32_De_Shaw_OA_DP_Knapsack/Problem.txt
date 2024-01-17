@@ -1,0 +1,15 @@
+Docs Link : https://docs.google.com/document/d/1UgpzjsTmne_SC5DgkMd-pwTZO-Yo7hg3p8o4f160QZU/edit
+
+Problem Link :https://www.desiqna.in/15099/shaw-super-hard-dynamic-programming-solution-kumar-2023-may
+
+You are given an array of size n , name cose[i]; You are also given 
+happy[i]; max[i]; min[i]; m-> total budget.
+
+Do shopping in such a way such that you get the maximum happiness in the given money.
+
+Constraints : 
+1<=n<=100
+1<=cost[i]<=100
+1<=happy[i]<=100
+1<=max,min<=100
+1<=m<=100 

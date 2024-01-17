@@ -1,4 +1,24 @@
 /*
+Observation :
+1. We can get the multiple quantity of the same item.but there is a restriction of picking any 
+quantity in the range of min quantity and max quantity.
+2. So, we have 2 options to pick that element or not pick that element , just like knapsack problem.
+3. And we also need to take care of the which we can't exceed beyond the budget.
+4. WHY TO APPLY DP?? 🧠🤔: As we have multiple options and we need to pick the best.So, explore all the
+possible possibles.
+5. In gerneral dp[i]=> Denotes the maximum happiness we can achieve till index 'i'.But also there is 1 money factor which u need to consider.
+6. dp[i][j]=> It denotes, the maximum happiness , we can achieve till index 'i', when we are forced to buy atleast 1 item of index 'i' and we have maximum 'j' amount of money.
+ i will go from 1 to n and j will go from 0 to budget.
+
+ dp[0][0] , dp[0][1]...=> INT_MIN, when i =0 , we don't have any item so answer will be INT_MIN.
+
+base case . dp[1][0]=INT_MIN; it was compulsory to buy at least 1 time; you cant even do that so answer is INT_MIN. 
+
+dp[1][j].....till j is less than cost of i item , it will be INT_MIN.
+
+
+*/
+/*
 Approach :
 
 */
