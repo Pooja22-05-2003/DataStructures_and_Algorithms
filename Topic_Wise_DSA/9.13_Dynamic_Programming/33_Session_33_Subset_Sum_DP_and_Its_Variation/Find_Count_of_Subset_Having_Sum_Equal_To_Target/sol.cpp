@@ -1,7 +1,7 @@
 
 /*
 Approach :
-
+Now u need to count the total numbers of subset having sum equal to target.
 */
 // TC=O(N*target)
 // SC=O(N*Target)
