@@ -1,0 +1,12 @@
+Problem Link : https://docs.google.com/document/d/1zbKA3OZjGmhhMrpdfh7jfZtz4TrNusSesHshGueJIZU/edit
+
+Que Link : https://www.desiqna.in/16231/walmart-oa-2nd-nov-question-and-solution-set-59-2024
+
+Find the largest subset in the array such that each element is thrice the previous element.
+
+Example:
+[1 5 15 3 9]
+
+output :
+3
+[1 3 9]
