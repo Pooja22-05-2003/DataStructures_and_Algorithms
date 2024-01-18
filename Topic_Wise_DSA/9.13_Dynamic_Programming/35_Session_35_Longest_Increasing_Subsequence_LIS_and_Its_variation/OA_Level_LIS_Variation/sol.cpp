@@ -1,10 +1,15 @@
+/*
+Approach :
+1. Let's write the for any general k diff , then if que is for consecutive , then we will fix k=1.
+
+*/
+
 
 /*
 Approach :
 
-hasmap(bst) will store the best ans for element i
 */
-// TC=O(N)
+// TC=O(N2)
 // SC=O(N)
 
 #include<bits/stdc++.h>
@@ -12,20 +17,16 @@ using namespace std;
 
   int solve(int k,vector<int>& arr) {
         int n=arr.size();
-        unordered_map<int,int>mp;
         vector<int> dp(n+1,1);
-        mp[arr[1-1]]=1;
         int i=2;
         while(i<=n){
 
-            // int j=i-1;
-            // while(j>=1){
-            //     if(arr[i-1]-arr[j-1]==k) dp[i]=max(dp[i],1+dp[j]);
-            //     j--;
-            // }
-            dp[i]=max(dp[i],(1+mp[arr[i-1]-k]));
+            int j=i-1;
+            while(j>=1){
+                if(arr[i-1]-arr[j-1]==k) dp[i]=max(dp[i],1+dp[j]);
+                j--;
+            }
             cout<<"i:"<<i<<" dp[i]:"<<dp[i]<<endl;
-            mp[arr[i-1]]=max(mp[arr[i-1]],dp[i]);
             i++;
         }
         

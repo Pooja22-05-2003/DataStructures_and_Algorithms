@@ -1,0 +1,27 @@
+Problem Link : https://docs.google.com/document/d/1hpX6nNrrebEspdP6kWP7QqRDgGYAZ1I_ysc_lb6eEC0/edit
+Q2 : Find LIS where each number is consecutive in the increasing sequence 
+
+
+
+[200 ; 4 ; 5 ; 6 ; 7 ; 100 ; 8]
+
+= 5 
+
+
+
+Q3 : Find LIS where each number  in the increasing sequence each number has consecutive difference of k 
+
+
+
+[100 ; 4 ; 5 ; 6 ; 7 ; 200 ; 8] ; k = 100 
+
+= 2
+
+
+(100,200) ==100 
+
+
+
+
+Solution : update the bst map according to the number in the array not according to the index in the array ; if you know the best answer for any number ; say you are at b[i] ; you can quickly check or lookup in your map in O(1) the answer of 1 + map[b[i]-1] 
+
