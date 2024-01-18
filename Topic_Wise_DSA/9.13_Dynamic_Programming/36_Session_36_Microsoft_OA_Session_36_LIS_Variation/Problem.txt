@@ -1,0 +1,41 @@
+Docs Link : https://docs.google.com/document/d/1Hx6e8ZIvUs_Nk90q6LleReshXZRyPGreT6atWojTbB8/edit
+
+Problem Link : https://www.desiqna.in/16208/microsoft-sde-oa-coding-questions-set-117-24th-dec-2023
+
+We are given an array of size “N”; we can select some numbers from this array and we can rearrange them
+in any order we want ; whatever order you get it should be the largest possible Arithmetic sequence. 
+
+
+/*
+// input1 :
+5
+4 7 1 5 3
+
+
+// output1:
+4
+
+
+
+Input2:
+5
+12 12 12 15 10
+
+// output 2:
+3
+
+
+input3:
+7
+18 26 18 24 20 22
+
+output:
+5
+
+input4:
+
+output: 
+
+
+
+*/
