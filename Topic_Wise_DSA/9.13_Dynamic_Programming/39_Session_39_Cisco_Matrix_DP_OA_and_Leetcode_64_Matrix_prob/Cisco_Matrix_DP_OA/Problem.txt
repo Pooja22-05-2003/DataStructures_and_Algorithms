@@ -1,0 +1,8 @@
+Given a chessboard of size "N X M" ; Rook is standing at (1,1) ; find the number of ways
+to reach (n,m) ; if rook is only allowed to go paths which will led it to move closer to destination.
+
+1<=N<=1000
+
+1<=M<=1000
+
+Find the answer modulo 1e9 + 7.
