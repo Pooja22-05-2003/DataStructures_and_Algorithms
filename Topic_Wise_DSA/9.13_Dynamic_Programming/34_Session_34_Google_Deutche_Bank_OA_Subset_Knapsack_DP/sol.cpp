@@ -1,10 +1,21 @@
+/*
+1.Approach , in each row we need to pickn 1 element. and At the current row, we were not sure whether
+by picking that el, we were able to reach the best answer or not at last.
+
+2.dp[i][j]=> It will store true , if It is possible to get sum = j by using the first 'i' rows.
+
+3.And at last for last row, checck for all the possible sums from 1 to 5000, and if dp[n][sum]==true , then find out the diff and
+store the min absolute diff in the answer.
+
+*/
+
 
 /*
 Approach :
 
 */
-// TC=O(N*target)
-// SC=O(N*Target)
+// TC=O(N*m*5000)
+// SC=O(N*5000)
 
 #include<bits/stdc++.h>
 using namespace std;

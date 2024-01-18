@@ -1,0 +1,29 @@
+Docs Link : https://docs.google.com/document/d/1MlZvxBGgBsN9KwIiL3eb3V8m4ilQ61wVzpgB5x4HNJU/edit?addon_store
+
+Problem Link : https://www.desiqna.in/16107/google-oa-dp
+
+We are given “N” rows. Each row has “M” elements; we have to select 1 element from each row. 
+
+Once we are done with it final sum of all elements should be as close as possible to K 
+
+Analysis :-> 
+
+N = 5 
+M = 2
+K = 40 
+{
+3 5
+5 8 
+8 8 
+10 10
+11 15
+}
+
+Output :-> Abs(sum-K) = (40-40) = 0 
+
+Return the min possible difference between k and sum.
+
+Constraints :
+1<=N,M<=70
+1<=price[i][j]<=70
+1<=K<=800
