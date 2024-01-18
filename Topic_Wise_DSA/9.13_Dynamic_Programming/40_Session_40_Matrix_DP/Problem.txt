@@ -1,0 +1,9 @@
+Problem Link : https://www.desiqna.in/13713/cisco-oa-sde1-may-2023
+
+Given a chessboard of size "N X M" ; Rook is standing at (1,1) ; find the number of ways to reach (n,m) ; if rook is only allowed to go right or down.
+
+1<=N<=1000
+
+1<=M<=1000
+
+Find the answer modulo 1e9 + 7.
