@@ -1,0 +1,9 @@
+An array of costs was given. 
+You always start at index 1. 
+You can either take two jumps forward or one jump backward. If you land on a particular index, you have to add the cost to your total. 
+Find the minimum cost needed to cross the array or reach the end of the array.
+You can visit any index for only 1 time. 
+
+b = [ 2 5 8 ] 
+cost = 10 
+

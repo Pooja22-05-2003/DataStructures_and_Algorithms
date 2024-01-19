@@ -1,3 +1,24 @@
+/*
+Problem in 1 Line:
+1. Given an array, u are index 1 and u need to reach at index n , or want to cross n.
+2. 2 options are there at each index
+  -> From index take 2 jumps forwars.
+  -> Or take 1 jump backward.
+3. NOTE:- You can visit any index for only 1 times.
+At whatever index u are reaching, add that to you total sum.
+
+
+Approach:
+1. At any index we don't know the best minimum cost will come from backward or from forward.
+So, We need to explore all the possible paths.
+2. Which DATA STRUCTURE???:-🤔🤔 DP: In dp we explore all the possible paths and store the best possible at each index.
+3. dp[i]=> It denotes the best possible answer till index 'i'.
+4. But there are 2 options , whether to move forward, or backward.
+5. So whatever thing is creating problem , try to make state for that.
+6. dp[i][forward]=> It means best possible answer till index 'i' , when we come at index 'i' through forward step.
+   dp[i][backward]=> It means best possible answer till index 'i' , when we come at index 'i' through the previous step as backward.
+*/
+
 // TC=O(N)
 // SC=O(N*3)
 
