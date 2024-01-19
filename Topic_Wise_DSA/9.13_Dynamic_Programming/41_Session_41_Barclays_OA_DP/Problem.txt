@@ -1,0 +1,11 @@
+Problem Link : https://www.desiqna.in/10567/barclays-sde-coding-oa-questions-and-solutions-set-8-2022-dp
+
+Given 2 arrays first array represent the amount pay for easy task at ith day. and second array represent the amount paid at ith day for hard dask. 
+And it is confirmed that at any amount paid for hard task > amount paid for easy task.
+
+At any day u have 3 options:
+1. Pick the easy task.
+2. Pick the hard task. if any day you are deciding to pick the hard task, then it is necessary that you had not done any task on the previous day, whether it is easy or hard.
+3. Don't pick any task on the ith day and do nothing.
+
+Return the maximum amount of salary u can achieve at the end of the N days.(As the array size is of n)
