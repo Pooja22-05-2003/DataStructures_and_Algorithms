@@ -1,0 +1,14 @@
+Docs Link : https://docs.google.com/document/d/1OEtaJJ6YP4HbRIAqm9ahUWg_bLr8Qr67V3-d-mk6OkU/edit
+
+You are given “N” strings. For each string you have to generate the Alpha set of that string 
+
+
+Alpha set - Subset of all strings + permutation of all those subsets! 
+
+-> Find the string which is coming in all the alpha sets. If you find multiple such strings, find the length of the largest one! 
+
+
+-> ab
+-> cba.
+
+:-> 2. 

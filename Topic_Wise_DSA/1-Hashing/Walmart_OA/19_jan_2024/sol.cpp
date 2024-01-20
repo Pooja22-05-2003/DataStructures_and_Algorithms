@@ -1,3 +1,8 @@
+/*
+Problem in simpler form:
+1. Find the length of the character which are coming in all the n strings.
+*/
+
 // TC= O(26 + N*(N+26) + 26) = O(N*N + 26*N) 
 // N*N <= 500000 
 // 26*N = 2600000 = 2.6 * 10^6 < 10^8 
