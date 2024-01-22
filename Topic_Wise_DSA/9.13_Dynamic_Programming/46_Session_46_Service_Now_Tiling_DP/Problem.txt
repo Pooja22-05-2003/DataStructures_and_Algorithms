@@ -1,0 +1,6 @@
+Problem Link :https://www.desiqna.in/11860/servicenow-coding-online-test-solution-2023-offcampus-hiring
+
+Video Link :https://www.youtube.com/watch?v=N_kmp8Pdpb8&lc=UgwMHif_lgiToSjk5Rt4AaABAg
+
+Given a n*3 matrix. Tile size given are 1*2(u can place horizontallly and vertically).
+Fint the number of ways of placing the tile in the grid.

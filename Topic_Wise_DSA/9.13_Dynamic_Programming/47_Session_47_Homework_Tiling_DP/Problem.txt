@@ -1,0 +1,3 @@
+Docs : https://docs.google.com/document/d/1p6osnIMOB1yb1DeCN8MMahuxRq84WH0q2JQ1GWr8WtU/edit
+
+-> Given a 4xN Grid ; and 1x2 tile ; arrange the tile vertically/horizontally and find the number of ways to fill the grid :) 
