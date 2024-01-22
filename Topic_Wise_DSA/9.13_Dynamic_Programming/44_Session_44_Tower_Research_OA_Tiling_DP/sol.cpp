@@ -52,3 +52,31 @@ int main(){
 	return 0;
 }
 	
+
+
+/*
+// input1 :
+5
+
+// output1:
+5
+
+Input2:
+
+// output 2:
+
+
+
+input3:
+
+
+output:
+
+
+input4:
+
+output: 
+
+
+
+*/

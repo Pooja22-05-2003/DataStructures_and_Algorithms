@@ -1,0 +1,9 @@
+Docs Link : https://docs.google.com/document/d/1CyNsUUl0Wlc6Yi0bcDUY8dz2lh6K90DqPhm08F0SA6g/edit
+
+Problem Link : https://www.desiqna.in/12381/tower-research-oa-sde-offcampus
+
+Video Link : https://drive.google.com/file/d/11HKj8zVfJVC32heuTP5Sbnqg96wiU1Ec/view
+
+Similar as previous question, but here 4*n wall is given, and 
+we need to fill with 1*4 or 4*1 bricks.
+
