@@ -2,7 +2,6 @@
 /*
 Approach :
 
-hasmap(bst) will store the best ans for element i
 */
 // TC=O(N)
 // SC=O(N)
