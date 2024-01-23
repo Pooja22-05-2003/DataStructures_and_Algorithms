@@ -1,0 +1,17 @@
+Problem Link:https://www.desiqna.in/12449/codenation-oa-sde-feb-2023-bit-manipulation-dp
+
+You are given an array of size n and an integer k, you have to partition the array into k 
+contiguous subarrays such that the sum of bitwise OR of all the subarrays is maximised. 
+Each element should belong to a partition.
+
+eg -> A = [1, 2, 3, 4], k = 2
+
+1st way: [1], [2, 3, 4] -> (1) + (2 | 3 | 4) = 8
+
+2nd way: [1, 2], [3, 4] -> (1 | 2) + (3 | 4) = 10
+
+3rd way: [1, 2, 3], [4] -> (1 | 2 | 3) + 4 = 7 Hence, the answer is 10.
+
+N = 1000
+
+1<=a[i]<=10000

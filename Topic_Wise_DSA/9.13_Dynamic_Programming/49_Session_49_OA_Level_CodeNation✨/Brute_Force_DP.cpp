@@ -1,4 +1,20 @@
-// TC=O(N3)
+/*
+Approach:
+At each index, try to find the best possible ans.
+dp[i][j]=> Maximum bitwise OR till index i, when u are partitioning the arr
+till index i in j parts.
+
+let's say arr= 1 4 2 56 3
+dp[4][2]=> Now at index 4.
+1. First option is take the last el in 1 subarray and divide i-1 in j-1 subarray.
+2nd otption take i,i-1 in 1 subarray and divide the remaining i-2 in j-1 subarray.
+.
+.
+Repeat this till u are able to divide it.
+
+*/
+
+// TC=O(N3) [N=1000, n3=10^9---> It will give TLE].
 // SC=O(N2)
 
 #include <bits/stdc++.h>

@@ -1,1 +1,22 @@
-5
+lastPart:2 currOR:2 dp[last_part-1][j-1]+currOR:3
+i:2 j:2 dp[i][j]:3
+lastPart:2 currOR:2 dp[last_part-1][j-1]+currOR:2
+lastPart:1 currOR:3 dp[last_part-1][j-1]+currOR:3
+i:2 j:1 dp[i][j]:3
+lastPart:3 currOR:3 dp[last_part-1][j-1]+currOR:6
+lastPart:2 currOR:3 dp[last_part-1][j-1]+currOR:4
+i:3 j:2 dp[i][j]:6
+lastPart:3 currOR:3 dp[last_part-1][j-1]+currOR:3
+lastPart:2 currOR:3 dp[last_part-1][j-1]+currOR:3
+lastPart:1 currOR:3 dp[last_part-1][j-1]+currOR:3
+i:3 j:1 dp[i][j]:3
+lastPart:4 currOR:4 dp[last_part-1][j-1]+currOR:7
+lastPart:3 currOR:7 dp[last_part-1][j-1]+currOR:10
+lastPart:2 currOR:7 dp[last_part-1][j-1]+currOR:8
+i:4 j:2 dp[i][j]:10
+lastPart:4 currOR:4 dp[last_part-1][j-1]+currOR:4
+lastPart:3 currOR:7 dp[last_part-1][j-1]+currOR:7
+lastPart:2 currOR:7 dp[last_part-1][j-1]+currOR:7
+lastPart:1 currOR:7 dp[last_part-1][j-1]+currOR:7
+i:4 j:1 dp[i][j]:7
+10
