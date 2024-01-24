@@ -1,0 +1,21 @@
+Problem Link : https://www.desiqna.in/7959/google-oa-ronnie-and-donnie-set-28-iit-2022
+
+1.Given an array of even length.
+2. Now there are 2 players in the game (Donnie and Ronnie).
+3. Donnie will always start the game. and Donnie can play any startegy(Greedy and optimial), so difinitely Doniie play the optimal strategy.
+4. Roniie will always play the greedy startegy.
+5. Both the players take the alternate turns.
+6. In any turn , player playing the game is aloowed to pick the leftmost element in the array and rightmost element in the array.
+7. In greedy startegy, players will always pick the greatest element from leftmost arr or rightmost array.
+8. In optimal strategy player will play optimally and if in the futute high money he can earn, so at the current picking player can also take small money
+ and in future he will more money and eventually earn the better profit.
+9. You are to determine exactly how bad the greedy strategy is for different games when ronnie uses it(greedy),but Donnie is free to use any strategy he wishes.
+
+10. Means u need to find the maximum difference between the greedy and optimal strategy.
+
+Constraints :
+1. 1<len(arr) <=1000
+2. len(arr) is always even
+3. Sum of the number in arr<=10^5
+
+

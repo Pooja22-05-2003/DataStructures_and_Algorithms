@@ -1,5 +1,5 @@
-// TC=O()
-// SC=O()
+// TC=O(n2)
+// SC=O(n2)
 
 #include <bits/stdc++.h>
 using namespace std;
