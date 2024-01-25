@@ -1,0 +1,31 @@
+Problem / Docs Link : https://www.desiqna.in/11238/aesthetic-permutation-triology-codenation-dynamic-programming
+Video Link : https://www.youtube.com/watch?v=6Jr01v1Ho9g&t=1814s
+
+Mr. Hola has an array A of size N and an integer B gifted to him by Mrs Hola.
+The Aesthetic Value of the array is defined by the summation of 
+[A[i]-A[i+B]] for all i from 1 to N-B.
+
+You need to find the minimum Aesthetic Value possible for any permutaion of the array A.
+
+For Example 
+
+
+arr=[4,3,4,3,2,5]
+B=3
+
+Output:3
+
+arr=[3,-5,3,-5,3]
+B=2
+output:
+0
+
+If u will see the example of the image or video.
+Que changes to:
+
+Arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+k=4.
+
+Divide the sorted array into X=3 sequence of len=4 and Y=1 sequence of length=3.
+
+X,Y and lenght will change according to the questions.

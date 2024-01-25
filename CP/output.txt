@@ -1,2 +1,2 @@
-Optimal path sum:19  Greedy path sum:9
-10
+3 0
+3
