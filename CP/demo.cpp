@@ -1,65 +1,49 @@
-// TC=O()
-// SC=O()
+// TC=O(N2)
+// SC=O(N2)
 
 #include <bits/stdc++.h>
 
 using namespace std;
 int solve(int n,int sum,vector<int>arr)
 {
-    vector<vector<int>>dp(n+1,vector<int>(sum,INT_MAX));
-    // fill the base case (for i=1)
-
-    for(int j=0;j<=sum;j++)
-    {
-        if(arr[1]>=j) dp[1][j]=1;
-    }
-
+    vector<vector<int>>dp(n+1,vector<int>(n+1,0));
+    dp[1][1]=arr[1];
     int i=2;
     while(i<=n)
     {
-        int j=0;
-        
-        while(j<=sum)
-        {            
-            if(arr[i]>=j)
-            {   // that single element can be the valid subsequence
-                dp[i][j]=1;
-                
-            }
-            else 
+        int j=1;
+        while(j<=i)
+        {
+            int l=1;
+            while(l<=(i-1))
             {
-                int v=1;
-                while(v<=(i-1))
-                {
-                    // increasing subsequence
-                    if(arr[v]<=arr[i])
-                    {
-                        if(j-arr[i]>=0)
-                        {
-                            if(dp[v][j-arr[i]]!=INT_MAX)
-                            {int temp=dp[v][j-arr[i]]+1;
-                            dp[i][j]=min(dp[i][j],temp);}
-                        }
-                        
-                    }
-                    v++;
-                }
+            if(arr[l]<=arr[i])
+            {
+                dp[i][j]=max(dp[i][j],arr[i]+dp[l][j-1]);
 
             }
+            l++;
+            }
+
             j++;
         }
-        i++;
-    }
+       
 
-    // Final ans would be the min of dp[1][sum]......dp[n][sum]
-    int ans=INT_MAX;
-    i=1;
-    while(i<=n)
-    {
-        ans=min(ans,dp[i][sum]);
         i++;
     }
-    return ans;
+   
+   int ans=INT_MAX;
+   for(int i=1;i<=n;i++)
+
+   {
+    for(int j=1;j<=i;j++)
+    {   
+        // Here u need to find the min between j and ans and not dp[i][j],ans
+        if(dp[i][j]>=sum) ans=min(j,ans);
+    }
+   }
+
+   return ans;
 
 }
 
