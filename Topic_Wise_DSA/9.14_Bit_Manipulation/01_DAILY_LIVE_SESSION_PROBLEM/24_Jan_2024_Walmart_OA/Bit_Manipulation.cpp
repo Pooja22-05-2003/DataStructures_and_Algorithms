@@ -1,3 +1,8 @@
+/*
+Approach:
+See the tabular explaination of the bits.
+*/
+
 // TC=O()
 // SC=O()
 
