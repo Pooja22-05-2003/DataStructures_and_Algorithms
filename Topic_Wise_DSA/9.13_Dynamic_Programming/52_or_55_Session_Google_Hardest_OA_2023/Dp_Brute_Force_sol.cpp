@@ -30,8 +30,8 @@ valid include 2 parameters:
 
 */
 
-// TC=O()
-// SC=O()
+// TC=O(N*N*Sum) => 10^2*10^2*10^8 (This complexity will not be accepted in Google OA)-> So try to remove the K term in the complexity
+// SC=O(N*sum)
 
 #include <bits/stdc++.h>
 
