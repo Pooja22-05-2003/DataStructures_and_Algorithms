@@ -1,5 +1,29 @@
-// TC=O()
-// SC=O()
+/*
+Problem explaination
+1. Bob has numbers in the array.
+2. If maximum  number has occurence =1 (Then cnt++), then bob remove that from the array and insert number/2 in the array(If number/2 occurence=0, then don't insert it in the collection)
+3. If the occurence has frequecny greater than 1 then remove all the occurence of that number.
+4. Bob will count until the collection becomes empty.
+5. Return the number of unique numbers present in Bob's collection.
+
+
+Constraint 
+1>=N<=10^5
+0>=A[i]<=10^5
+*/
+
+/*
+Approach:
+1. As every time we need to pick the maximum element , so we need to use some data structure, which will store maximum element at the top.
+2. So here We will use Priority Queue and also we need to store here the frequency (So we can use here hashing for that).
+
+*/
+
+
+// space:- O(N)[hashmap] + O(N)[priority Queue.]
+
+// Tc :- O(N)[hashmap] + O(NlogN)[pq.] + O(N*log(N)) [Pushing ans Poopiing of element in the Priority Queue]
+
 
 #include <bits/stdc++.h>
 
