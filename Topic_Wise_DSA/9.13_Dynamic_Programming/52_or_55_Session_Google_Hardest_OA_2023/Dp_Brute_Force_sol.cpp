@@ -1,3 +1,35 @@
+/*
+Problem Explaination in short:
+1. Given an array A of size N and an element K.
+2. You need find the minimum  length of the valid subsequence.
+3. Valid Susequence include:
+  -> 1.Subsequence should be increasing.
+  -> 2. Sum of all elements of the subsequence must be atleast k.
+  -> 3. We need to find the minimum length of the good subsequence , else return -1.
+
+Constraints:
+1<=N<=500(5*10^2)
+1<=K<=100000000(10^8)
+*/
+
+/*
+Approach:
+1. Which data structure to use??
+=> As we need to find the valid subsequence and also of minimum length, So we need to explore all the possible paths.
+=> while exploring we can reuse the previous to compute the current state.So definitely we can use DP here.
+
+2. Let's try to define the right defintiion of DP[i](Right Defition of DP is very imp)
+2. Dp[i]=> It denote the minimum length of valdid subsequence and it must include the last element in the subsequence.
+valid include 2 parameters:
+->Increasing (This can be tracked using 1D Dp)
+->Sum must be grater than equal to k. [This Need 1 more DP state]
+-> Minimum [This can also be tracked in the 1D Dp].
+
+
+3. Dp[i][j]=> It will denote tha valid subsequence till index i, which include the last element in the subsequence and the sum of the subsequence must be 'j'.
+
+*/
+
 // TC=O()
 // SC=O()
 
@@ -104,3 +136,4 @@ int main() {
 // // output1:
 
 // */
+
