@@ -1,0 +1,18 @@
+Docs link : https://docs.google.com/document/d/1kbzqv-u2DEivM6ROtQutPDdyh4kDiPZTisaHNR9swIk/edit
+Problem Link : https://www.desiqna.in/16089/atlassian-oa-sde1-ctc-75-lac
+
+You are given “N” strings; you can swap a character of a particular string with any other character of some other string :-> do this operation any number of times you want 
+
+-> The final output should have a maximum number of palindromic strings. 
+
+-> 
+N = 2 
+ab 
+bab
+
+
+Output - 2 [aa,bbb] 
+
+1<=N<=100000
+1<=|s[i]|<=100000
+Sum of length of all string <= 10000 
