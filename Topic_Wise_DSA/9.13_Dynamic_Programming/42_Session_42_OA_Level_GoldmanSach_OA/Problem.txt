@@ -1,3 +1,4 @@
+Problem Link : https://www.desiqna.in/13008/goldman-sachs-sde-oa-ctc-30-lac-2023-dp
 An array of costs was given. 
 You always start at index 1. 
 You can either take two jumps forward or one jump backward. If you land on a particular index, you have to add the cost to your total. 
