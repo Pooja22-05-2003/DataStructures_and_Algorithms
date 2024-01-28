@@ -1,227 +1,117 @@
-// TC=O()
-// SC=O()
-
-#include <bits/stdc++.h>
-
+// TC=O(N)
+// SC=O(N)
+#include<bits/stdc++.h>
 using namespace std;
-int solve(int n,vector<string>arr)
-{
-    // First Priority Queue will store the strings size in ascendding order
-    vector<int>size;
-    unordered_map<char,int>freq;
-    for(int i=1;i<=n;i++)
-    {
-        size.push_back(arr[i].size());
-        string curr=arr[i];
-        for(int j=0;j<curr.size();j++)
-        {
-            freq[curr[j]]++;
+
+int solve(vector<int>arr , int n ){
+    vector<vector<int>> dp(n+1,vector<int>(3,0));
+    // dp[i][odd]==dp[i][1]==Means Maximum  Number of journeys , such that their sum is odd(and the number starting from 1 and ending at i)
+    // dp[i][even]==dp[i][2]==Means Maximum  Number of journeys , such that their sum is even(and the number starting from 1 and ending at i)
+
+    if(arr[1]%2==0) dp[1][2]=1;
+    else dp[1][1]=1;
+
+
+    if(arr[2]%2==0){
+        dp[2][1]=dp[2-1][1]+dp[2-2][1];
+        dp[2][2]=dp[2-1][2]+dp[2-2][2];
+    }
+    else {
+         // odd+even=odd
+            dp[2][1]=dp[2-1][2]+dp[2-2][2];
+
+
+            // odd+odd=even
+            dp[2][2]=dp[2-1][1]+dp[2-2][1];
+    }
+    int i=3;
+    while(i<=n){
+        if(arr[i]%2==0){
+            //  we can take 1 jump or 2 jump
+
+            // even + odd= odd
+            // even + even= even
+            dp[i][1]=dp[i-1][1]+dp[i-2][1]+dp[i-3][1];
+            dp[i][2]=dp[i-1][2]+dp[i-2][2]+dp[i-3][2];
         }
+        else {
+            // odd+even=odd
+            dp[i][1]=dp[i-1][2]+dp[i-2][2]+dp[i-3][2];
+
+
+            // odd+odd=even
+            dp[i][2]=dp[i-1][1]+dp[i-2][1]+dp[i-3][1];
+        }
+
+        i++;
     }
 
-    sort(size.begin(),size.end());
-
-    priority_queue<int>Even_PQ;
-    priority_queue<int>Odd_PQ;
-
-    for(auto it : freq)
-    {
-        int cnt=it.second;
-        if(cnt%2==0)
-        {
-           Even_PQ.push(cnt) ;
-        }
-        else 
-        {
-            Odd_PQ.push(cnt);
-        }
-    }
-
-    int ans=0;
-    for(int i=0;i<n;i++)
-    {
-        int vl=size[i];
-        if(vl%2==0)
-        {
-
-            while(vl!=0 and !Even_PQ.empty())
-            {
-                int guy=Even_PQ.top();
-                if(guy!=0)
-                {
-                if(guy<=vl)
-                {
-                    vl=vl-guy;
-                    Even_PQ.pop();
-                }
-                else 
-                {
-                    guy=guy-vl;
-                    vl=0;
-                    Even_PQ.pop();
-                    Even_PQ.push(guy);
-
-                }
-                }
-                else return ans;
-
-            }
-
-            // It may happen that even Priority not able to fufill the vl elements, so take from odd PQ.
-            while(vl!=0 and !Odd_PQ.empty())
-            {
-                int guy=Odd_PQ.top()-1;
-                if(guy!=0)
-                {
-                if(guy<=vl)
-                {
-                    vl=vl-guy;
-                    Odd_PQ.pop();
-                    // because we excluded one odd guy in top() operation , so include that in PQ.
-                    Odd_PQ.push(1);
-
-                }
-                else 
-                {
-                    guy=guy-vl;
-                    vl=0;
-                    Odd_PQ.pop();
-                    Odd_PQ.push(guy+1);
-
-                }
-                }
-                else return ans;
+    // If the number is odd
+    // return dp[n][1];
+    
 
 
-            }
-
-            if(vl==0) 
-            {
-                ans=i+1;
-                continue;
-            }
-            else return ans;
-        }
-      
-        else 
-        {
-            //
-            vl=vl-1; // middle element ko exclude krke remaining even length ka fill krne ka try krenege
-            while(vl!=0 and !Even_PQ.empty())
-            {
-                int guy=Even_PQ.top();
-                if(guy!=0)
-                {
-                if(guy<=vl)
-                {
-                    vl=vl-guy;
-                    Even_PQ.pop();
-                }
-                else 
-                {
-                    guy=guy-vl;
-                    vl=0;
-                    Even_PQ.pop();
-                    Even_PQ.push(guy);
-
-                }
-                }
-                else return ans;
-
-            }
-
-            // It may happen that even Priority not able to fufill the vl elements, so take from odd PQ.
-            while(vl!=0 and !Odd_PQ.empty())
-            {
-                int guy=Odd_PQ.top()-1;
-                if(guy!=0)
-                {
-                if(guy<=vl)
-                {
-                    vl=vl-guy;
-                    Odd_PQ.pop();
-                    // because we excluded one odd guy in top() operation , so include that in PQ.
-                    Odd_PQ.push(1);
-
-                }
-                else 
-                {
-                    guy=guy-vl;
-                    vl=0;
-                    Odd_PQ.pop();
-                    Odd_PQ.push(guy+1);
-
-                }
-                }
-                else return ans;
+    // If question is asking for returning even journeys
+    // return dp[n][2];
 
 
-            }
+    cout<<"dp[n][1]:"<<dp[n][1]<<" dp[n][2]:"<<dp[n][2]<<endl;
+    return dp[n][1];
+}  
 
-            if(vl==0) 
-            {
-                if(Odd_PQ.empty()==false)
-                {
-                    int top_guy=Odd_PQ.top();
-                    Odd_PQ.pop();
-                    if(top_guy>=1) 
-                    {
-                        // it can satisfy our 1 number need.
-                          ans=i+1;
-                    }
-                    top_guy--;
-                    if(top_guy!=0) Odd_PQ.push(top_guy);
-                }
-                else return ans;
-              
-            }
-            else return ans;
-        
-            //
-        }
-    }
-
-    return ans;
-
-}
-
-int main() {
+int main(){
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif
     //**********
-    //
+//
 
     //*********
-   
-    int n;
+
+	int n;
     cin>>n;
 
- 
-    vector<string>arr(n+1);
-    for(int i=1;i<=n;i++)
-    {
+    vector<int> arr(n+1);
+    for(int i=1;i<=n;i++){
         cin>>arr[i];
     }
-    
-    int ans=solve(n,arr);
-    
-    cout<<ans<<endl;
-    
-    return 0 ; 
+
+    cout<<solve(arr,n);
+	return 0;
 }
+	
+
+
 /*
-// // input1 :
+// input1 :
+5
+2 3 5 8 10 
+
+
+// output1:
+dp[n][1]:4 dp[n][2]:3
 4
-pass sas asps df
 
 
-// // output1:
-3
 
-// // input1 :
 
-// // output1:
+// input 2 :
+4
+5 4 2 6
 
-// */
+// output 2:
+dp[n][1]:4 dp[n][2]:0
+4
+
+input3:
+
+
+
+output3:
+
+
+
+
+*/
+
