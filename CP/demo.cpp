@@ -1,64 +1,23 @@
-// TC=O(60)
-// SC=O(1)
+// TC=O(N)
+// SC=O(N)
 #include<bits/stdc++.h>
 using namespace std;
 
-int solve(int y, int k ){
-    int z=0;
-
-    for(int i=60;i>=0;i--)
+void solve(int n ){
+    for(int i=10;i>=0;i--)
     {
-        int y_ith_bit;
-        
-        int g=(y>>i);
-        // cout<<"g:"<<g<<endl;
-        if((g&1)==1)
+        int k=(n>>i);
+
+        if((k&1)==1)
         {
-            // if the ith bit is set , then its and with 1==1
-            y_ith_bit=1;
+            cout<<"1";
         }
         else 
         {
-            y_ith_bit=0;
+            cout<<"0";
         }
-
-        int k_ith_bit;
-        
-        int gg=(k>>i);
-        // cout<<"k:"<<gg<<endl;
-        if((gg&1)==1)
-        {
-            // if the ith bit is set , then its and with 1==1
-            k_ith_bit=1;
-        }
-        else 
-        {
-            k_ith_bit=0;
-        }
-
-
-        // IF both the bit is same then add nothing.
-        // if they are different .
-        // If yth bit 1 then conversion of 1-->0 is not using possible OR.
-        // else add(In bit for additon u can do OR) the ans (1<<i)
-
-        if(y_ith_bit==k_ith_bit)
-        {
-            // do nothing
-        }
-        else 
-
-        {
-            if(y_ith_bit==1 && k_ith_bit==0) return -1;
-
-            // In bitWise addition happen with OR and not with"+" sign
-            else z=z|(1<<i);
-        }
-
-
     }
     
-    return z;
 }  
 
 int main(){
@@ -69,13 +28,9 @@ int main(){
     //**********
      
     // Enter the decimal number.
-    int y;
-    cin>>y;
-
-    int k;
-    cin>>k;
-    int ans=solve(y,k);
-    cout<<ans<<endl;
+    int n;
+    cin>>n;
+    solve(n);
 	return 0;
 }
 	
@@ -99,6 +54,17 @@ int main(){
 00000000100
 
 
+input :
+24
+
+output :
+00000011000
+
+input :
+25
+
+output :
+00000011001
 
 
 
