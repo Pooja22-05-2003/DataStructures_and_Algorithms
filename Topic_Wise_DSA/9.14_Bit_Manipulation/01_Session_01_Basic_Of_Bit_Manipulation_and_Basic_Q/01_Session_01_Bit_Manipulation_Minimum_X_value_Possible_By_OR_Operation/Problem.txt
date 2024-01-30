@@ -1,0 +1,19 @@
+Docs Link :https://docs.google.com/document/d/1mK63LZViwFKWi3YztFEu2Wei7M84NoXhKB2IL9Xgvjw/edit
+
+Given two integers : 
+
+Y and K ; find minimum possible such that Z ; such that 
+
+Y | Z = K ; where “|” means BitWise OR 
+
+If it is not possible then print -1. 
+
+Example:- 
+
+Y = 10
+K = 15 
+
+Output - Z = 5 
+As (10 | 5) = 15 
+
+C++ https://ideone.com/6BFt90
