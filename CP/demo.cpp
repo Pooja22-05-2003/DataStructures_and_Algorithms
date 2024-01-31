@@ -1,86 +1,63 @@
-// TC=O(N*32)
-// SC=O(1)
-
-/*
-1. This question is similar to previous question, but here we have not any binary array.
-2. So, at each bit, we will do  the same as we did in the previous ques.
-
-
-*/
-#include<bits/stdc++.h>
+// TC=O(N)
+// SC=O(N)
+#include <bits/stdc++.h>
 using namespace std;
 
-int solve(int n ,vector<int>arr){
-    int ans=0;
-    for(int i=0;i<=31;i++)
+int solve(int n)
+{
+    int Most_significant_bit_col = 0;
+    for (int i = 30; i >= 0; i--)
     {
+        int g = (n >> i);
 
-        int cnt_1=0;
-        int sum=0;
-        for(int j=1;j<=n;j++)
+        if ((g & 1) == 1)
         {
-            int num=arr[j];
-            // check if that is set or not
-           
-            int g=(num>>i);
-            if((g&1)==1)
-            {
-                int total_Valid_pairs=j-1;
-                sum+=total_Valid_pairs* (pow(2,i));
-                 cnt_1++;
-            }
-            else {
-                int total_Valid_pairs=cnt_1;
-                sum+=total_Valid_pairs* (pow(2,i));
-               
-            }
-           
-        }
-        ans+=sum;
-      
+            Most_significant_bit_col = i;
 
-       
+            break;
+        }
     }
 
-    return ans;
-    
-}  
+    return (pow(2, Most_significant_bit_col) - 1);
+}
 
-int main(){
-    #ifndef ONLINE_JUDGE
+int main()
+{
+#ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-    #endif
+#endif
     //**********
-     
+
     // Enter the decimal number.
-    int n;
-    cin>>n;
-
-    vector<int>arr(n+1);
-
-    for(int i=1;i<=n;i++)
+    int t;
+    cin >> t;
+    while (t--)
     {
-        cin>>arr[i];
+        int n;
+        cin >> n;
+        cout << solve(n) << endl;
     }
-    cout<<solve(n,arr)<<endl;
-	return 0;
+    return 0;
 }
-	
-
 
 /*
 // input1 :
-4
-1 2 3 4
+3
+7
+9
+17
 
 // output1:
-27
+
+3
+7
+15
+
 
 
 // input 2 :
-3
-5 10 15
+
 
 // output 2:
 
@@ -91,4 +68,3 @@ int main(){
 
 
 */
-

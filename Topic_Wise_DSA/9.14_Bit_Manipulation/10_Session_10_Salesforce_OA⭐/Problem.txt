@@ -1,0 +1,31 @@
+Docs Link : https://docs.google.com/document/d/1xY1DsLE5LJFu1PWyjTA_rP_hu4kFAYLZhc5TNgqvfPM/edit
+Problem Link:https://www.desiqna.in/16125/salesforce-oa-coding-questions-ctc-26l-set-2-2023
+
+Video Link: https://drive.google.com/file/d/1vtO6maIhm9Z-9GCfYYqjukW5Jeys67IJ/view
+
+Given n test cases. and In each test case,
+there is a number x is given and u need to find a biigest number which
+is smaller than x and (let that number be Y) when u do (y&(y+1)&(y+2)....&(x))==0.
+
+Constraints :
+1<=T<=10^5
+1<=n<=10^9
+
+Example:
+3
+7
+9
+17
+
+Output:
+3
+7
+15
+
+Explaination for testcase1:
+(n==7)
+
+6 & 7 != 0
+5 & 6 & 7 != 0
+4 & 5 & 6 & 7 != 0
+3 & 5 & 6 & 7 == 0 (So 3 is the answer.)
