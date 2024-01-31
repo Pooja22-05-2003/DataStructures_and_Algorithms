@@ -1,4 +1,23 @@
-// TC=O(N)
+/*
+Brute force approach:
+1. Check for all the subarray by using 2 for loop using i and j.
+2.Then in each for loop, iterate through i and j and check using bit move(for loop from i=30 to 1),whether using the 
+special move, u can make the subarray 0 or not. If yes the increment the ans++.
+3. TC=O(n^2*n*30)
+4. Finally Return the ans.
+
+
+
+Optimized Approach:
+1.We can do this using Bit manipulation and Bit Masking .(Represeting the binary number sequence in the form of decimal number. )
+2. Conver the whole array into bit. , Now at each array ind i, if the (Bit wise sequence is same for any two index, then it means element inbetween them contain even number of 1 and we can make it to 0).
+3. Refer img1 where we converted bitwise count into prefix sum array.(can store in hash array ).
+4. Then in img 2, see the even count are replaced with 0 and odd count are replaced with 1.
+5. See the code for more clearance.
+
+*/
+
+// TC=O(N*30)
 // SC=O(N)
 #include <bits/stdc++.h>
 using namespace std;

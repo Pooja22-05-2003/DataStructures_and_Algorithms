@@ -1,0 +1,15 @@
+Problem Link : https://www.desiqna.in/7886/triology-codenation-coding-oa-sde-set-25-2022
+
+Given an array A having N numbers, Coun the total number of valid subarray.
+.Since the number can be very large , so print the answer%(1e9+7).
+
+A valid Subarray=> By performing special moves, you can reduce it 
+to an array of zeroes.
+
+Special Move:
+There is a special move allowed to u, in which you can select any two elements and subtract 2^i from each elements, 
+if and only if their bitwise AND contains 1 at the ith bit.
+
+Constraints:
+1<=A[i]<=5*10^5.
+0<=A[i]<=10^9.
