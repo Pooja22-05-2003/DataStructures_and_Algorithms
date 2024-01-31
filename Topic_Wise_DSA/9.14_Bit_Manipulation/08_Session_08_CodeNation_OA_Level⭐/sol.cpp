@@ -1,92 +1,5 @@
-// // TC=O(N)
-// // SC=O(N)
-// #include <bits/stdc++.h>
-// using namespace std;
-
-
-// int solve(int n, vector<int> arr , int l1, int l2, int r1 , int r2)
-// {
-//     vector<vector<int>>matrix(200000+5,vector<int>(50,0));
-//     vector<vector<int>>sum(200000+5,vector<int>(50,0));
-//     int j=1;
-//     while(j<=n)
-//     {
-//         int num=arr[j];
-//         for(int i=31;i>=0;i--)
-//         {
-//             int g=(num>>i);
-//             if((g&1)==1)
-//             {
-//                 matrix[j][i]=1;
-//             }
-//         }
-//         j++;
-//     }
-
-//     // prefix arr, 
-//     j=1;
-//     while(j<=n)
-//     {
-//         for(int i=0;i<=31;i++)
-//         {
-//             sum[j][i]=sum[j-1][i]+matrix[j][i];
-//         }
-//         j++;
-//     }
-
-//     int len1=abs(r1-l1)+1;
-//     int decimal=0;
-//     int p=31;
-//     while(p>=0)
-//     {
-//         int cnt_1=abs(sum[r1][p]-sum[l1-1][p]);
-//         if(cnt_1==len1) decimal=((decimal)|((1<<p)));
-//         p--;
-//     }
-//     int x=decimal;
-
-//     int len2=abs(r2-l2)+1;
-//     decimal=0;
-//     p=31;
-//     while(p>=0)
-//     {
-//         int cnt_1=abs(sum[r2][p]-sum[l2-1][p]);
-//         if(cnt_1==len1) decimal=((decimal)|((1<<p)));
-//         p--;
-//     }
-//     int y=decimal;
-//     return (x^y);
-// }
-
-// int main()
-// {
-// #ifndef ONLINE_JUDGE
-//     freopen("input.txt", "r", stdin);
-//     freopen("output.txt", "w", stdout);
-// #endif
-//     //**********
-
-//     // Enter the decimal number.
-
-//     int n;
-//     cin >> n;
-
-//     vector<int> arr(n + 1);
-//     for (int i = 1; i <= n; i++)
-//     {
-//         cin >> arr[i];
-//     }
-
-//     int l1,l2,r1,r2;
-//     cin>>l1;
-//     cin>>l2;
-//     cin>>r1;
-//     cin>>r2;
-
-
-//     cout << solve(n, arr,l1,l2,r1,r2);
-//     return 0;
-// }
+// // TC=O(N*31)
+// // SC=O(N*50)
 
 #include <bits/stdc++.h>
 
@@ -244,3 +157,92 @@ int main() {
 
 
 */
+
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+
+// int solve(int n, vector<int> arr , int l1, int l2, int r1 , int r2)
+// {
+//     vector<vector<int>>matrix(200000+5,vector<int>(50,0));
+//     vector<vector<int>>sum(200000+5,vector<int>(50,0));
+//     int j=1;
+//     while(j<=n)
+//     {
+//         int num=arr[j];
+//         for(int i=31;i>=0;i--)
+//         {
+//             int g=(num>>i);
+//             if((g&1)==1)
+//             {
+//                 matrix[j][i]=1;
+//             }
+//         }
+//         j++;
+//     }
+
+//     // prefix arr, 
+//     j=1;
+//     while(j<=n)
+//     {
+//         for(int i=0;i<=31;i++)
+//         {
+//             sum[j][i]=sum[j-1][i]+matrix[j][i];
+//         }
+//         j++;
+//     }
+
+//     int len1=abs(r1-l1)+1;
+//     int decimal=0;
+//     int p=31;
+//     while(p>=0)
+//     {
+//         int cnt_1=abs(sum[r1][p]-sum[l1-1][p]);
+//         if(cnt_1==len1) decimal=((decimal)|((1<<p)));
+//         p--;
+//     }
+//     int x=decimal;
+
+//     int len2=abs(r2-l2)+1;
+//     decimal=0;
+//     p=31;
+//     while(p>=0)
+//     {
+//         int cnt_1=abs(sum[r2][p]-sum[l2-1][p]);
+//         if(cnt_1==len1) decimal=((decimal)|((1<<p)));
+//         p--;
+//     }
+//     int y=decimal;
+//     return (x^y);
+// }
+
+// int main()
+// {
+// #ifndef ONLINE_JUDGE
+//     freopen("input.txt", "r", stdin);
+//     freopen("output.txt", "w", stdout);
+// #endif
+//     //**********
+
+//     // Enter the decimal number.
+
+//     int n;
+//     cin >> n;
+
+//     vector<int> arr(n + 1);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+
+//     int l1,l2,r1,r2;
+//     cin>>l1;
+//     cin>>l2;
+//     cin>>r1;
+//     cin>>r2;
+
+
+//     cout << solve(n, arr,l1,l2,r1,r2);
+//     return 0;
+// }
