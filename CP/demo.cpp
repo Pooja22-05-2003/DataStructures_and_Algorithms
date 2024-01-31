@@ -1,18 +1,45 @@
-// TC=O(N2)
+// TC=O(N*32)
 // SC=O(1)
+
+/*
+1. This question is similar to previous question, but here we have not any binary array.
+2. So, at each bit, we will do  the same as we did in the previous ques.
+
+
+*/
 #include<bits/stdc++.h>
 using namespace std;
 
 int solve(int n ,vector<int>arr){
     int ans=0;
-    for(int i=1;i<=n;i++)
+    for(int i=0;i<=31;i++)
     {
-        for(int j=i+1;j<=n;j++)
-        {
-            int OR_operation=arr[i] | arr[j];
-            ans=ans+OR_operation;
 
+        int cnt_1=0;
+        int sum=0;
+        for(int j=1;j<=n;j++)
+        {
+            int num=arr[j];
+            // check if that is set or not
+           
+            int g=(num>>i);
+            if((g&1)==1)
+            {
+                int total_Valid_pairs=j-1;
+                sum+=total_Valid_pairs* (pow(2,i));
+                 cnt_1++;
+            }
+            else {
+                int total_Valid_pairs=cnt_1;
+                sum+=total_Valid_pairs* (pow(2,i));
+               
+            }
+           
         }
+        ans+=sum;
+      
+
+       
     }
 
     return ans;
@@ -52,7 +79,8 @@ int main(){
 
 
 // input 2 :
-
+3
+5 10 15
 
 // output 2:
 
