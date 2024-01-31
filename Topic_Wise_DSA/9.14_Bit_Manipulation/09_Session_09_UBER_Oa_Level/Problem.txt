@@ -1,0 +1,11 @@
+Problem Link :https://www.desiqna.in/12497/uber-sde-oa-bit-manipulation
+
+Given an array containin postive numbers, count the unordered pairs(i,j) (1<=i<=j<=n)
+where (arr[i] XOR arr[j]) >( arr[i] AND arr[j]).
+
+Example: 
+n=4
+arr=[4,3,5,2]
+
+output : 4
+(For more detail explaination see the ques given in link)

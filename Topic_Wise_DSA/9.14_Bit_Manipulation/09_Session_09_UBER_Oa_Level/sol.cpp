@@ -1,4 +1,4 @@
-// TC=O(N)
+// TC=O(N*30)
 // SC=O(N)
 #include <bits/stdc++.h>
 using namespace std;
