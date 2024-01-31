@@ -1,5 +1,7 @@
 Problem Link : https://www.desiqna.in/7886/triology-codenation-coding-oa-sde-set-25-2022
 
+Video Link : https://www.youtube.com/watch?v=otqJBdiMKLw&t=4s
+
 Given an array A having N numbers, Coun the total number of valid subarray.
 .Since the number can be very large , so print the answer%(1e9+7).
 
