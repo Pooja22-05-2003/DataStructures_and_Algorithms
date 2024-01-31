@@ -1,0 +1,4 @@
+Q:Given an Array of Binary numbers , which contain only 0 and 1.
+Take all the pairs , then perform OR operation on each pairs and add the value to 
+a sum variable and return their sum.
+
