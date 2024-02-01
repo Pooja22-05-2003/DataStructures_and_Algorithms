@@ -70,13 +70,8 @@ int main()
         cin >> arr[i];
     }
 
-    vector<int>arr2(n+1);
-    for(int i=1;i<=n;i++)
-    {
-        cin>>arr2[i];
-    }
 
-    cout << solve(n,arr,arr2);
+    cout << solve(n,arr);
     return 0;
 }
 
