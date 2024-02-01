@@ -1,0 +1,6 @@
+Docs Link : https://docs.google.com/document/d/10c4oLi7EiOY3ozzZnEgCKFzU8SwJy7IidclNiem2ct8/edit
+
+Understanding -> We are given an array of size “N”. We have to find  a group of numbers such that their bitwise AND ! = 0 ; the group should be as large as possible. 
+
+1<=N<=100000
+1<=A[i]<=1000000000 
