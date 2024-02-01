@@ -1,0 +1,20 @@
+Docs Link : https://docs.google.com/document/d/10Hetn3C1bkT4CeSzC1pchYIDOTJmLPWwxmi7P4CV92Q/edit
+Video Link : https://drive.google.com/file/d/1xgEKy1cxbqSyTBcnip0MDxn4cPaZcztk/view
+Constraints:->
+a[i],b[i]<=1000000000
+1<=N<=100000 
+
+
+Understanding of the problem:-> We are given two array a and b ; for all the pairs (i,j) find the sum of (a[i] xor b[j])
+
+A = [ 1 2 3 ]
+
+B = [5 5 5]
+
+Sum :- A[1] xor B[1] + A[1] xor B[2] + A[1] xor B[3] + 
+
+A[2] xor B[1] + A[2] xor B[2] +A[2] xor B[3] +
+
+A[3] xor B[1] + A[3] xor B[2] +A[3] xor B[3] 
+
+= final answer 
