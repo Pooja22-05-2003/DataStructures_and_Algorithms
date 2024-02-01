@@ -1,0 +1,13 @@
+Problem Link : https://www.desiqna.in/12658/google-interview-sde-march-2023-bit-manipulation
+
+Given an array 'A' of size 'N' ; find the sum of xor of all pairs of the given array .
+
+1<=N<=100000
+
+1<=a[i]<=100000000
+
+Input :
+5
+2 7 1 5 8
+
+Output : 2xor7 + 2xor1 + 2xor5 + 2xor8 + 7xor1 + 7xor5 + 7xor8 + 1xor5 + 1xor8 + 5xor8 = 74
