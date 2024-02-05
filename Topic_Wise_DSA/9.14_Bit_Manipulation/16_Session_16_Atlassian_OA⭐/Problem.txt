@@ -1,7 +1,9 @@
+Problem Link : https://www.desiqna.in/12669/atlassian-oa-bit-manipulation-sde1-march-2023
+
 Problem Link : https://www.desiqna.in/13150/razorpay-sde1-coding-oa-march-2023
 
 You are given an array A[] of size N.
-Find the sum of bitwise AND of all the possible subarrays in the array.
+Find the sum of bitwise OR of all the possible subarrays in the array.
 
 Input Format :
 The First line containts a single integer N , which denotes the size of the array.
