@@ -3,7 +3,7 @@
 2. At each bit , try to remove the count of those subarrays.
 
 */
-
+// Sir sol link :https://ideone.com/nUj3Lg
 // TC=O(n*32*32)
 // SC=O(32)
 #include<bits/stdc++.h>
