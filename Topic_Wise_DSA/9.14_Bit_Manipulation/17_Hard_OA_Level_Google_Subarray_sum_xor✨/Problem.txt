@@ -1,0 +1,17 @@
+Problem Link : https://www.desiqna.in/12669/atlassian-oa-bit-manipulation-sde1-march-2023
+
+
+You are given an array A[] of size N.
+Find the sum of bitwise XOR of all the possible subarrays in the array.
+
+Input Format :
+The First line containts a single integer N , which denotes the size of the array.
+The next line contains N space separated integers.
+
+
+Output Format:
+Print a single integer K denoting the answers.
+
+Constraints :
+Input Constraints: 1<=N<=10^5
+1<=A[i]<=10^9
