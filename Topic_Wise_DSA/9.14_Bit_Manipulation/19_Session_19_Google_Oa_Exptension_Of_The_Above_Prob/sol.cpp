@@ -3,6 +3,9 @@
 2. At each bit , try to remove the count of those subarrays.
 
 */
+
+// TC=O(n*32*32)
+// SC=O(32)
 #include<bits/stdc++.h>
 using namespace std;
     int nCr(int a,int b)

@@ -1,0 +1,10 @@
+Problem Link :https://www.desiqna.in/13290/atlassian-oa-sde-2023
+Docs Link : https://docs.google.com/document/d/10UZ9wTvOwDwgqy4RyZVJGkwClP5aD4YP4UzRM7UU6Qc/edit
+Video Link : https://drive.google.com/file/d/1K7kEbVrpCD7NDM7XwA06IvnHCrOTjctX/view
+
+You are given an array A[] of size N.
+Find the sum of bitwise XOR of all the possible triplets (A[i] xor A[j] xor A[k]) in the array.
+
+constraints:
+1<=N<=10^5
+1<=A[i]<=10^9
