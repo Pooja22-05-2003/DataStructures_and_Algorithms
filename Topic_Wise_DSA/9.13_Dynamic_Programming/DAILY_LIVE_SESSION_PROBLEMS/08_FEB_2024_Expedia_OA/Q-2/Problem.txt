@@ -1,0 +1,4 @@
+Docs  Link : https://docs.google.com/document/d/1ESRtAoy6IkBe_zOlR3poEibWhPxijOW9af0kJc-C8tg/edit
+
+Understanding :- You are given a string s ; you find have to find smallest substring g 
+such that anagram of g can be concatenated to make it s;
