@@ -1,10 +1,15 @@
 // TC=O(Nlogn)
 // SC=O(N)
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
 int solve(vector<int>arr , int n ){
 	sort(arr.begin(),arr.end());
+
+    // dp[i][1]=> maximum length of the subset when  we are taking the last element in the subset and the subset (adjacent el diff)sum is odd.
+    // dp[i]2]=> maximum length of the subset when  we are taking the last element in the subset and the subset (adjacent el diff)sum is even.
     vector<vector<int>> dp(n,vector<int>(3,0));
 	int ans=0;
     if((arr[1]-arr[0])%2==0) dp[1][2]=2;
