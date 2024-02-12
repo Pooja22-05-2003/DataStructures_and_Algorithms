@@ -1,0 +1,5 @@
+Docs Link : https://docs.google.com/document/d/1zCNxkDR7Jxg-akCj1lhCLuzJepJZ1AC3wUfib4AT9Fc/edit
+Problem Link :https://www.desiqna.in/16386/expedia-oa-coding-questions-ctc-20l-set-3-2024
+
+Understanding :- Given two arrays “a” and “b” ; find the unique pairs such that element in a is bigger than element in b 
+

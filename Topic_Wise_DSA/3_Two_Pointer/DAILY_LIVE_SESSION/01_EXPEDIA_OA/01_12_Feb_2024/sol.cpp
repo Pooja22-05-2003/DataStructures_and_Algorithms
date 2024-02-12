@@ -1,3 +1,16 @@
+// Observation:- Biggest number in array “a”; has the maximum chance of being a valid pair with the smallest number in b 
+
+// -> If even that doesn't not work then answer is 0 
+
+// How can we visualize this problem better 
+
+// By sorting the array because we are comparing elements and that makes it seem easier to visualize. 
+
+
+// ->Bigger element of a already have good chance to win; so to increase the number of valid pairs lets first try to make small elements of a win first 
+
+// First element of a should competed with first element of b to have maximum chance of a > b 
+
 
 // TC :- O(NlogN + NlogN + N + N) = O(2*(NlogN + N)) = O(NlogN + N) = O(NlogN) 
 
@@ -78,3 +91,4 @@ Output2:
 1
 
 */
+
