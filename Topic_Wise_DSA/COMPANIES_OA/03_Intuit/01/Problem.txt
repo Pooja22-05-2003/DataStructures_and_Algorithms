@@ -1,0 +1,37 @@
+Problem Link : https://www.desiqna.in/16339/intuit-oa-sde1-intern-ctc-35-l-set-32-2024
+
+Given a number n, which denotes the size of the string and a number m , which denotes that maximum m numbers
+we can reduce from the string.
+
+So the cost is the square of the count of all the character and the total cost is sum of all these squares.
+U need to minimize this sum, and the condition is that, we can remove at max m characrter.
+
+
+Input1:
+6
+2
+bacacc
+
+Output 1:
+6
+
+Explaination:
+a=2
+b=1
+c=3
+(2)^2+(1)^2+(3)^2=> 14
+
+
+Remove 2 c , ans=> (2)^2+(1)^2+(1)^2=>6
+Input2:
+15
+3
+xxxxxxxxxxxxxxx
+
+Output2:
+144
+
+Explaination:
+Initital sum is (15)^2=> 225
+Remove 3 x , now sum=> (12)^2=> 144
+Constraints:
