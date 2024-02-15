@@ -1,54 +1,8 @@
-i:0 freq[i]:0
-i:1 freq[i]:0
-i:2 freq[i]:0
-i:3 freq[i]:0
-i:4 freq[i]:0
-i:5 freq[i]:0
-i:6 freq[i]:0
-i:7 freq[i]:0
-i:8 freq[i]:0
-i:9 freq[i]:0
-i:10 freq[i]:0
-i:11 freq[i]:0
-i:12 freq[i]:0
-i:13 freq[i]:0
-i:14 freq[i]:0
-i:15 freq[i]:0
-i:16 freq[i]:0
-i:17 freq[i]:0
-i:18 freq[i]:0
-i:19 freq[i]:0
-i:20 freq[i]:0
-i:21 freq[i]:0
-i:22 freq[i]:0
-i:23 freq[i]:15
-i:24 freq[i]:0
-i:25 freq[i]:0
-;;;;;;
-i:0 freq[i]:0
-i:1 freq[i]:0
-i:2 freq[i]:0
-i:3 freq[i]:0
-i:4 freq[i]:0
-i:5 freq[i]:0
-i:6 freq[i]:0
-i:7 freq[i]:0
-i:8 freq[i]:0
-i:9 freq[i]:0
-i:10 freq[i]:0
-i:11 freq[i]:0
-i:12 freq[i]:0
-i:13 freq[i]:0
-i:14 freq[i]:0
-i:15 freq[i]:0
-i:16 freq[i]:0
-i:17 freq[i]:0
-i:18 freq[i]:0
-i:19 freq[i]:0
-i:20 freq[i]:0
-i:21 freq[i]:0
-i:22 freq[i]:0
-i:23 freq[i]:12
-i:24 freq[i]:0
-i:25 freq[i]:0
-144
+ans:5
+ans:10
+ans:20
+ans:30
+ans:40
+ans:55
+55
+
