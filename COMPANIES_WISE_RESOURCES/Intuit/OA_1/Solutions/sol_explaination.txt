@@ -1,0 +1,9 @@
+1.Dekho humko sabsa smallest lexigrophically string bana sakta hai ki nahi in the given condition for aaba it is not possible.
+
+2.Because tum kaisa bhi string bana ias case mein  mirror index pe same element aaya hu jayaga
+
+3.Ab aaya abca ka case toh. Jabtak half of the element hum travel na Kara le tab Tak tum dekha hoga mein add karta ja raha sabsa smallest character ko like a ki frequency di hai aur k ki value 2 hai aur i =1 Tak i>=k toh hoga nahi tab Tak sabsa chota element add karo.
+
+4.Toh "aa" aaya uasa ab kya add karna hai wo dekhna ka Liya humlog ko i>=k mein Jana hoga aur dekho a ka frequency khatam ho chuka hi b ka bacha hai.
+
+5.Wosa kara ka break kara ka hum har i pe aaya ka add karta jayenga lekin humko ek condition dimag mein rakhnu hai ki jo answer hai uska mirror index pe wo na aaya jaya
