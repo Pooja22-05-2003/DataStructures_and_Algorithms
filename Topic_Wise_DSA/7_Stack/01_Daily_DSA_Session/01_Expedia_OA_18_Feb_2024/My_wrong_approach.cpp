@@ -11,49 +11,56 @@ Rememeber, we can remove any character , it is present afterwards also.[For that
 
 */
 
-// TC=O(n)
-// SC=O(n)
 #include<bits/stdc++.h>
 using namespace std;
 
 string solve(string s){
     string ans="";
 
+    unordered_map<char,int>tracker; // track the last index of the characters
+
+    for(int i=0;i<s.size();i++)
+    {
+        tracker[s[i]]=i;
+    }
 
     
     stack<char>st;
-    unordered_map<char,int>count; // It will tell :-> After erasing the current character, the count is present afterward
-    
-    unordered_set<char>usedChar; // Which charcters i used upto the string
-    
-    for(auto it:s){ 
-        count[it]++;
-    }
-    
-    int n = s.length();
-    
-    for(int i=0;i<n;i++){
-        
-        // if lexicorgraphich maximum is asking in que :
-        // use this  while(!st.empty() && st.top()<s[i] && count[st.top()]>=1)
-        while(!st.empty() && st.top()>s[i] && count[st.top()]>=1){ // St.top() wala bigger,and o bad mai aata hai
-            usedChar.erase(st.top()); // pehle ans mei use kiya tha....ab nahi chhaiye,....to removing it.
-            st.pop();
-        }
-        
-        if(usedChar.count(s[i])==0){ // If not used yet, then use it
-            st.push(s[i]);
-            usedChar.insert(s[i]);
-        }
-        count[s[i]]--;
-    }
-    
+    for(int i=0;i<s.size();i++)
+    {
+        if(st.empty() || (st.top()<s[i])) st.push(s[i]);
+        else {
 
-    
+            cout<<"i:"<<i<<endl;
+            while((!st.empty()) && (st.top()>s[i]))
+            {
+                cout<<"i:"<<i<<" st.top():"<<st.top()<<endl;
+                cout<<"st.size():"<<st.size()<<endl;
+                int LastIndex=tracker[st.top()];
+                cout<<"LastIndex:"<<LastIndex<<endl;
+                if(LastIndex>i)
+                {
+                    cout<<"s[i]:"<<s[i]<<endl;
+                    // we can pop safely
+                    st.pop();
+                }
+                else break;
+            }
+            if(st.empty()) st.push(s[i]);
+            else if(s[i]!=st.top()) st.push(s[i]);
+        }
+    }
+
+    unordered_map<char,int>mp;
     while(!st.empty())
     {
+       int el=st.top();
+       if(mp.find(st.top())==mp.end())
+       {
        ans+=st.top();
+       mp[st.top()]=1;
        st.pop(); 
+       }
     }
     reverse(ans.begin(),ans.end());
 
@@ -101,9 +108,10 @@ aabcb
 
 Output2:
 
-abc 
+abcb ❌❌// output is : abc 
 
 
 */
+
 
 

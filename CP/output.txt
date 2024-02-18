@@ -1,8 +1,1 @@
-ans:5
-ans:10
-ans:20
-ans:30
-ans:40
-ans:55
-55
-
+acbd
