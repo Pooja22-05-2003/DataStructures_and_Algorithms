@@ -15,49 +15,69 @@ Rememeber, we can remove any character , it is present afterwards also.[For that
 // SC=O(n)
 #include<bits/stdc++.h>
 using namespace std;
+const int MOD=1000000007;
+int  solve(int n, int m,vector<int>arr){
+    vector<vector<int>>dp(n+1,vector<int>(m+1,0));
 
-string solve(string s){
-    string ans="";
-
-
-    
-    stack<char>st;
-    unordered_map<char,int>count; // It will tell :-> After erasing the current character, the count is present afterward
-    
-    unordered_set<char>usedChar; // Which charcters i used upto the string
-    
-    for(auto it:s){ 
-        count[it]++;
-    }
-    
-    int n = s.length();
-    
-    for(int i=0;i<n;i++){
-        
-        // if lexicorgraphich maximum is asking in que :
-        // use this  while(!st.empty() && st.top()<s[i] && count[st.top()]>=1)
-        while(!st.empty() && st.top()>s[i] && count[st.top()]>=1){ // St.top() wala bigger,and o bad mai aata hai
-            usedChar.erase(st.top()); // pehle ans mei use kiya tha....ab nahi chhaiye,....to removing it.
-            st.pop();
-        }
-        
-        if(usedChar.count(s[i])==0){ // If not used yet, then use it
-            st.push(s[i]);
-            usedChar.insert(s[i]);
-        }
-        count[s[i]]--;
-    }
-    
-
-    
-    while(!st.empty())
+    // if arr size is 1
+    if(arr[1]==-1)
     {
-       ans+=st.top();
-       st.pop(); 
+        for(int k=1;k<=n;k++)
+        {
+            dp[1][k]=1;
+        }
     }
-    reverse(ans.begin(),ans.end());
+    else 
+    {
+        dp[1][arr[1]]=1;
+    }
 
-    return ans;
+    // for arr of size =2 to n
+    for(int i=2;i<=n;i++)
+    {
+        if(arr[i]==-1)
+        {
+            // if the current element is -1, then it have the el as from up wave also and down wave.
+            // if we are considering ans for dp[i][j] come from down wave , then dp[i-1][1]+dp[i-1][2]+.....dp[i-1][j-1]
+
+            // j can be any value from 1 to m
+            for(int j=1;j<=m;j++)
+            {
+
+                // Up wave=> previous numbers are smaller than j
+                for(int k=1;k<=j-1;k++)
+                {
+                    dp[i][j]=dp[i][j]+dp[i-1][k];
+                }
+
+                // for down wave => down up down
+                for(int k=j+1;k<=m;k++)
+                {
+                    dp[i][j]=dp[i][j]+dp[i-1][k];
+                }
+            }
+        }
+        else 
+        {
+            // store for all the previous j values from 1 to arr[i]-1....to.....arr[i]+1 to m
+            for(int k=1;k<=m;k++)
+            {
+                if(k!=arr[i])
+                {
+                    dp[i][arr[i]]+=dp[i-1][k];
+                    dp[i][arr[i]]=dp[i][arr[i]]%MOD; //// Applying modulo to avoid overflow
+                }
+            }
+        }
+    }
+
+    int ans=0;
+
+    if(arr[n]==-1)
+    {
+
+    }
+    else 
   
   
 }  
@@ -74,10 +94,14 @@ int main(){
     //*********
 
 
-    string s;
-    cin>>s;    
-   
-    cout<<solve(s)<<endl;
+    int n,m;
+    cin>>n>>m;
+    vector<int>arr(n+1);
+    for(int i=1;i<=n;i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<solve(n,m,arr)<<endl;
 
 	return 0;
 }
