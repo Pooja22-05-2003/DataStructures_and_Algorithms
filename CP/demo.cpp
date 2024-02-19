@@ -1,13 +1,4 @@
 /*
-Approach:
-1. We need to keep atleast 1 occurence of all the characters.
-2. While Iterating from the arr from start, we can remove any character at index i only if its occurence also present after index 'i'
-else , we need to forcefullly keep that element.
-3. Which Data Structure???🤔---> As we need to remove characters, we can' remove in arr , so think of stack(Monotonic Stack).
-4. At index i if that character is bigger than the top most element of the stack, then its ok, push that.
-5. But if it is smaller , try to pop the topmost element till the topmost element of the stack is not smaller than the current element.
-Rememeber, we can remove any character , it is present afterwards also.[For that we will keep , one unordered map, where we will store the last index of all the characters].
-
 
 */
 
