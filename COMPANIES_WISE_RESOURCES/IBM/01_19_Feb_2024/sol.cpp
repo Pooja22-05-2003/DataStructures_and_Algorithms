@@ -1,9 +1,17 @@
 /*
+Approach.
+1. It is a greedy problem.
+2. Sort the array 
+3. Convert the middle element to k , add the number of operation in answer.
+4. Convert the left half of the array to less than equal to k.
+5. Convert the right half of the array to greater than equal to k.
+
 
 */
 
-// TC=O(n)
-// SC=O(n)
+
+// TC=O(nlogn)
+// SC=O(1)
 #include<bits/stdc++.h>
 using namespace std;
 

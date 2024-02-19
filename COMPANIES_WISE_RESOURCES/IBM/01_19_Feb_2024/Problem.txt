@@ -1,0 +1,6 @@
+Problem Link :https://www.desiqna.in/16369/ibm-oa-coding-questions-ctc-20l-set-10-2024
+
+Given an array , and it is always of odd size,
+Convert the median of the array to k.
+
+Median is the middle element of the array in sorted array.
