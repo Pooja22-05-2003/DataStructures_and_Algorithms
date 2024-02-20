@@ -1,0 +1,20 @@
+Problem Link :https://docs.google.com/document/d/1rWiHnNWlfLY7wZImucWTfw7wPcm2BlNamt-KrtZVNSs/edit
+Docs Link :https://docs.google.com/document/d/1uAGCjqCMAR-qj-F-wZeEx0aoP3XXO5jaHWNiZd8MBGY/edit
+Video Link : https://drive.google.com/file/d/1gPXiyezgNMEy8L0x0PgqeqklAnNL_wTE/view
+
+Given an array A of size n , having randome ID's. You can remove as many
+as m items from the bag.
+Determine the minimum number of differenct ID's the final bag can conatain after performing at most m deletions.
+
+
+Input :
+n=6
+ids=[1,1,1,2,3,2]
+m=2
+
+Output :
+2
+
+1. One way can be , remove 2 items with ID=2 and the final bag will contain items ids=[1,1,1,3]
+2. Second way can be, Remove the 1 item with ID=2 and 1 item with ID=3  and the final bag
+will contain item ids=[1,1,1,2]

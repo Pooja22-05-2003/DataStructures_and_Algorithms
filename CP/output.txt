@@ -1,3 +1,4 @@
-0 1 2 3 3 3 3 3 3 3 4 
-7 6 6 6 6 5 4 3 2 1 0 
-3
+i:3distinct:1
+i:5distinct:2
+distinct:3 totalextra:3
+1
