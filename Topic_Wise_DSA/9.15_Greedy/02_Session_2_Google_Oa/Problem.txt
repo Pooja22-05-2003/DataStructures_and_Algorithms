@@ -1,0 +1,10 @@
+Google OA. 
+Question
+Given binary string = "011100001" we can flip 1 to 0 and 0 to 1 any number of times.
+Apply the above operation such that the string does not contain "10" as a substring.
+Return minimum number of such operations required.
+
+e.g 01110000001
+
+flip 111 -> 000
+so result string is 00000000001

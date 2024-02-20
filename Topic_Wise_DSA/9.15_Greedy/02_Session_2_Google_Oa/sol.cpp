@@ -1,4 +1,17 @@
 /*
+Approach:
+1. For the String to not not contain "10" as the substring .
+2. Try to convert the string into the any of the following 3 states.
+     i-> 0000000000.... (0^n)
+     ii-> 111111111.... (1^n)
+     iii-> 000000111111 (0^n 1^n)
+3. For this we can flip 0->1 or 1->0 any number of times.
+4. Find the minimum number of flips required to make it a valid string.
+
+*/
+
+
+/*
 
 */
 
