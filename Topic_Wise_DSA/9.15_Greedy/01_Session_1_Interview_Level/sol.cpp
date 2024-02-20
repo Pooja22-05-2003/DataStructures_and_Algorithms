@@ -1,4 +1,10 @@
 /*
+1. As we need to put the maximum number of items in the bag. 
+2. Try to put the smaller size items and then bigger than this and so on.
+3. Whenver capacity is exceeded , return the number of items u was ablt to put in the bag.
+*/
+
+/*
 
 */
 

@@ -1,0 +1,11 @@
+Problem Link : https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/tutorial/
+
+Given an array of size n , having n items of differenct sizes.
+You have 1 bag of capacity c. Find the maximum number of items u can put in the bag.
+
+Input :
+5 10
+8 5 4 3 2
+
+Output :
+3
