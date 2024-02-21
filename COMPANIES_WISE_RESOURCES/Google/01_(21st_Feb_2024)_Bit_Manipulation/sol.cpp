@@ -14,10 +14,6 @@ Given an array, find the length of the maximum length of the subarray having AND
 
 */
 
-/*
-
-*/
-
 // TC=O(n)
 // SC=O(1)
 #include<bits/stdc++.h>
