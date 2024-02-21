@@ -1,4 +1,20 @@
 /*
+Approach :
+
+Given an array, find the length of the maximum length of the subarray having AND of the subarray is As maximum as possible.
+
+1. AND of two number van be less than or equal to the maximum number.
+2. If both numbers are different , then their AND is less.
+3. If both numbers are same , then there AND is same value. But AND of two number can never increase by the maximum value.
+4. If take 2 or more elements in the subarray, then if they are differenct then their AND will be differernt.
+
+
+5. step1: Find the maximum value among the array.
+6. Find the maximum lenght of the subarray having all element equal to that maximum element.
+
+*/
+
+/*
 
 */
 

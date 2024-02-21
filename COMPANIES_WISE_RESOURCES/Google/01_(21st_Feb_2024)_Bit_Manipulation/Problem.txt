@@ -1,0 +1,3 @@
+Problem Link :https://docs.google.com/document/d/1V32rJ5zTu8eomlSmItI6dG59FnxWxzeOP_04OZD45Jg/edit
+
+Given an array of size “N” positive integers; find the longest subarray whose AND value will be maximum. 
