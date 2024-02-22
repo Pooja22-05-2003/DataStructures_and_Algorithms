@@ -18,7 +18,7 @@ int solve(vector<int>&A , int n , int k ){
 
    int maxSum=suffix[n-k]+1;
 
-   int i=0;
+   int i=1;
    while(i<=k){
       int j=(n-k)+(i+1);
       int sum=prefix[i]+suffix[j];
