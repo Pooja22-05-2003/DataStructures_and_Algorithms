@@ -1,0 +1,33 @@
+Problem Link : https://www.desiqna.in/15561/intuit-oa-sde-2023-august-set-harry-potter-and-the-goblet-fire#google_vignette
+
+Given 2 arrays, having skill of the ith student. First will repersent the primary skill and the second array repersent the secondary skill.
+A student will pass the exam , if no one have both the primary and secondary skill than him.
+
+Return the count of the student that will pass the exams.
+
+
+Input : 
+3
+1 2 3
+3
+3 2 1
+
+Output :
+3
+
+Explaination :
+All wizards will advance to the tournament , since there is no 
+single wizard whose primary and secondary skill which are strictly 
+higher than the others.
+
+
+Input 2:
+2
+1 2
+2
+2 3
+
+Output :
+1
+
+Only wizard 2 will pass the exam.

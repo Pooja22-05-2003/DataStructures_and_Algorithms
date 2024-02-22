@@ -1,0 +1,12 @@
+Link -> https://www.desiqna.in/15661/zs-associates-oa-august-2023-freshers-monica-and-dishes 
+
+
+Understanding :-> We are given an array of size “N”. Pick up some elements from the array ; multiply the first element with 1 ; second element with 2 ; 3rd element with 3 and so on. 
+Sum of all these should be maximum. 
+
+1<=N<=1000
+1<=A[i]<=100000
+
+=>[-2 5 8 0 1] 
+
+-> 61 

@@ -1,4 +1,13 @@
 /*
+Approach.
+1. I thought that this is a easy probelem, just sort the array and take positive numbers and remove all the negative numbers.
+2. But if u remove all the negative numbers , this is not correct and not always give the correct answer.
+3. Try to take one by one negative number as well , lets say we have -1, then (-1*1) , but now the positive numbers will get the high index. and it will increase the overall answer.
+4. So try to take 1 negative number, 2 ,3 and so on and update the maximum regularly.
+4. Once u start getting positive ans break the loop and return the final max positive ans.
+*/
+
+/*
 
 */
 
