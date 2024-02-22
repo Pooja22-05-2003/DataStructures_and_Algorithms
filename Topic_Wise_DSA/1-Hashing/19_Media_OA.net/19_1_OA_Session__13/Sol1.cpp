@@ -16,7 +16,7 @@ int solve(vector<int>&A , int n , int k ){
    }
 
 
-   int maxSum=suffix[n-k];
+   int maxSum=suffix[n-k]+1;
 
    int i=0;
    while(i<=k){
