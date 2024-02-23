@@ -1,4 +1,12 @@
 /*
+Approach:
+1. In one Iteration find the minimum possible absolute difference and store those in vector pair ans(Store the pairs).
+2. Then sort the answer vector.
+3. Print that answer vector.
+
+*/
+
+/*
 
 */
 
