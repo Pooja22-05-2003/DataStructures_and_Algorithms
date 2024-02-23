@@ -1,1 +1,5 @@
-61
+work_Hr:3 Nurse_id:0
+work_Hr:2 Nurse_id:2
+work_Hr:4 Nurse_id:0
+work_Hr:6 Nurse_id:1
+ans:1 Albhabet_Id:b

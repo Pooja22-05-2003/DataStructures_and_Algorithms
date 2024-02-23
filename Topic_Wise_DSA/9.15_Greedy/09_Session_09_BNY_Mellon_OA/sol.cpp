@@ -1,4 +1,18 @@
 /*
+Approach:
+Que in 1 Line :
+Given a 2D array , having 2 column and n rows.
+Each row contain  a nurse detail. (nurse id and Leave time).
+Find out the nurse emplyee number who works lonest hour in single shift.
+
+
+1. Iterate thorugh the array and and find the workign hour of the current nurse, for this u need to maintain the end time of the previous nurse.
+2. If the working hour is greater than the maximum value , then update the maximum value and the answer variable with the current nurse id.
+
+
+*/
+
+/*
 
 */
 
