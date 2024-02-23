@@ -1,4 +1,16 @@
 /*
+Approach : 
+1. Its is confirmed that all the even number sum will add up to give the final even sum. 
+2. wee need to find the maximum sum, so don't inlcude negative even sum.
+3. For odd numbers, Put all the odd numbers in one temporary vector.
+4. Sort the vector.
+5. Start picking two elements from back,  (odd+odd=even).
+6. After every pickign of one pair, update the max ans with the maximum possible answer.
+7. Return the maximum sum.
+
+*/
+
+/*
 
 */
 

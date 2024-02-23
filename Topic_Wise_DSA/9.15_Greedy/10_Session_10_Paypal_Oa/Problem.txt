@@ -1,0 +1,5 @@
+Problem Link : https://www.desiqna.in/16108/paypal-coding-online-test-problem-discount-intern-october 
+
+
+Understanding :-> Given an array of size N; positive and negative integers can be inside this array :->
+find a subset of elements whose sum is even and is as large as possible. 
