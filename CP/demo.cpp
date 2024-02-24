@@ -4,72 +4,59 @@
 
 // TC=O(nlogn)
 // SC=O(1)
+// TC=O(N3)
+// SC=O(1)
+
 #include <bits/stdc++.h>
 using namespace std;
 
-int solve(vector<int>arr, int n)
-{
-    
-    int maxSum=0; // not pikcing any element, as it is allowed in the question
-    vector<int>odd;
-    for(int i=1;i<=n;i++)
-    {
-        if(arr[i]%2==0)
-        {
-            if(arr[i]>0)
+int solve(vector<int> &A , int n){
+   //  Brute force 
+   int count=0;
+   for(int i=1;i<=n;i++){
+      for(int j=i+1;j<=n;j++){
+         for(int k=j+1;k<=n;k++){
+            for(int l=k+1;l<=n;l++)
             {
-                maxSum+=arr[i];
+                  if(A[i] > A[j] < A[k] >A[l])  count++;
             }
-        }
-        else 
-        {
-            odd.push_back(arr[i]);
-        }
-    }
+          
+         }
+      }
+   }
 
-    sort(odd.begin(),odd.end());
+   return count;
 
-    int i=odd.size()-1;
-    while(i>=0)
-    {
-        if((i-1)>=0)
-        {
-            int temp=odd[i]+odd[i-1];
-            maxSum=max(maxSum,maxSum+temp);
-        }
-        i-=2;
-    }
-    return maxSum;
-}   
 
+}
 int main()
 {
-#ifndef ONLINE_JUDGE
+    #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-#endif
+    #endif
     //**********
-    //
 
     //*********
+    // 1-- based indexing are used here
 
     int n;
-    cin >> n;
+    cin >> n ;
 
-    vector<int>arr(n+1);
-
-    for(int i=1;i<=n;i++)
-    {
-        cin>>arr[i]; 
+    vector<int> arr(n+1);
+    for(int i=1;i<=n;i++){
+      cin>>arr[i];
     }
+    
 
-  
-    int ans = solve(arr, n);
+    cout<<solve(arr,n);
 
-    cout << "ans:"<<ans<< endl;
-
-    return 0;
 }
+
+
+
+
+
 
 /*
 input1 :
