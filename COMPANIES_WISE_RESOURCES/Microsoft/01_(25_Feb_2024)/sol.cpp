@@ -1,6 +1,14 @@
 /*
+1.First create graph. (Adjacency list).
+2. Then first put all the nodes , which have 0 and 1 adjacenet nodes connected to it. because at time=1, this will start dsiappearing.
+3. Go in while loop and repeat this , until u find even one edges, else break the loop.
+4. Inside the loop, for all the edges which are disappearing, mark them visiited and 
+all the adjacent nodes , which are connected to this disppearing edge, deceaese their indegree. and if after decreasing , its degree become 0,1, put them in the queue.
+5. After one iteration , increase the counter of time.
+6. After all the iterations, return the totoal time.
 
 */
+
 
 // TC=O(N+M)
 // SC=O(N+M)

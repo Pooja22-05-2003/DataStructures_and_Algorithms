@@ -1,0 +1,33 @@
+Problem Link :https://www.desiqna.in/15921/microsoft-oa-september-2023-freshers-hiring-sde1-set-116#google_vignette
+
+Docs Link :https://docs.google.com/document/d/1k4IoJDkC24wHcFhIri9RFaGSGb2wOJ_civv8HJwOpT8/edit
+
+Given an undirected graph consisting of N vertices , numbers from 0 to N-1,
+connected with M edges. The graph is descibed by 2 two arrays A and B, both of length
+M. A pair (A[k],B[k]), for K from 0 to M-1, desccirbes edge vertex from A[k] and vertex B[k].
+
+Each second , every vertex with at most one edge connected to it disappear.
+Every edge which is connected to one of the disappearing edge , vertices also disappear.
+
+After how many , seconds will the vertices stop disappearing.
+
+Ex:
+N=7
+A=[0,1,2,4,5]
+B=[1,2,3,5,6]
+
+Output:
+2 
+
+After the first second, vertices 0,3,4 and 6 will disappear.
+
+During the next second, all of the remaiing vertices disappear. so the answer is 2.
+
+
+Input 2:
+N=4
+A=[0,1,2,3]
+B=[1,2,3,0]
+
+Output 
+0
