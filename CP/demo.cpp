@@ -9,68 +9,67 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int solve(int n , vector<int> &A , vector<int> &B){
+void bfs(vector<int> adj[], int n, int start,int &cnt,vector<bool> &visited) {
+    // Initialize visited array
    
+
+    // Create a queue for BFS
+    queue<int> q;
+
+    // Mark the current node as visited and enqueue it
+    visited[start] = true;
+    q.push(start);
+
+    // Iterate while the queue is not empty
+    while (!q.empty()) {
+        // Dequeue a vertex from queue and print it
+        int u = q.front();
+        q.pop();
+      //   cout << u << " ";
+
+        // Get all adjacent vertices of the dequeued vertex u.
+        // If an adjacent vertex has not been visited, then mark it
+        // visited and enqueue it.
+        for (int v : adj[u]) {
+            if (!visited[v]) {
+                visited[v] = true;
+                cnt++;
+                q.push(v);
+            }
+        }
+    }
+}
+int solve(int n , vector<int> &A , vector<int> &B){
+//   cout<<"A:"<<A.size()<<"B:"<<B.size()<<endl;
+   if(A.size()==0 && B.size()==0) return n;
    // create adjacenecy list.
-   int m=A.size()-1;
+   int m=A.size();
 
-   vector<int>adj[n];
-   vector<int>InDegree(n,0);
-   for(int i=1;i<=m;i++)
-   {
-      adj[A[i]].push_back(B[i]);
-      adj[B[i]].push_back(A[i]);
-      InDegree[A[i]]++;
-      InDegree[B[i]]++;
+    vector<int> adj[n+1];
+    // or
+    // int adj[n+1][m+1];
 
-      
-   }
+    // Take input of all the edges.
+    for(int i=0;i<m;i++){
+        int u,v;
+         u=A[i];
+         v=B[i];
 
-   queue<int> q;
+         //v-->u
+        // If Weighted use the pair<int,int> ( neigbhour edge , weight) instead of normal
+        adj[v].push_back(u);
 
-   vector<int>vis(n,0);
-   // push all the nodes , which have indegree =1;
+        // If weighted use the weight instead of 1.
+    }
 
-   for(int i=0;i<n;i++)
-   {
-      if(InDegree[i]==0 || InDegree[i]==1) 
-      {
-         q.push(i);
-          vis[i]=1;
-         // cout<<"i:"<<i<<" it:"<<InDegree[i]<<endl;
-        
-      }
-   }
-
-   int flag=1;
-   int time=0;
-   if(q.size()==0) flag=0;
-   else // do nothing
-  
-   while(flag==1)
-   {
-        queue<int> newQueue;
-      while(!q.empty()){//}
-      int disappear=q.front();q.pop();
-     
-
-      for(auto it : adj[disappear])
-      {
-         InDegree[it]--;
-         if(vis[it]==0 && (InDegree[it]==0 || InDegree[it]==1))
-         {
-            newQueue.push(it);
-             vis[it]=1;
-         }
-      }
-      }
-       time++;
-      q=newQueue;
-      if(q.size()==0) flag=0;
-      
-   }
-
-   return time;
+    vector<bool> visited(n + 1, false);
+    int cnt=1;
+    bfs(adj,n,B[0],cnt,visited);
+    for(int i=1;i<=n;i++)
+    {
+      if(visited[i]==false) bfs(adj,n,i,cnt,visited);
+    }
+    return cnt;
 
 }
 int main()
@@ -87,21 +86,25 @@ int main()
     int n;
     cin >> n ;
 
-    int m;
-    cin>>m;
-    vector<int> arr(m+1,0);
-    for(int i=1;i<=m;i++){
-      cin>>arr[i];
+    int a;
+    cin>>a;
+
+    int b;
+    cin>>b;
+
+    vector<int>arr1(a,0);
+    for(int i=0;i<a;i++)
+    {
+      cin>>arr1[i];
     }
 
-    vector<int>arr2(m+1,0);
-    for(int i=1;i<=n;i++)
+    vector<int>arr2(b,0);
+    for(int i=0;i<a;i++)
     {
       cin>>arr2[i];
     }
-    
 
-    cout<<"ans:"<<solve(n,arr,arr2);
+    cout<<"ans:"<<solve(n,arr1,arr2);
 
 }
 
@@ -112,23 +115,32 @@ int main()
 
 /*
 input1 :
+
 7
+6
+6
+1
+2
+3
+4
+6
 5
-0 1 2 4 5
-1 2 3 5 6
+7
+6
+4
+1
+2
+1
 
 Output 1:
-ans:2
+
 
 
 input2 :
-4
-4
-0 1 2 3
-1 2 3 0
+
 
 Output2:
-ans:0
+
 
 
 
