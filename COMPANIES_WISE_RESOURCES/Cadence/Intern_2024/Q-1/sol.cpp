@@ -19,6 +19,7 @@ int calculateMaxManhattanDistance(vector<pair<int, int>>& points, int n) {
         maxiSum = max(maxiSum, sum);
         miniDiff = min(miniDiff, diff);
         maxiDiff = max(maxiDiff, diff);
+        
     }
     
     return  max(maxiSum - miniSum, maxiDiff - miniDiff);
