@@ -14,6 +14,7 @@ public:
         ListNode * fast=dummy;
         
 
+
         for(int i=1;i<=n;i++){
             fast=fast->next;
         }
