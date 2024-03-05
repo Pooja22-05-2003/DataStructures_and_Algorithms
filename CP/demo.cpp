@@ -1,49 +1,44 @@
-/*
-
-*/
-
-// TC=O(N+M)
-// SC=O(N+M)
-
-
+// // TC=O(N+2*E)
+// // SC= O(3N)==> O(N) [ans,recursion stack space(Max depth of the graph),vis]
 #include <bits/stdc++.h>
 using namespace std;
 
-void bfs(vector<int> adj[], int n, int start,int &cnt,vector<bool> &visited) {
-    // Initialize visited array
-   
-
-    // Create a queue for BFS
-    queue<int> q;
-
-    // Mark the current node as visited and enqueue it
-    visited[start] = true;
-    q.push(start);
-
-    // Iterate while the queue is not empty
-    while (!q.empty()) {
-        // Dequeue a vertex from queue and print it
-        int u = q.front();
-        q.pop();
-      //   cout << u << " ";
-
-        // Get all adjacent vertices of the dequeued vertex u.
-        // If an adjacent vertex has not been visited, then mark it
-        // visited and enqueue it.
-        for (int v : adj[u]) {
-            if (!visited[v]) {
-                visited[v] = true;
-                cnt++;
-                q.push(v);
+// This dfs recursion would be called maximum n times
+ void dfs(int st, vector<int> &vis , vector<int> & ans , vector<int> adj[]){
+        vis[st]=1;
+        ans.push_back(st);
+        
+        // This adjacecny will go maximum to all degree(2*E)
+        for(auto it : adj[st]){
+            if(!vis[it]){              
+                dfs(it,vis,ans,adj);
             }
-        }
-    }
+        }       
 }
-int solve(int n , vector<int> &A , vector<int> &B){
-//   cout<<"A:"<<A.size()<<"B:"<<B.size()<<endl;
-   if(A.size()==0 && B.size()==0) return n;
-   // create adjacenecy list.
-   int m=A.size();
+vector<int> dfsOfGraph(int V, vector<int> adj[]) {
+        // Code here
+        vector<int> ans;
+        vector<int>vis(V,0);
+    
+        
+        dfs(0,vis,ans,adj);
+        return ans;
+}
+
+
+int main(){
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif
+    //**********
+
+
+    //*********
+    int n ;
+    int m;
+    cin>>n;
+    cin>>m;
 
     vector<int> adj[n+1];
     // or
@@ -52,96 +47,46 @@ int solve(int n , vector<int> &A , vector<int> &B){
     // Take input of all the edges.
     for(int i=0;i<m;i++){
         int u,v;
-         u=A[i];
-         v=B[i];
+        cin>>u;
+        cin>>v;
 
-         //v-->u
-        // If Weighted use the pair<int,int> ( neigbhour edge , weight) instead of normal
+        // If Weighted use the pair<int,int> ( neigbhour edge , weight) instead of normal weight.
+        adj[u].push_back(v);
+
         adj[v].push_back(u);
+       
 
-        // If weighted use the weight instead of 1.
     }
 
-    vector<bool> visited(n + 1, false);
-    int cnt=1;
-    bfs(adj,n,B[0],cnt,visited);
-    for(int i=1;i<=n;i++)
-    {
-      if(visited[i]==false) bfs(adj,n,i,cnt,visited);
-    }
-    return cnt;
+    vector<int> ans=dfsOfGraph(n,adj);
 
+    for(auto it : ans) {
+        cout<< it<<endl;
+    }
+    cout<<endl;
+
+    return 0;
 }
-int main()
-{
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif
-    //**********
-
-    //*********
-    // 1-- based indexing are used here
-
-    int n;
-    cin >> n ;
-
-    int a;
-    cin>>a;
-
-    int b;
-    cin>>b;
-
-    vector<int>arr1(a,0);
-    for(int i=0;i<a;i++)
-    {
-      cin>>arr1[i];
-    }
-
-    vector<int>arr2(b,0);
-    for(int i=0;i<a;i++)
-    {
-      cin>>arr2[i];
-    }
-
-    cout<<"ans:"<<solve(n,arr1,arr2);
-
-}
-
-
-
-
 
 
 /*
-input1 :
-
-7
-6
-6
-1
-2
-3
-4
-6
+// // input1 :
 5
-7
-6
 4
+0 1
+0 2
+0 3
+2 4
+
+
+
+// // output1:
+
+0
 1
 2
-1
-
-Output 1:
-
-
-
-input2 :
-
-
-Output2:
-
-
+4
+3
 
 
 

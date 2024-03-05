@@ -1,3 +1,9 @@
+/*
+The space needed to represent a graph using its adjacency matrix is n² locations. Space 
+complexity = (n*n), It is a costly method as n² locations are consumed.
+
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
