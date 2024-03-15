@@ -42,7 +42,7 @@ class Complex{
     }
 };
 
-    // this is called membership label
+    // this is called membership label(Complex::  (Scope resolution operator-::))
 void Complex:: set_data(int x,int y)
 {
     a=x;
