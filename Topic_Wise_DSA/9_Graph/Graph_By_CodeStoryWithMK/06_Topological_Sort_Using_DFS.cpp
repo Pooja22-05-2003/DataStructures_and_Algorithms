@@ -1,3 +1,6 @@
+// TC=O(V+2E)
+// SC=O(3N) [Recursion stack space + Visited + Stack]
+
 #include <bits/stdc++.h>
 using namespace std;
 
