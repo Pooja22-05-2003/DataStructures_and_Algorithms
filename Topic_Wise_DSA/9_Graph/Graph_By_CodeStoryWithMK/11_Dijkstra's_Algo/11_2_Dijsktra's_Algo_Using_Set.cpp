@@ -2,14 +2,13 @@
 using namespace std;
 
 /*
+Time Complexity : O( E log(V) ) 
 
-TC=O(ElogV) [It has the complete derivation for this]
+Where E = Number of edges and V = Number of Nodes.
+
 Space Complexity : O( |E| + |V| ) 
 
 Where E = Number of edges and V = Number of Nodes.
-Disadvantage of Dijkstra's Algo:
-1. Any graph with negative weights cannot implement dijkstra's algo.
-2. It will fall in an infinite loop [EX 0--->1 (weight is -2)], evertime, u get minimum weight
 */
 class Solution
 {
@@ -23,15 +22,16 @@ class Solution
         Dis[S]=0;
         
         // We Take Priority Queue[Min-Heap], It will store the minimum distance node at the top.
-        priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq; // O(n) [SC]
+        set<pair<int,int>>s; // O(n) [SC]
         
         // Pushing the source node in the pq, with dist=0;
         // Pq-{dist,node}
-        pq.push({0,S});
+        s.insert({0,S});
         
-        while(!pq.empty())
+        while(!s.empty())
         {
-            auto curr=pq.top();pq.pop();
+            auto curr=*(s.begin());
+            s.erase(curr);
             int dist=curr.first;
             int node=curr.second;
             
@@ -44,8 +44,19 @@ class Solution
                 
                 if( sum< Dis[AdjNode])
                 {
+                    if(Dis[AdjNode]!=INT_MAX)
+                    {
+                        // Delete that node entry from Set
+                        
+                        s.erase({AdjNode,newDist});
+                        //or
+                        /*
+                        auto iter=s.find({AdjNode,newDist});
+                        s.erase(iter);
+                        */
+                    }
                     Dis[AdjNode]=sum;
-                    pq.push({sum,AdjNode});
+                    s.insert({sum,AdjNode});
                 }
             }
         }
