@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
+ vector<int>parent;
+ vector<int>rank; // all nodes rank are intialyy 0
 int find(vector<int>parent, int node)
 {
     
@@ -44,6 +45,5 @@ void unionSetUsing_Rank_And_pathCompression(vector<int>parent,vector<int>rank,in
 
 int main()
 {
-    vector<int>parent;
-    vector<int>rank; // all nodes rank are intialyy 0
+   
 }
