@@ -1,4 +1,26 @@
 /*
+Approach:
+Observation:- 
+1.Let’s say your number is 3 ; now you do its AND operation with any number in the world : - 3&x = the value will always be <=3 
+
+x&y <= min(x,y) 
+
+
+2.Now think how can you keep a[1],a[2],a[3],.......a[n] as it is; because it is sure that they can easily decrease so the best you can do is keep them as it is so their sum comes max possible.
+
+
+3.To keep all numbers as they are and get the max sum :- x = “111111….” of this format
+
+
+
+
+4.Is there any other x which could give the maximum sum and be less than this “11111111………”  
+
+5.If in any row :- all numbers are 0 in that case; you can replace that bit of your x with 0 because it will make your x smaller and at the same time; keeping all the numbers the same hence its a better x. 
+
+
+*/
+/*
 
 */
 
@@ -86,5 +108,8 @@ Output2:
 
 
 */
+
+
+
 
 

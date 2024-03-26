@@ -1,0 +1,14 @@
+Problem Link: https://docs.google.com/document/d/1SFbQK5xikZMUrbvMF6DB0J5jZC6zGsNMwG89x9KaCsI/edit
+
+
+-> Given an array of size “N” ; find the minimum value of x such that 
+
+a[1]&x + a[2]&x + a[3]&x + a[4]&x + …………………………+a[n]&x = maximum! 
+
+
+1<=N<=200000
+1<=a[i]<=100000000
+
+[7 1 3 5] 
+
+->o/p = 7. (7&7 + 1&7 + 3&7 + 5&7) = 16 = maximum possible value.
