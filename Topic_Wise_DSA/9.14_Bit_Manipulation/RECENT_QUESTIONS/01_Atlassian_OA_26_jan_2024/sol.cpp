@@ -1,4 +1,8 @@
 /*
+
+TC=O(n*30)
+SC=O(1)
+
 Approach:
 Observation:- 
 1.Let’s say your number is 3 ; now you do its AND operation with any number in the world : - 3&x = the value will always be <=3 
@@ -18,9 +22,6 @@ x&y <= min(x,y)
 
 5.If in any row :- all numbers are 0 in that case; you can replace that bit of your x with 0 because it will make your x smaller and at the same time; keeping all the numbers the same hence its a better x. 
 
-
-*/
-/*
 
 */
 
