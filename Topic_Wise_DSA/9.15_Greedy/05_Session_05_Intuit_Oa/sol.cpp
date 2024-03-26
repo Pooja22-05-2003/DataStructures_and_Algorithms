@@ -20,9 +20,7 @@ SAME ELEMENTS CASE:
 For index 2, index 3 is same , so it do not have greater primary skill, it will never able to defeat index el 2.
 For winning index element 2, it should compare with index 4(secondary value). (If that element do not have greater secondary value than 2). Then it will win.
 
-*/
 
-/*
 
 */
 

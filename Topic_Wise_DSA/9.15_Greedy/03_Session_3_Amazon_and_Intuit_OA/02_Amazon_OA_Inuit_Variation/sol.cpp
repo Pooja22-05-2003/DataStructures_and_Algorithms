@@ -1,5 +1,9 @@
 /*
-
+1. Here try to find out the total number of extra elements.
+2. Now whatever operation u have, if u remove all the extra element,now after that also, u have more number of operations 
+remaining
+3. Try to subtract from the dsitinct elements.
+4. After doing all these return the different ID's u have.
 */
 
 // TC=O(n)
@@ -17,7 +21,7 @@ int  solve(vector<int>arr, int n , int op){
     // cout<<"arr.size():"<<arr.size()<<endl;
     // for(auto it : arr) cout<<it<<endl;
     // cout<<";"<<endl;
-    int distinct=0;
+    int distinct=1;
     int cnt=1;
     for(int i=2;i<=n;i++)
     {
@@ -36,7 +40,7 @@ int  solve(vector<int>arr, int n , int op){
 
     if(cnt>1) 
     {extra.push_back(cnt-1);
-    distinct++;
+    // distinct++;
     }
     int ans=0;
 

@@ -48,13 +48,17 @@ int solve(vector<int> arr, int n, int op)
     while (op > 0)
     {
 
-        op = op - freq[ind];
+      
         if (freq[ind] <= op)
+        {
+            op = op - freq[ind];
             freq[ind] = 0;
-        // cout<<"ind:"<<ind<<" freq:"<<freq[ind]<<" op:"<<op<<endl;
 
-        if (op <= 0)
-            break;
+        // cout<<"ind:"<<ind<<" freq:"<<freq[ind]<<" op:"<<op<<endl;
+        }
+
+       
+        else  break;
         ind++;
     }
 

@@ -1,145 +1,105 @@
+/*
 
-// #include <bits/stdc++.h>
-// using namespace std;
+*/
 
-// bool check(int st,vector<int>arr, int n , int lb, int ub )
-// {
-//     vector<int>newarr;
-//     int num=st;
-//     newarr.push_back(num);
-//     int i=0;
-//     int prev=arr[i];
-//     int x=num;
-//     while(i<n-1 && x<=ub)
-//     {
-//         x=num-prev;
-      
-//         if(x<=ub) 
-//         {
-//             newarr.push_back(x);
-            
-//             i++;
-//             prev=arr[i];
-//             num=x;
-//         }
-//         else break;
-
-
-//     }
-
-//     if(newarr.size()==n) return true;
-//     else return false;
-// }
-// int solve(vector<int>arr, int n , int lb, int ub)
-// {
-//     int cnt=0;
-//     for(int i=lb;i<=ub;i++)
-//     {
-//         if(check(i,arr,n,lb,ub)) cnt++;
-//         else break;
-//     }
-//     return cnt;
-// }
-
-// int main(){
-//     #ifndef ONLINE_JUDGE
-//     freopen("input.txt", "r", stdin);
-//     freopen("output.txt", "w", stdout);
-//     #endif
-//     //**********
-
-
-//     //*********
-//     int n;
-//     cin>>n;
-//     vector<int>arr(n);
-//     for(int i=0;i<n;i++)
-//     {
-//         cin>>arr[i];
-//     }
-//     int lb,ub;
-//     cin>>lb;
-//     cin>>ub;
-
-//     int ans=solve(arr,n,lb,ub);
-//     cout<<"ans:"<<ans<<endl;
-
-
-//     return 0;
-// }
-
-
-// /*
-// // input1 :
-// 4
-// -2
-// -1
-// -2
-// 5
-// 3
-// 10
-
-
-
-// // output1:
-// 3
-
-
-// input 2:
-// 3
-// -1
-// -3
-// 2
-// 2
-// 8
-
-// output :
-// 3
-
-
-
-
-// */
-
-
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <string>
-#include <bitset>
+// TC=O(n)
+// SC=O(n)
+#include<bits/stdc++.h>
 using namespace std;
 
-string solve(int n, int k, vector<string>& a) {
-    for (int i = 0; i < a.size(); ++i) {
-        a[i] = a[i].substr(0, a[i].find_last_not_of(' ') + 1);
+int  solve(vector<int>arr, int n , int op){
+
+    sort(arr.begin(),arr.end());
+
+
+    vector<int>extra;
+
+    // cout<<"arr.size():"<<arr.size()<<endl;
+    // for(auto it : arr) cout<<it<<endl;
+    // cout<<";"<<endl;
+    int distinct=1;
+    int cnt=1;
+    for(int i=2;i<=n;i++)
+    {
+       if(arr[i-1]==arr[i]) cnt++;
+       else 
+       {
+       
+        distinct++;
+        // cout<<"i:"<<i<<"distinct:"<<distinct<<endl;
+        if(cnt>1) extra.push_back(cnt-1);
+        cnt=1;
+       } 
     }
 
-    sort(a.begin(), a.end());
 
-    for (int i = 0; i < min(k, (int)a.size()); ++i) {
-        string curr = "";
-        for (char b : a[i]) {
-            curr += to_string(1 - (b - '0'));
-        }
-        a[i] = max(curr, a[i]);
+
+    if(cnt>1) 
+    {extra.push_back(cnt-1);
+    // distinct++;
     }
+    int ans=0;
 
-    int ans = 0;
-    for (string s : a) {
-        ans += stoi(s, nullptr, 2);
+    int totalextra=0;
+    for(auto it : extra) totalextra+=it;
+
+    cout<<"distinct:"<<distinct<<" totalextra:"<<totalextra<<endl;
+    ans=max(0,distinct-max(0,(op-totalextra)));
+    return ans;
+}  
+
+
+int main(){
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif
+    //**********
+//
+
+    //*********
+
+    int n ;
+    cin>>n;
+
+    int operations;
+    cin>>operations;
+
+    vector<int>arr(n+1,0);
+    for(int i=1;i<=n;i++)
+    {
+        cin>>arr[i];
+
     }
+    
+    int ans=solve(arr,n,operations);
+    cout<<ans<<endl;
 
-    string binary = bitset<64>(ans).to_string();
-    return binary.substr(binary.find('1'));
+	return 0;
 }
-int main() {
-    int numberofbits = 3; 
-    int maximumoperationsallowed = 2;
-    vector<string> arr = {"011","100","100"};
+	
 
-    string result = solve(numberofbits, maximumoperationsallowed, arr);
-    cout << result << endl;
+/*
+input1 :
+6
+2
+1 1 1 2 3 2
 
-    return 0;
-}
- 
+
+Output 1:
+3
+
+
+
+input2 :
+6
+5
+1 1 2 2 3 3
+
+Output2:
+1 (distinct:3 totalextra:3)
+
+
+*/
+
+

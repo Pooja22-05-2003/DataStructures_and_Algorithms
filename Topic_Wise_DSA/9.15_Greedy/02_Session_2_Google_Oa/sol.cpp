@@ -7,6 +7,10 @@ Approach:
      iii-> 000000111111 (0^n 1^n)
 3. For this we can flip 0->1 or 1->0 any number of times.
 4. Find the minimum number of flips required to make it a valid string.
+5. For this we can create prefix array of type 1, and try to put cost of making that type at prefix[i]
+6. For this we can create suffix array of type 2, and try to put the cost at ith index of making array from i+1 to n index in suffix[i]
+7. Now for making the array of the 3rd type, at each index try make the left side array of prefix1 type and right side array of prefix 2 side.
+8. while Doing all these things, try to maintaint the minimum variable, which will store all these things.
 
 */
 

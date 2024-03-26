@@ -48,6 +48,7 @@ int main() {
 
 			if(sum>=k)
 			{
+				// It means in the k widnow size, we have continuos ones
 				// make the last 1 -> 0
 				arr[i]=0;
 
@@ -56,7 +57,9 @@ int main() {
 				ans++;
 
 			}
-			sum-=arr[i-(k)+1];
+
+			// Decreasing the window size
+			sum-=arr[i-(k)+1]; // +1 because, abhi hum next idex pe gaye nahi hn
 			
 			i++;
 		}

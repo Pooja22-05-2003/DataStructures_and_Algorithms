@@ -1,1 +1,2 @@
-ans:3
+distinct:3 totalextra:3
+1
