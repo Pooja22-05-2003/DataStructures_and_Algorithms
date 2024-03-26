@@ -4,9 +4,6 @@ Approach:
 2. Then sort the answer vector.
 3. Print that answer vector.
 
-*/
-
-/*
 
 */
 

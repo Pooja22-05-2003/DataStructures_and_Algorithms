@@ -10,10 +10,6 @@ Approach :
 
 */
 
-/*
-
-*/
-
 // TC=O(nlogn)
 // SC=O(1)
 #include <bits/stdc++.h>
