@@ -1,0 +1,4 @@
+Problem Link : https://www.geeksforgeeks.org/minimum-product-subset-array/
+Video Link : https://www.youtube.com/watch?v=vM9rY_749lU
+
+The minimum product subset of an array refers to a subset of elements from the array such that the product of the elements in the subset is minimized. To find the minimum product subset, various algorithms can be used, such as greedy algorithms, dynamic programming, and branch and bound. The choice of algorithm depends on the specific constraints and requirements of the problem.
