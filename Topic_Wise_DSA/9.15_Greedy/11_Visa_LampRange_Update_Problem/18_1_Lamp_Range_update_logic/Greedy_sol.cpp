@@ -1,5 +1,8 @@
 /*
+TC=O(nlogn)
+SC=O(n)
 
+// Use this approach, when constraints is so high, If constrainst is of range between 1<=x<=(10^9) [ Then use the Hashing Approach]
 */
 
 #include<bits/stdc++.h>
