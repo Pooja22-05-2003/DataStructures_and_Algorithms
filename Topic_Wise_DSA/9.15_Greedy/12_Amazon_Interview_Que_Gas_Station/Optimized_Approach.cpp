@@ -23,7 +23,7 @@ public:
         for(int i = 0; i<n; i++) {
             
             total += gas[i] - cost[i];
-            // Here i was not able to get the logic, how this is sure that this will reach back to start position and not forms cyle.
+            // ❓❓Here i was not able to get the logic, how this is sure that this will reach back to start position and not forms cyle.
             if(total < 0) {
                 total = 0;
                 result = i+1;
