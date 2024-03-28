@@ -1,7 +1,14 @@
 /*
-
+1. By Observation , u will see if we arrange alhabets in the msg , according to their security valu sorted manner,
+then it will give the min possible sum of the asjacet elements diff.
+2. So make one arr and store the security value of all the alphabets.
+3. Sort that arr
+4. Find the sum of adjacent el diff.
+5. Return that sum,
 */
 
+// TC:O(slogs) // s is the size of the string
+// SC:O(s)
 #include<bits/stdc++.h>
 using namespace std;
 
