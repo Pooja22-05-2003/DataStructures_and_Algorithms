@@ -1,0 +1,3 @@
+Problem Link : https://leetcode.com/discuss/interview-question/3532259/BNY-Melon-SETUP-HackerRank-questions
+Q-3 (leetcode)
+
