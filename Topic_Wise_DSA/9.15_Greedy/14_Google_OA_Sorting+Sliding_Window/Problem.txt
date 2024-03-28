@@ -1,0 +1,7 @@
+Problem Link :https://www.desiqna.in/16112/google-oa-sde1
+
+Write a function Find_Min_Diff(L,P) .
+L is a vector of integers and P is an single integer value.
+The Task is to pick p different elements from the List L, where the 
+difference between the maximum valud and the minimum value in selected elements
+is minimum compared to others differences in possible subset
