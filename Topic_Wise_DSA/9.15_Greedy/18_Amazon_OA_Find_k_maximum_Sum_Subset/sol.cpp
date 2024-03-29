@@ -1,3 +1,23 @@
+/*
+Understanding :-> We are giving you an array B -> Find k subsets from this array such that their sum is maximum! 
+
+
+1.Observation 1 :-> The subset with maximum sum is the sum of all positive elements of the array ; this way we easily find the 1st  ranker
+
+2.Observation 2 :-> But we need the top K rankers -> How to find the second ranker -> Either add the smallest negative number(non-positive-> <=0) to your subset OR remove the smallest positive number from your subset ; subset ->1st ranker 
+
+3.Observation 3 :-> Let's separate the positive and negative elements. Left bucket -> negative elements ; right bucket -> positive elements ; 1st ranker = max_sum = sum of all positive elements; all you can do is select a guy from right bucket and remove or select a guy from left bucket and add it 
+
+4.Observation 4 :-> Hmm.
+
+5.Observation 5 :-> No matter from where you pick up ; sum will only decrease-> so take the absolute value of all the numbers given to you and whoever is the smallest in them:-> 2nd ranker =  you do 1st ranker - smallest number with absolute value; 
+
+6.Question is now :-> Given an array of all >=0 numbers ; find the k smallest subsets. 
+
+
+*/
+
+
 // TC=O(Nlogn+OOklogk)
 // SC=O(k) // k is the subsetsum arr
 #include <bits/stdc++.h>

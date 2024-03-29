@@ -1,0 +1,10 @@
+Problem Link :https://www.desiqna.in/16178/amazon-oa-nov-2023-sde-1-ctc-45-l-find-k-maximum-priority
+Docs Link:https://docs.google.com/document/d/14YeOCELYf1m8A4kjpMYohf-1gu6BGINNrnlOzdA0qMM/edit
+
+
+Given an array having both positive and negtiave numbers, find the k smallest subset sum.
+
+constraints:
+1<=n<=10^5
+-10^9<=popularity[i]<=10^9
+1<=k<=min(2000,2^n) 
