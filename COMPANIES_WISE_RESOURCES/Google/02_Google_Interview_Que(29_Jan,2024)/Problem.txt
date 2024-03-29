@@ -1,0 +1,19 @@
+Problem Link : https://docs.google.com/document/d/1Kwh2mIHg4zpnrDM4jPefiI9H737-I7sX3wbmOVJQayM/edit
+
+You are given “Q” queries of the type :- 
+
+1<=(x,y)<=100000
+
+-> Add (x,y) 
+-> Count(x,y) = count the number of squares you can build with the point (x,y) such that (x,y) is one of the end points of the created square. 
+
+[Square should be parallel to X-axis and Y-axis] 
+
+(x,y) can be the same for multiple queries. 
+
+-> Add(5,4)
+-> Add(8,4)
+-> Add(8,1)
+-> Count(5,1) 
+
+->read(n);b-> array of pairs.
