@@ -1,0 +1,10 @@
+Problem Link :Topic_Wise_DSA/9.15_Greedy/17_Amazon_OA/17_01/Problem.txt
+
+Given list of movies, and a variable k representing maximum allowed difference, we need 
+to group the movies into groups. No groups can have movies which has difference amongst
+ them greater than m. We need to return minimum number of groups which follows the condition.
+
+Example - movies = [1,5,4,6,8,9,2], k=3;
+output = 3 [groups-(1,2,4),(5,6,8),(9)]
+
+ 

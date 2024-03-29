@@ -1,0 +1,11 @@
+Problem Link :https://docs.google.com/document/d/176MBA9Hq1IJsPfaqD8HbGbrmhckm0qrWmnvJboOl9z0/edit
+
+Understanding - Given an array of size “N”; find sum of Bitwise OR of all the subarrays. 
+
+[2 10]
+
+-> (2) = 2 
+-> (10) = 10
+->(2,10) = 2 | 10 = 10
+
+Sum = 2 + 10 + 10 = 22 

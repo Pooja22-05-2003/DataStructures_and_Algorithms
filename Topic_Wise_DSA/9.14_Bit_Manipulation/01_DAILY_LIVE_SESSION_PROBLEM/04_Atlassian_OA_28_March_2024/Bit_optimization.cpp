@@ -1,3 +1,13 @@
+/*
+Optimized_sol Appoach:
+1. Calculate bitwise OR for all the ith col.
+2. For calcualting 1, let's think that the first col all element are present in binary form.
+3. Then follow the sit mehtod of binary number subarray sum calculation for creating first funciton/
+4. Then for final sum, add all the ithcol sum * (2^i) [ i will vary from 0 to 30]
+5. Finally return the ans.
+
+*/
+
 
 
 #include <bits/stdc++.h>
