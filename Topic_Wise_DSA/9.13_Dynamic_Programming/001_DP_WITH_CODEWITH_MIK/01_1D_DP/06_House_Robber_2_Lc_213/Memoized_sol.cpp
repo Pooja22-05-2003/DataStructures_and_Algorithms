@@ -2,17 +2,14 @@
 // SC=O(n)
 class Solution {
 public:
-    int solve(int st, int end , vector<int>&nums , vector<int>&dp)
+    int solve(int st, int i , vector<int>&nums , vector<int>&dp)
     
     {
-       dp[st]=nums[st];
-       if(st+1<=end) dp[st+1]=max(nums[st+1],nums[st]); // ✨✨ Here if condition is necessary, without if (u will get error in [0,0])
-       
-      for(int i=st+2;i<=end;i++)
-      {
-          dp[i]=max(dp[i-1],(nums[i]+dp[i-2]));
-      }
-        return dp[end];
+        if(i==st) return dp[i]=nums[i];
+        if(i==st+1) return dp[i]=max(nums[i],nums[i-1]);
+        
+        if(dp[i]!=-1) return dp[i];
+        return dp[i]=max((solve(st,i-1,nums,dp)), (solve(st,i-2,nums,dp)+nums[i]));
         
     }
     int rob(vector<int>& nums) {
