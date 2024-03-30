@@ -1,3 +1,14 @@
+// Sir code:https://ideone.com/fw1xNq
+
+/*
+Convert all the numbers to binary ; now for each column find the optimal value of y 
+// But if in any col, count of 0 and 1 are same ,then pick min valu(go with 0)
+->Whenever the frequency of both bits in a row are equal in that case; go for 0 as it will minimize y 
+
+*/
+
+// TC :- O(N*log(max(a[i])) = O(N*30)
+// Takes O(1) size because no extra data structure; is declared apart from the variables. 
 
 
 // TC=O(O(n*30))

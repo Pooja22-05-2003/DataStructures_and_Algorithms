@@ -1,0 +1,8 @@
+Docs Link :https://docs.google.com/document/d/1nWk9g-YXI9ae1ugz8g49ZFumSd5xA94pQFnzOWTWxxo/edit
+
+Given an array maximize the equation :- 
+
+B[1] xor y + B[2] xor y + B[3] xor y + ……………………+ B[n] xor y 
+
+
+Output the minimum value of y
