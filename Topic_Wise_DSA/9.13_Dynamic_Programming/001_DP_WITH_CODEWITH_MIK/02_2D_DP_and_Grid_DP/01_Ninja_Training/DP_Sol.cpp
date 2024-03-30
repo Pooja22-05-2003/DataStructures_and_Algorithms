@@ -1,5 +1,5 @@
 // TC=O(n)
-// SC=O(n)
+// SC=O(n*3)
 
 int ninjaTraining(int n, vector<vector<int>> &nums)
 {

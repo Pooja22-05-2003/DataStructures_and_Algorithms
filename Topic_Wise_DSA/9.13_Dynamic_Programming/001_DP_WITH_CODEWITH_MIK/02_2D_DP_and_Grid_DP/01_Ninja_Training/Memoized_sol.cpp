@@ -1,6 +1,6 @@
 // Memoization code
 // TC=O(n)
-// SC=(n)
+// SC=(n*3)
 
 
 #include <bits/stdc++.h>
