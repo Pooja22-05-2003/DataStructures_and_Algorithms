@@ -1,0 +1,2 @@
+1. Memoization is (Top-Down) , so start your recursion with index n-1 and go towards lower indexes and initialize the base case
+2. Tabulation is (Bottom-Up), so do just opposite of Tabulation and first intialize the base case value in the dp state.
