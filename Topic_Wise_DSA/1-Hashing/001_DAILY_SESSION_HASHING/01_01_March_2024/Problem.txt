@@ -1,0 +1,52 @@
+Problem Link:https://www.desiqna.in/16820/amazon-oa-sde-ctc-45lpa-coding-questions-2024-set-141
+
+Docs Link: https://docs.google.com/document/d/1esfWAWutnC-WEOJT0N9vC3Z5EFkUteCrHCtE8rqetEM/edit
+
+Understanding :- Given an array of size “N” ; in one operation ➖
+
+You can either select any two same elements and remove them from the array 
+
+You can select any three same elements from the array and remove them from the array 
+
+
+Your task is to destroy the full array in a minimum number of operations! 
+
+
+According to Tariquddin’s law :-  if  the frequency of any number is 1 then the answer will be -1
+
+According to Yasika’s law :- If the frequency of all numbers is >=2 then the answer is always valid.
+
+
+How to solve the problem :- To make the visualization easy, store all the numbers in a hashmap with their frequencies.  
+
+
+If the array is 1 5 5 1 1 8 8 10 10 
+
+Store them in hashmap with the frequencies :- 
+
+According to Tanmai’s Law :- 
+
+{
+1 - 3 
+5 - 2 
+8 - 2 
+10 - 2 
+}
+
+Next instinct tells that we should try to destroy each of the numbers separately 
+
+If a particular number is coming “x” a number of times then what is the minimum number of operations to destroy x? 
+
+It takes x/3 operations if x is divisible by 3 ; and takes x/3 + 1 operations if x is not divisible by 3 according to the pattern observed!
+
+2 -> 1
+3 -> 1
+4 -> 2
+5 -> 2
+6 -> 2
+7 -> 3
+8 -> 3 (8/3 + 1 = 2 + 1) 
+9 -> 3 
+
+
+
