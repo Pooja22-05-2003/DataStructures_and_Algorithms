@@ -1,0 +1,11 @@
+Docs Link: https://docs.google.com/document/d/1gQHEO8EjsYk-9xjDLqb2woak2_8vpzeDVsYGOqnHVCo/edit
+Problem Link:https://www.desiqna.in/16582/microsoft-sde-oa-coding-questions-set-119
+
+Understanding :- You are given two strings; namely s1 and s2 ; your task is to make them balanced. 
+
+In each column and in each row there should be equal number of W and R 
+
+Do it in the minimum number of operations.  
+
+-> ? R W W 
+-> ? W R R 

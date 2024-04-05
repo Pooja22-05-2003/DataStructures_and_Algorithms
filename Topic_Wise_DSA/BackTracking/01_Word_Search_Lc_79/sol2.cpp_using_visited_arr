@@ -1,0 +1,41 @@
+class Solution {
+public:
+    vector<int> row = {0, -1, 0, 1};
+    vector<int> col = {-1, 0, 1, 0};
+
+    bool helper(int ind, int i, int j, int m, int n, vector<vector<char>>& board, string& word, vector<vector<bool>>& visited) {
+        if (ind == word.size())
+            return true;
+
+        if (i < 0 || j < 0 || i >= m || j >= n || visited[i][j] || word[ind] != board[i][j])
+            return false;
+
+        visited[i][j] = true;
+
+        for (int a = 0; a < 4; a++) {
+            int newr = i + row[a];
+            int newc = j + col[a];
+            if (helper(ind + 1, newr, newc, m, n, board, word, visited))
+                return true;
+        }
+
+        // Backtrack
+        visited[i][j] = false;
+        return false;
+    }
+
+    bool exist(vector<vector<char>>& board, string word) {
+        int m = board.size();
+        int n = board[0].size();
+        vector<vector<bool>> visited(m, vector<bool>(n, false));
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (board[i][j] == word[0] && helper(0, i, j, m, n, board, word, visited))
+                    return true;
+            }
+        }
+
+        return false;
+    }
+};

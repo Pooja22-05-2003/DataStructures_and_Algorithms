@@ -1,0 +1,9 @@
+Problem Link:https://docs.google.com/document/d/1mWB5cQG_NFkGx65x2uLY1fbw2QDPJq9MX-NOuOOunH0/edit
+
+Given an array B, construct an array A such that f() is maximum. 
+
+f() = sum(abs(a[i]-a[i-1]) 
+
+1<=A[i]<=B[i] 
+
+According to Sachin’s Law; we are given an array b , now we have to create the array a such that a[i] value lies between 1 to b[i]
