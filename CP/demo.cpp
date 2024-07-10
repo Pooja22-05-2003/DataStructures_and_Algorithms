@@ -1,74 +1,100 @@
-
-
-// TC :- O(N*b[i]*b[i]) = O(N*U*U) U = max(b[i]) 
-
-// SC=O(1)
-
-#include <bits/stdc++.h>
+#include <iostream>
+#include <queue>
 using namespace std;
 
-int solve( int n, vector<int>b)
+class Node
 {
-    vector<vector<int>>dp(n+1,vector<int>(100000,0));
+   public:
+   int data;
+   Node* left;
+   Node* right;
+   
+   Node(int data)
+   {
+       this->data=data;
+       left=NULL;
+       right=NULL;
+   }
+   
+};
 
-    for(int i=2;i<=n;i++)
+
+Node* InsertNode(Node* root, int data)
+{
+    // base case, if root even not exist of the binary tree
+    if(root==NULL)
     {
-        for(int j=1;j<=b[i];j++)
+        Node* newnode=new Node(data);
+        return newnode;
+    }
+    
+    if(data>root->data) 
+    {
+        // Insert the node in the root right
+        root->right=InsertNode(root->right,data);
+    }
+    
+    if(data<root->data)
+    {
+        // Insert the node in the root left
+        root->left=InsertNode(root->left,data); 
+    }
+    
+    return root;
+}
+Node* takeInput(Node* root)
+{
+    int data;
+    cin>>data;
+    
+   
+    while(data!=-1)
+    {      
+        root=InsertNode(root,data);
+        cin>>data;
+    }
+    return root;
+}
+
+void printLevelWise(Node*root){
+    if(root==NULL) return;
+    
+    queue<Node*> q;
+    q.push(root);
+
+    while(!q.empty()){
+        Node*cur=q.front();
+        q.pop();
+        cout<<cur->data<<":";
+
+        if(cur->left) 
         {
-            for(int second_last_val=1;second_last_val<=(b[i]-1);second_last_val++)
-            {
-                int  G = abs(second_last_val-j) + dp[i-1][second_last_val];
-               dp[i][j] = max(dp[i][j],G)  ;
-
-            }
+            cout<<"L:"<<cur->left->data<<" ";
+            q.push(cur->left);
         }
-    }
+        if(cur->right) 
+        {
+            cout<<"R:"<<cur->right->data<<" "<<endl;
+            q.push(cur->right);
+        }
+       
 
-    int ans=INT_MIN;
-    for(int i=1;i<=100000;i++)
-    {
-        ans=max(ans,dp[n][i]);
     }
-
-    return ans;
 
 }
 
-int main()
-{
-#ifndef ONLINE_JUDGE
+int main() {
+    #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-#endif
+    #endif
     //**********
-    int n;
-    cin >> n;
-    vector<int>arr(n+1);
-    for(int i=1;i<=n;i++)
-    {
-        cin>>arr[i];
-    }
-    int ans=solve(n,arr);
-    cout<<"ans:"<<ans<<endl;
+    cout<<"Enter the Nodes of the BST :"<<endl;
+    Node* root=NULL;
+    root=takeInput(root);
+    
+    cout<<"Printing the BST Node Level wise:"<<endl;
+    printLevelWise(root);
+    
     return 0;
 }
-
-/*
-input1 :
-
-
-Output 1:
-
-
-
-input1 :
-
-
-Output 1:
-
-
-
-
-
-
-*/

@@ -5,7 +5,8 @@
     "deque": "cpp",
     "string": "cpp",
     "vector": "cpp",
-    "*.tcc": "cpp"
+    "*.tcc": "cpp",
+    "new": "cpp"
   },
   "liveServer.settings.port": 5501
 }
