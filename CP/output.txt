@@ -1,1 +1,4 @@
+Previous Doubly Linked List
 2 33 4 1 
+After Deletion of kth node,New Doubly Linked List
+2 33 4 

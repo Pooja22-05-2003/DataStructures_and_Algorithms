@@ -181,7 +181,18 @@ int main() {
     PrintDLL(head);
     cout<<endl;
 
+//////////////////////////////////////////////
+/*
+//TC=O(N)
+// SC=O(1)
+Delete Node in Doubly Linked List
+ Node which need to be deleted can be 
+0. First Node->head
+1. Kth node
+2. Last Node->Tail Node
 
+*/
+///////////////////////////////////////////
     // cout<<"After Deletion of head node,New Doubly Linked List"<<endl;
     // head=Deletehead(head);
     // PrintDLL(head);
